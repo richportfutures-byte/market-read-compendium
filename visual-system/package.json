@@ -14,12 +14,14 @@
     "gen:specs": "tsx packages/authoring/generateSpecPack.ts",
     "demo:negative": "tsx scripts/demoNegativeRender.ts",
     "gate": "tsx scripts/gate.ts",
-    "coverage": "tsx scripts/coverage.ts"
+    "coverage": "tsx scripts/coverage.ts",
+    "snapshot:png": "tsx scripts/snapshot.ts"
   },
   "dependencies": {
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "playwright": "^1.60.0",
     "tsx": "^4.22.4"
   }
 }
