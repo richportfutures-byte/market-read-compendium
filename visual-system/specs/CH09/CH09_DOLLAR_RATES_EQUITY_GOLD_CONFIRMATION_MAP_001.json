@@ -1,66 +1,67 @@
 {
   "figure_id": "CH09_DOLLAR_RATES_EQUITY_GOLD_CONFIRMATION_MAP_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH09",
-  "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
   "title": "Dollar / Rates / Equity / Gold Confirmation Map",
-  "concept": "Dollar / Rates / Equity / Gold Confirmation Map",
+  "concept": "Separating named-mechanism confirmation from chart-overlay correlation across the dollar, rates, equity, and gold",
   "source_refs": [
-    "CH09:dollar-rates-equity-gold-confirmation-map"
+    "CH09:intermarket-confirmation-vs-correlation",
+    "CH09:cross-market-conflict",
+    "CH09:gold-dollar-rates-triangle"
   ],
-  "teaching_objective": "TODO: state what Dollar / Rates / Equity / Gold Confirmation Map teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to require, before citing any second market as support, a one-sentence mechanism (what repriced, why this market is forced to respond, what the response should look like in magnitude and sequence), to score the four layers as confirm or conflict, and to let that coherence set size rather than shopping for the one agreeing chart.",
+  "junior_error": "Chart-overlay confirmation: treating visual co-movement as proof. On a driverless afternoon he sees yields up and stocks up, builds a resilience story out of two markets drifting through the liquidity trough, and sizes up a trade he labels confirmed that is actually unconditional noise. The mirror error is confirmation shopping: citing the one agreeing market and ignoring the dissenters.",
+  "professional_read": "On a hot 8:30 print, four markets are independently forced by one input: yields jump, NQ underperforms ES, gold is sold, the dollar bids, 6E breaks, all real-rate repricing. That is confirmation and it upgrades a short read at structure. When layers disagree (vol bidding into a rally, breadth fading, yields shrugging), that is conflict, and it caps size, shortens holding period, or stands the trader aside.",
+  "decision_consequence": "Confirmation across layers permits full size on a structure read. Two or more conflicts cap size at half and ban adds. Without a writable mechanism the plan is stamped no-confirmation and trades base size or passes.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "four_market_layers", "label": "Dollar, rates, equity, gold layers, each marked confirm or conflict", "required": true },
+    { "id": "named_mechanism", "label": "Named mechanism per layer: why each market is forced to reprice (real-rate repricing)", "required": true },
+    { "id": "confirm_vs_conflict_coherence", "label": "Coherence score: layers confirming vs conflicting in the same hour", "required": true },
+    { "id": "magnitude_and_sequence", "label": "Magnitude and sequence proportionate to the mechanism (8bp yields, NQ underperforms ES)", "required": true },
+    { "id": "size_permission_consequence", "label": "Size and permission consequence: confirmation upgrades size, conflict caps it", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "chart_overlay_confirmation", "description": "Treating visual co-movement / chart overlay as proof of confirmation without a named mechanism." },
+    { "id": "confirmation_shopping", "description": "Confirmation shopping: citing the one agreeing market and ignoring the dissenters." },
+    { "id": "stale_correlation_regime", "description": "Carrying last quarter's correlation sign forward when the stock-bond regime has flipped." }
   ],
-  "figure_type": "price_path_level_interaction",
+  "figure_type": "intermarket_matrix",
   "learning_mode": "static_explanatory",
   "interaction": "none",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Dollar / Rates / Equity / Gold Confirmation Map"
-    }
+    { "id": "cross_market_map", "role": "matrix", "title": "Dollar / rates / equity / gold confirmation map", "grid": "row:1 col:1-2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1 col:3" }
   ],
-  "annotations": [],
+  "annotations": [
+    { "id": "mechanism_label", "type": "label", "target": "named_mechanism", "text": "One sentence: what repriced, why each must respond" },
+    { "id": "confirm_zone", "type": "zone", "target": "confirm_vs_conflict_coherence", "text": "Hot CPI: yields up, NQ under ES, gold sold, dollar bid, 6E breaks" },
+    { "id": "conflict_callout", "type": "callout", "target": "size_permission_consequence", "text": "Two or more conflicts caps size at half, bans adds" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Dollar / Rates / Equity / Gold Confirmation Map (mapped from \"Cross-market map\").",
-    "instruments": []
+    "description": "Two synthetic cross-market snapshots. Confirmation: a hot 8:30 inflation print, 10-year yields +7bp, NQ gaps down harder than ES, gold sold, dollar bids, 6E breaks, all forced by real-rate repricing. Overlay (no mechanism): a driverless afternoon, ZN drifts down 6 ticks and ES drifts up 8 handles through the liquidity trough, co-movement with nothing repricing.",
+    "instruments": ["DX", "ZN", "ES", "NQ", "GC", "6E"],
+    "notes": "Numbers taken from the Intermarket-Confirmation-vs-Correlation worked example in CH09 so the fixture can be checked against the manuscript."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH09",
-    "section_slug": "dollar-rates-equity-gold-confirmation-map",
-    "position": "after_section_heading"
+    "section_slug": "intermarket-confirmation-vs-correlation",
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "intermarket_confirmation_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "All four layers (dollar, rates, equity, gold) are drawn, each marked confirm or conflict, not as a single overlay.",
+    "Each confirming layer carries a named mechanism, not mere co-movement.",
+    "Magnitude and sequence are shown as proportionate to the mechanism (a yield move sized to its equity response).",
+    "The coherence count drives the size and permission consequence shown.",
+    "Every required_evidence id is rendered and stamped (render-evidence check passes)."
   ]
 }

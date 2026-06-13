@@ -112,6 +112,20 @@ const ruleFamilies: Record<string, Rule[]> = {
     (s) => s.forbidden_errors.some((f) => /first tick|trade the break|pre.?commit|direction from|coil.*direction/i.test(f.description)) ? null
       : "volatility figure must forbid trading the first tick or pre-committing direction from the coil",
   ],
+  intermarket_confirmation_rules: [
+    (s) => s.required_evidence.some((e) => /dollar|rates|gold|equit|yield/i.test(e.label)) ? null
+      : "intermarket figure must show the cross-market layers (dollar, rates, equity, gold)",
+    (s) => s.required_evidence.some((e) => /mechanism|reprice|forced|discount|real.?rate/i.test(e.label)) ? null
+      : "intermarket figure must show a named mechanism (why each market must reprice)",
+    (s) => s.required_evidence.some((e) => /confirm|conflict|coherence/i.test(e.label)) ? null
+      : "intermarket figure must show confirm-vs-conflict coherence",
+    (s) => s.required_evidence.some((e) => /magnitude|proportion|sequence/i.test(e.label)) ? null
+      : "intermarket figure must show magnitude / sequence proportionate to the mechanism",
+    (s) => s.required_evidence.some((e) => /size|permission|conviction|upgrade|downgrade/i.test(e.label)) ? null
+      : "intermarket figure must show the size / permission consequence",
+    (s) => s.forbidden_errors.some((f) => /overlay|correlation as|co.?movement|shopping/i.test(f.description)) ? null
+      : "intermarket figure must forbid chart-overlay confirmation and confirmation shopping",
+  ],
 };
 
 export function hasRuleFamily(name: string): boolean {
