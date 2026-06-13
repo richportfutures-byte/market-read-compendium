@@ -1,66 +1,81 @@
 {
   "figure_id": "CH06_TRAP_SEQUENCE_STORYBOARD_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH06",
-  "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
   "title": "Trap Sequence Storyboard",
-  "concept": "Trap Sequence Storyboard",
+  "concept": "Reading a breakout-trap as a located population before its forced exit, not as a hindsight label",
   "source_refs": [
-    "CH06:trap-sequence-storyboard"
+    "CH06:trapped-traders",
+    "CH06:failed-breakout-failed-breakdown",
+    "CH06:stop-runs-as-fuel"
   ],
-  "teaching_objective": "TODO: state what Trap Sequence Storyboard teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to locate the entrant population (entry zone and stop zone) at the moment of displacement, then read the print evidence that converts them from offside to forced-exit, distinguishing a trap (reentry plus acceleration) from a defended breakout (hold plus value migration). Trapped is a pre-resolution location statement, not a hindsight narration.",
+  "junior_error": "Calling traps in hindsight and trading them in foresight without evidence: seeing a reversal, narrating trapped longs, then fading a clean (defended) breakout at the first pullback because they are trapped up there, and getting run over by the defended version. Two leaks from one untested belief.",
+  "professional_read": "Name the entry zone (21,446 to 21,458) and the forced-exit zone (stops densest under 21,440) at the displacement. Withhold the trade through the break. Commit only on the reentry-plus-acceleration trigger (price crossing back through 21,445 with a speed and sell-volume burst), targeting the range bottom near 21,428. Kill the trap read if the pullback holds above 21,445 with bids refreshing and value migrating up.",
+  "decision_consequence": "With the trap read correct and the reentry trigger waited for, the move down through the stop pool is paid for by the breakout crowd's forced exits. Fade in hindsight without the trigger and you short the defended branch and get run over; chase the breakout and you become the trapped population.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "entrant_population_entry_zone", "label": "Entrant population entry zone (21,446 to 21,458)", "required": true },
+    { "id": "forced_exit_stop_pool", "label": "Forced-exit stop pool, densest under 21,440", "required": true },
+    { "id": "displacement_delta_and_volume", "label": "Displacement burst: positive delta and roughly 3x volume", "required": true },
+    { "id": "absorption_at_extreme", "label": "Absorption at the extreme: offers refresh, delta climbs, price static", "required": true },
+    { "id": "reentry_through_entry_trigger", "label": "Reentry through the entry zone with acceleration (trap trigger)", "required": true },
+    { "id": "forced_exit_cascade_to_target", "label": "Forced-exit cascade to the range bottom near 21,428", "required": true },
+    { "id": "defended_branch_value_migration", "label": "Defended branch: hold above 21,445, value migrates up to 21,464", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "hindsight_trap_label", "description": "Labeling the reversal as trapped only in hindsight, with no pre-resolution entry and stop locations drawn." },
+    { "id": "trap_without_locations", "description": "Depicting a trap with no named entry zone and no forced-exit location (no locations, no trap)." },
+    { "id": "displacement_as_the_event", "description": "Treating the displacement bar as the event instead of the post-displacement acceptance behavior." },
+    { "id": "defended_mislabeled_as_trap", "description": "Collapsing the two branches so that every breakout reads as a trap." },
+    { "id": "fade_without_reentry_trigger", "description": "Showing a short entered before the reentry-plus-acceleration trigger prints." }
   ],
   "figure_type": "trap_storyboard",
   "learning_mode": "step_through_sequence",
   "interaction": "step_through",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Trap Sequence Storyboard"
-    }
+    { "id": "price_path", "role": "price_path", "title": "Trap sequence price path", "grid": "row:1 col:1-2" },
+    { "id": "read_branches", "role": "read_branches", "title": "Trap vs defended resolution", "grid": "row:2 col:1-2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-2 col:3" }
   ],
-  "annotations": [],
+  "sequence": [
+    { "step": 0, "caption": "Established range: 21,410 to 21,445 held 90 minutes. Watched level 21,445; latent stop pool forming under 21,440.", "reveal": ["price_path"] },
+    { "step": 1, "caption": "Displacement. Offer breaks, burst prints 21,446 to 21,458 in under a minute on positive delta and ~3x volume. The entrant population and its stop cluster are now located.", "reveal": ["entrant_population_entry_zone", "forced_exit_stop_pool", "displacement_delta_and_volume"] },
+    { "step": 2, "caption": "Absorption. Four minutes, no print above 21,458, offers at 21,456 to 21,458 refresh after every lift, delta climbs while price is static. Offside, not yet trapped.", "reveal": ["absorption_at_extreme"] },
+    { "step": 3, "caption": "The fork. Price slips to 21,448 and pauses. This is where the read is made, before the outcome.", "reveal": ["read_branches"] },
+    { "step": 4, "caption": "Trap branch. 21,443 prints, speed jumps, sell-volume bursts, run to 21,428. Forced exits fire as price crosses back through the entry zone into the stop pool.", "reveal": ["reentry_through_entry_trigger", "forced_exit_cascade_to_target"] },
+    { "step": 5, "caption": "Defended branch. Pullback holds 21,448, bids refresh, small sell prints absorbed, time builds above 21,445, next push prints 21,464. Trap read killed, value migrating up.", "reveal": ["defended_branch_value_migration"] }
+  ],
+  "annotations": [
+    { "id": "entry_zone_marker", "type": "zone", "target": "entrant_population_entry_zone", "text": "Entries cluster 21,446 to 21,458" },
+    { "id": "stop_pool_marker", "type": "zone", "target": "forced_exit_stop_pool", "text": "Stops densest under 21,440" },
+    { "id": "trigger_arrow", "type": "arrow", "target": "reentry_through_entry_trigger", "text": "21,443 prints: speed and sell-volume burst" },
+    { "id": "fork_label", "type": "label", "target": "read_branches", "text": "Read is made here, before resolution" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Trap Sequence Storyboard (mapped from \"Step-through storyboard\").",
-    "instruments": []
+    "description": "Synthetic NQ morning session. Range 21,410 to 21,445 held 90 minutes. Displacement burst prints 21,446 to 21,458 on positive delta and ~3x recent per-minute volume. Absorption over 4 minutes with offers refreshing at 21,456 to 21,458. Trap branch: reentry at 21,443 cascading to 21,428. Defended branch: hold 21,448, value builds above 21,445, push to 21,464.",
+    "instruments": ["NQ"],
+    "notes": "Numbers taken verbatim from the Trapped Traders worked example in CH06 so the fixture can be checked against the manuscript."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH06",
-    "section_slug": "trap-sequence-storyboard",
-    "position": "after_section_heading"
+    "section_slug": "trapped-traders",
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "trap_positioning_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "The entrant population entry zone and the forced-exit stop pool are both drawn and labeled at the displacement step, before any resolution.",
+    "Both the trap branch and the defended branch are shown as alternative resolutions from the same fork.",
+    "The trap branch trigger is the reentry through the entry zone with acceleration, not the displacement bar.",
+    "No short is depicted as entered before the reentry trigger prints.",
+    "Every required_evidence id is rendered and stamped (render-evidence check passes)."
   ]
 }

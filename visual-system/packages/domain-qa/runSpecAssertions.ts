@@ -66,6 +66,24 @@ const ruleFamilies: Record<string, Rule[]> = {
     (s) => s.forbidden_errors.some((f) => /low.?volume.*absorption|pause.*absorption/i.test(f.description)) ? null
       : "absorption figure must forbid labeling a low-volume pause as absorption",
   ],
+  trap_positioning_rules: [
+    (s) => s.required_evidence.some((e) => /entrant|entry zone|population/i.test(e.label)) ? null
+      : "trap figure must show the entrant population entry zone",
+    (s) => s.required_evidence.some((e) => /stop pool|forced.?exit/i.test(e.label)) ? null
+      : "trap figure must show the forced-exit stop pool / forced-exit location",
+    (s) => s.required_evidence.some((e) => /displacement|delta|volume/i.test(e.label)) ? null
+      : "trap figure must show the displacement with delta and volume",
+    (s) => s.required_evidence.some((e) => /absorption|absorb/i.test(e.label)) ? null
+      : "trap figure must show absorption at the extreme",
+    (s) => s.required_evidence.some((e) => /reentry|re-entry|cross.?back|trigger/i.test(e.label)) ? null
+      : "trap figure must show the reentry-through-entry trigger",
+    (s) => s.required_evidence.some((e) => /defended|value migrat/i.test(e.label)) ? null
+      : "trap figure must show the defended branch (hold plus value migration), not only the trap",
+    (s) => s.forbidden_errors.some((f) => /hindsight/i.test(f.description)) ? null
+      : "trap figure must forbid hindsight trap-labeling",
+    (s) => s.forbidden_errors.some((f) => /without location|no location/i.test(f.description)) ? null
+      : "trap figure must forbid a trap with no named entry/forced-exit location",
+  ],
 };
 
 export function hasRuleFamily(name: string): boolean {
