@@ -1,66 +1,67 @@
 {
   "figure_id": "CH11_THESIS_STATE_LIFECYCLE_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH11",
-  "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
   "title": "Thesis State Lifecycle",
-  "concept": "Thesis State Lifecycle",
+  "concept": "Classifying a live trade by thesis state (intact, weakening, invalidated, complete) from market evidence, never from open P&L",
   "source_refs": [
-    "CH11:thesis-state-lifecycle"
+    "CH11:thesis-state-lifecycle",
+    "CH11:trade-working-diagnosis"
   ],
-  "teaching_objective": "TODO: state what Thesis State Lifecycle teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to write a falsifiable thesis (reason, expected behavior, confirming evidence, kill evidence) before the fill, then re-classify its state at defined checkpoints from market evidence and execute the pre-mapped action for that state on time, without renegotiation, treating invalidation evidence as outranking the resting stop.",
+  "junior_error": "Using green P&L as proof of an intact thesis. Because P&L is the only number that updates every tick, the junior holds weakening-but-green trades until they round-trip and cuts intact-but-red trades at the first flicker of pain, inverting the winner/loser distribution and converting a positive-expectancy setup into a negative-expectancy account.",
+  "professional_read": "State is set by evidence measured against the written thesis. Pushes heavy with directional delta and value following equals intact (hold). The same plus-4.75 P&L with lighter pushes, delta divergence, an offer refreshing without breaking, and value still anchored behind price equals weakening (the kill condition warming up): fire the pre-mapped reduction and tighten the stop.",
+  "decision_consequence": "Intact holds per plan; weakening reduces and tightens; invalidated exits now without waiting for the stop; complete takes the exit even when it feels early. Favorable price on hostile evidence is weakening, not intact, and must never upgrade the state.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "four_thesis_states", "label": "Four thesis states: intact, weakening, invalidated, complete", "required": true },
+    { "id": "evidence_vs_written_thesis", "label": "Transitions set by market evidence against the written thesis (confirming and kill evidence)", "required": true },
+    { "id": "state_independent_of_pnl", "label": "State independent of open P&L: a trade can be green-and-invalidated or red-and-intact", "required": true },
+    { "id": "state_to_action_map", "label": "State-to-action map: intact hold, weakening reduce and tighten, invalidated exit now, complete take exit", "required": true },
+    { "id": "checkpoint_reclassification", "label": "Checkpoint re-classification at each rotation or named reference", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "pnl_as_state", "description": "Using green P&L as proof of an intact thesis; favorable price on hostile evidence is weakening, not intact." },
+    { "id": "upgrade_on_favorable_price", "description": "Upgrading the state because price moved in your favor rather than because evidence accumulated." },
+    { "id": "stop_outranks_invalidation", "description": "Treating the resting stop, not the invalidation evidence, as the exit decision-maker." }
   ],
-  "figure_type": "price_path_level_interaction",
+  "figure_type": "trade_state_lifecycle",
   "learning_mode": "static_explanatory",
   "interaction": "none",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Thesis State Lifecycle"
-    }
+    { "id": "state_machine", "role": "decision", "title": "Thesis state machine", "grid": "row:1 col:1-2" },
+    { "id": "pnl_contrast", "role": "read_branches", "title": "Same green P&L, different state", "grid": "row:2 col:1-2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-2 col:3" }
   ],
-  "annotations": [],
+  "annotations": [
+    { "id": "states_label", "type": "label", "target": "four_thesis_states", "text": "INTACT to WEAKENING to INVALIDATED or COMPLETE" },
+    { "id": "pnl_callout", "type": "callout", "target": "state_independent_of_pnl", "text": "Both versions show +4.75; the states differ" },
+    { "id": "kill_zone", "type": "zone", "target": "evidence_vs_written_thesis", "text": "Kill: acceptance below 5457 or absorption of buying 5464 to 5466" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Thesis State Lifecycle (mapped from \"State-machine diagram\").",
-    "instruments": []
+    "description": "Synthetic ES trade. Three-day value 5458 to 5482. Long 5461.25 after sellers are absorbed at the lower edge; thesis expects rotation to 5472 then 5478 POC; kill conditions are acceptance below 5457 or absorption of buying at 5464 to 5466; stop 5455.50. Version one (intact): pushes heavy, pullbacks quiet, value follows, hold. Version two (weakening): same +4.75 P&L but lighter pushes, delta divergence, offer at 5466.25 refreshing three times, value anchored at 5460; reduce half and tighten beneath 5459.",
+    "instruments": ["ES"],
+    "notes": "Numbers taken from the Thesis State Lifecycle worked example in CH11 so the fixture can be checked against the manuscript."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH11",
     "section_slug": "thesis-state-lifecycle",
-    "position": "after_section_heading"
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "trade_state_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "All four states are drawn with the evidence-driven transitions between them.",
+    "The figure shows state determined by evidence against the written thesis, with the kill conditions explicit.",
+    "The same green P&L is shown producing two different states (intact vs weakening), making P&L-independence visible.",
+    "Each state is mapped to its pre-set action.",
+    "Every required_evidence id is rendered and stamped (render-evidence check passes)."
   ]
 }

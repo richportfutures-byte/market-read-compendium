@@ -126,6 +126,20 @@ const ruleFamilies: Record<string, Rule[]> = {
     (s) => s.forbidden_errors.some((f) => /overlay|correlation as|co.?movement|shopping/i.test(f.description)) ? null
       : "intermarket figure must forbid chart-overlay confirmation and confirmation shopping",
   ],
+  trade_state_rules: [
+    (s) => s.required_evidence.some((e) => /intact|weakening|invalidated|complete/i.test(e.label)) ? null
+      : "trade-state figure must show the four thesis states (intact, weakening, invalidated, complete)",
+    (s) => s.required_evidence.some((e) => /evidence|thesis|kill/i.test(e.label)) ? null
+      : "trade-state figure must show transitions driven by evidence against the written thesis",
+    (s) => s.required_evidence.some((e) => /p&l|p\/l|green|red|profit/i.test(e.label)) ? null
+      : "trade-state figure must show state is independent of open P&L",
+    (s) => s.required_evidence.some((e) => /hold|reduce|exit|tighten|action/i.test(e.label)) ? null
+      : "trade-state figure must show the state-to-action mapping",
+    (s) => s.required_evidence.some((e) => /checkpoint|rotation|reference|re.?classif/i.test(e.label)) ? null
+      : "trade-state figure must show checkpoint re-classification",
+    (s) => s.forbidden_errors.some((f) => /p&l|green.*proof|favorable price|profit.*intact/i.test(f.description)) ? null
+      : "trade-state figure must forbid using green P&L as proof of an intact thesis",
+  ],
 };
 
 export function hasRuleFamily(name: string): boolean {
