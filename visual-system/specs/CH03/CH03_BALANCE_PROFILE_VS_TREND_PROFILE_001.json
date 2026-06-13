@@ -1,66 +1,71 @@
 {
   "figure_id": "CH03_BALANCE_PROFILE_VS_TREND_PROFILE_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH03",
-  "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
-  "title": "Balance Profile vs Trend Profile",
-  "concept": "Balance Profile vs Trend Profile",
-  "source_refs": [
-    "CH03:balance-profile-vs-trend-profile"
-  ],
-  "teaching_objective": "TODO: state what Balance Profile vs Trend Profile teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
+  "title": "Balance Profile vs. Trend Profile",
+  "concept": "The same first ten minutes of a push produce opposite trades depending on the auction regime: a balance profile rotates and fades from its extremes, a trend profile migrates value and is traded with extension. The candle cannot tell them apart; the auction can.",
+  "source_refs": ["CH03:the-auction-framework", "CH03:value-migration-and-overlap"],
+  "teaching_objective": "Classify the auction regime as balance or trend from profile shape, value behavior, volume response, and rotation symmetry, then select the tactic family that belongs to it, before reading the candle.",
+  "junior_error": "Applying one breakout playbook to both, because the candles are nearly identical at the moment of decision: fading trend days that look extended and chasing balance breaks that look strong.",
+  "professional_read": "Balance shows a fat symmetric profile, value building and overlapping, POC parked near the middle, volume contracting at the extremes, and comparable rotation legs both ways. Trend shows an elongated thin profile, value migrating with price, POC trailing, volume expanding on extension, and one-sided extension with shallow corrections.",
+  "decision_consequence": "In balance, fade movement toward the extremes and target the middle. In trend, trade with the extension and stop fading. The tactic family follows the regime, not the candle.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "profile_shape", "label": "Profile shape: symmetric and fat vs elongated and thin", "required": true },
+    { "id": "value_behavior", "label": "Value behavior: building and overlapping vs migrating with price", "required": true },
+    { "id": "volume_at_extremes", "label": "Volume at the extremes: contracting vs expanding on extension", "required": true },
+    { "id": "rotation_symmetry", "label": "Rotation symmetry: comparable legs vs one-sided extension", "required": true },
+    { "id": "poc_location", "label": "POC location: parked central vs trailing price", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "candle_breakout_equivalence", "description": "Do not imply the two regimes are distinguishable from the candle or breakout pattern alone; they look identical at the decision moment." },
+    { "id": "label_without_consequence", "description": "Do not show a profile label without its tactic consequence; a label without a consequence is decoration." },
+    { "id": "fade_the_trend", "description": "Do not depict fading the trend profile at its extension as correct." },
+    { "id": "static_value_in_trend", "description": "Do not show value staying put in the trend state; in trend, value migrates with price." }
   ],
   "figure_type": "market_profile_static",
-  "learning_mode": "static_explanatory",
-  "interaction": "none",
+  "learning_mode": "toggle_comparison",
+  "interaction": "toggle",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Balance Profile vs Trend Profile"
-    }
+    { "id": "shared_axis", "role": "price_path", "title": "Same instrument, same opening push (shared reference)", "grid": "row:1 col:1-3" },
+    { "id": "profile", "role": "profile", "title": "Developing profile (toggles: balance / trend)", "grid": "row:2 col:1-2" },
+    { "id": "volume_edges", "role": "chart", "title": "Volume at the day's extremes", "grid": "row:2 col:3" },
+    { "id": "evidence", "role": "evidence_rail", "title": "Classify the regime", "grid": "row:1-2 col:4" },
+    { "id": "forbidden", "role": "forbidden_rail", "title": "Must not imply", "grid": "row:3 col:1-4" }
   ],
-  "annotations": [],
+  "sequence": [
+    { "step": 0, "caption": "Balance: three sessions rotating 6004-6024, value overlapping, POC parked near 6012, the push to 6026.75 fails on contracting volume and returns to 6021. Working destination is the opposite extreme, 6004.", "reveal": ["profile", "volume_edges", "profile_shape", "value_behavior", "volume_at_extremes", "rotation_symmetry", "poc_location"] },
+    { "step": 1, "caption": "Trend: after a hawkish-surprise catalyst, the push through 6024 expands volume, the pullback holds 6024.25 with bids refreshing, and value builds 6026-6032. Trade with the extension.", "reveal": ["profile", "volume_edges", "profile_shape", "value_behavior", "volume_at_extremes", "rotation_symmetry", "poc_location"] }
+  ],
+  "annotations": [
+    { "id": "anno_same_candle", "type": "bracket", "target": "shared_axis", "text": "Same chart pattern for the first ten minutes. The candle cannot classify the regime." },
+    { "id": "anno_fade_target", "type": "callout", "target": "profile", "text": "Balance state: failed top makes 6004 the working destination (fade toward the middle/opposite extreme)." }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Balance Profile vs Trend Profile (mapped from \"Market profile comparison\").",
-    "instruments": []
+    "description": "Two ES sequences sharing an identical opening push through 6024. BALANCE: three prior sessions rotating 6004-6024 with overlapping value and POC near 6012; day four pushes to 6026.75 on contracting per-bar volume, offers at 6026-6027 refresh, nothing trades above 6027, price returns to 6021 within 20 minutes. TREND: same push through 6024 but after a hawkish catalyst, per-bar volume expands on extension, the pullback holds 6024.25 with bids refreshing, value builds 6026-6032 with POC trailing price up.",
+    "instruments": ["ES"],
+    "notes": "Static teaching fixture, bounded TPO/volume counts, renders in SVG without Canvas. The toggle exposes exactly two regime states over an identical opening push."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH03",
-    "section_slug": "balance-profile-vs-trend-profile",
-    "position": "after_section_heading"
+    "section_slug": "the-auction-framework",
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1280, "height": 760 },
   "qa": {
     "domain_rule_family": "auction_profile_rules",
-    "render_evidence_check": false,
-    "visual_snapshot": false
+    "render_evidence_check": true,
+    "visual_snapshot": true
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "Both regimes render from an identical opening push, so the comparison isolates the auction, not the candle.",
+    "All five evidence items are drawn for each regime with opposing values.",
+    "The balance state shows a symmetric profile with parked POC and contracting extreme volume; the trend state shows an elongated profile with migrating value and trailing POC.",
+    "Every profile label carries its tactic consequence; no label is shown as decoration.",
+    "The figure never depicts fading the trend extension or treating the candle as the classifier.",
+    "The toggle switches between exactly two regimes, not more."
   ]
 }

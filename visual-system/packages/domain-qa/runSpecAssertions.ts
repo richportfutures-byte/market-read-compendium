@@ -22,6 +22,16 @@ const ruleFamilies: Record<string, Rule[]> = {
     (s) => s.forbidden_errors.some((f) => /touch.*signal|signal.*touch/i.test(f.description)) ? null
       : "event-read figure must forbid treating the touch itself as a signal",
   ],
+  auction_profile_rules: [
+    (s) => s.required_evidence.some((e) => /profile shape|symmetric|elongated/i.test(e.label)) ? null
+      : "auction-profile figure must show profile shape (symmetric vs elongated)",
+    (s) => s.required_evidence.some((e) => /value|overlap|migrat/i.test(e.label)) ? null
+      : "auction-profile figure must show value behavior (overlapping vs migrating)",
+    (s) => s.required_evidence.some((e) => /volume/i.test(e.label)) ? null
+      : "auction-profile figure must show volume response at the extremes",
+    (s) => s.forbidden_errors.some((f) => /candle|breakout|consequence|decoration/i.test(f.description)) ? null
+      : "auction-profile figure must forbid candle-only classification or labels without consequence",
+  ],
   level_interaction_rules: [
     (s) => s.required_evidence.some((e) => /time|volume|beyond/i.test(e.label)) ? null
       : "level-interaction figure must show time/volume beyond the level",
