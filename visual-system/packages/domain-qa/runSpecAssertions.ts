@@ -84,6 +84,20 @@ const ruleFamilies: Record<string, Rule[]> = {
     (s) => s.forbidden_errors.some((f) => /without location|no location/i.test(f.description)) ? null
       : "trap figure must forbid a trap with no named entry/forced-exit location",
   ],
+  session_context_rules: [
+    (s) => s.required_evidence.some((e) => /asia|london/i.test(e.label)) ? null
+      : "session figure must show the three regional sessions (Asia, London, NY)",
+    (s) => s.required_evidence.some((e) => /liquidity|depth|thin|thick/i.test(e.label)) ? null
+      : "session figure must show liquidity depth differences across sessions",
+    (s) => s.required_evidence.some((e) => /value|migrat|accept|reject/i.test(e.label)) ? null
+      : "session figure must show value migration / accept-reject across the handoff",
+    (s) => s.required_evidence.some((e) => /session of record|origin|built|which session/i.test(e.label)) ? null
+      : "session figure must show which session built the reference (session of record)",
+    (s) => s.required_evidence.some((e) => /cross.?asset|sponsor|rates|fx|6e|zn/i.test(e.label)) ? null
+      : "session figure must show cross-asset sponsorship at the handoff",
+    (s) => s.forbidden_errors.some((f) => /undifferentiated|same ink|one block|unlabeled|wrong session/i.test(f.description)) ? null
+      : "session figure must forbid treating overnight as one undifferentiated block",
+  ],
 };
 
 export function hasRuleFamily(name: string): boolean {

@@ -1,66 +1,68 @@
 {
   "figure_id": "CH07_ASIA_LONDON_NY_HANDOFF_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH07",
-  "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
-  "title": "Asia → London → NY Handoff",
-  "concept": "Asia → London → NY Handoff",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
+  "title": "Asia to London to NY Handoff",
+  "concept": "Reading the 23-hour day as three linked regional auctions, and knowing which session built the level in front of you",
   "source_refs": [
-    "CH07:asia-london-ny-handoff"
+    "CH07:session-sequencing-asia-london-ny-handoff",
+    "CH07:ny-inheritance-vs-rejection"
   ],
-  "teaching_objective": "TODO: state what Asia → London → NY Handoff teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to treat the overnight as three sequenced auctions (Asia, London, NY), label which session built each extreme, weight a level's reliability by the liquidity that built it, and read each handoff window as an accept, extend, or reject verdict requiring displacement plus acceptance.",
+  "junior_error": "Treating the RTH open as a blank slate and every level with the same ink: buying support at 5482 because Asia's thin value low printed there six hours ago, then booking the loss as support failed rather than I read the wrong session.",
+  "professional_read": "Identify the session of record at the open. If London rejected Asia's balance and rebuilt value lower with cross-asset sponsorship (ZN and 6E leading), Asia structure is dead, the level where the live session's sellers proved themselves is the supply reference, and an open inside London value argues for rotation there until NY adds its own initiative.",
+  "decision_consequence": "Trade against the live session's references and size down or skip theses built on a session whose participants are asleep. Lean on a dead session's level and you take full stops at references that were never going to be defended now.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "three_session_relay", "label": "Three regional auctions in sequence: Asia, London, New York", "required": true },
+    { "id": "liquidity_depth_step", "label": "Liquidity depth steps up per session: Asia thinnest, London deeper, NY deepest", "required": true },
+    { "id": "value_migration_across_handoff", "label": "Value migration across the handoff: overlapping (accept) vs separated (reject)", "required": true },
+    { "id": "session_of_record_reference", "label": "Session of record and the origin of each extreme it built", "required": true },
+    { "id": "cross_asset_sponsorship", "label": "Cross-asset sponsorship at the London handoff: ZN and 6E lead", "required": true },
+    { "id": "handoff_verdict", "label": "Handoff verdict at each window: accept, extend, or reject", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "overnight_as_one_blob", "description": "Treating overnight as one undifferentiated block, drawing every level with the same ink regardless of which session built it." },
+    { "id": "dead_session_level", "description": "Leaning on a dead session's level as if defended in the current session (reading the wrong session)." },
+    { "id": "probe_as_verdict", "description": "Concluding the incoming session rejected the prior one on a probe alone, without displacement plus acceptance." }
   ],
   "figure_type": "session_timeline",
   "learning_mode": "static_explanatory",
   "interaction": "none",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Asia → London → NY Handoff"
-    }
+    { "id": "session_timeline", "role": "timeline", "title": "Asia to London to NY relay", "grid": "row:1 col:1-3" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:2 col:1-3" }
   ],
-  "annotations": [],
+  "annotations": [
+    { "id": "asia_balance", "type": "zone", "target": "three_session_relay", "text": "Asia balances 5482 to 5492, thin, value 5487" },
+    { "id": "london_reject", "type": "bracket", "target": "value_migration_across_handoff", "text": "London rejects Asia, rebuilds value 5470 to 5478" },
+    { "id": "sponsorship_arrow", "type": "arrow", "target": "cross_asset_sponsorship", "text": "ZN and 6E displace first at 3:05 ET" },
+    { "id": "handoff_label", "type": "label", "target": "handoff_verdict", "text": "Handoff windows: 2:00 to 3:00 ET and 9:30 ET" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Asia → London → NY Handoff (mapped from \"Session timeline\").",
-    "instruments": []
+    "description": "Synthetic ES overnight. Asia balances 5482 to 5492 on light volume, value 5487. At 3:05 ET London displaces to 5474 with ZN bidding hard and 6E breaking its overnight low; value rebuilds 5470 to 5478 over two hours. At 8:30 a data print pops ES to 5483 into the old Asia value underside, where sellers absorb it. The 9:30 open prints 5476, inside London value.",
+    "instruments": ["ES", "ZN", "6E"],
+    "notes": "Numbers taken from the Session Sequencing worked example in CH07 so the fixture can be checked against the manuscript."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH07",
-    "section_slug": "asia-london-ny-handoff",
-    "position": "after_section_heading"
+    "section_slug": "session-sequencing-asia-london-ny-handoff",
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "session_context_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "All three sessions are drawn in sequence with their relative liquidity depth shown, not as one undifferentiated overnight block.",
+    "Each extreme is labeled with the session that built it (session of record).",
+    "The London handoff shows cross-asset sponsorship (ZN and 6E leading) as evidence of initiative versus a stop run.",
+    "Value migration across each handoff is shown as overlapping (accept) or separated (reject).",
+    "Every required_evidence id is rendered and stamped (render-evidence check passes)."
   ]
 }
