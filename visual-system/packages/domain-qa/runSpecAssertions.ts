@@ -98,6 +98,20 @@ const ruleFamilies: Record<string, Rule[]> = {
     (s) => s.forbidden_errors.some((f) => /undifferentiated|same ink|one block|unlabeled|wrong session/i.test(f.description)) ? null
       : "session figure must forbid treating overnight as one undifferentiated block",
   ],
+  volatility_regime_rules: [
+    (s) => s.required_evidence.some((e) => /compress|coil|balance|contraction/i.test(e.label)) ? null
+      : "volatility figure must show the compression / coil phase",
+    (s) => s.required_evidence.some((e) => /expansion|release|breakout/i.test(e.label)) ? null
+      : "volatility figure must show the expansion / release phase",
+    (s) => s.required_evidence.some((e) => /stop fuel|stop cluster|stops/i.test(e.label)) ? null
+      : "volatility figure must show stop fuel at the edge",
+    (s) => s.required_evidence.some((e) => /retest|initiative|real.*false|false.*real|acceptance/i.test(e.label)) ? null
+      : "volatility figure must show real-vs-false discrimination at the retest",
+    (s) => s.required_evidence.some((e) => /tactic|stop|size|permission|target/i.test(e.label)) ? null
+      : "volatility figure must show that the regime changes tactic, stop, size, or permission",
+    (s) => s.forbidden_errors.some((f) => /first tick|trade the break|pre.?commit|direction from|coil.*direction/i.test(f.description)) ? null
+      : "volatility figure must forbid trading the first tick or pre-committing direction from the coil",
+  ],
 };
 
 export function hasRuleFamily(name: string): boolean {

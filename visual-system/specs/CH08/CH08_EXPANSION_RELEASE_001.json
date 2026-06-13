@@ -1,66 +1,76 @@
 {
   "figure_id": "CH08_EXPANSION_RELEASE_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH08",
-  "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
   "title": "Expansion Release",
-  "concept": "Expansion Release",
+  "concept": "Reading the release out of compression, and separating a real initiative break from a false stop-sweep at the retest",
   "source_refs": [
-    "CH08:expansion-release"
+    "CH08:compression-vs-expansion-the-volatility-cycle",
+    "CH08:compression-breakouts-real-vs-false"
   ],
-  "teaching_objective": "TODO: state what Expansion Release teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to treat volatility as a cycle: prepare during compression (mark both edges and the dominant node, size stops for the coming expansion regime, pre-write a plan per break direction), then on release withhold the trade through the edge and decide real vs false at the retest, switching tactic families the moment a real break is confirmed.",
+  "junior_error": "Regime misclassification at the transition: trading the coil with coil-sized expectations, fading mid-range out of boredom with a coil-sized stop sitting inside the edge stop-cluster, then getting filled in the acceleration when the edge releases. Plus trading the first tick of the break instead of the retest answer.",
+  "professional_read": "During the coil, mark the edges (5462 and 5438) and the node (5450), and re-derive stop size for an expansion regime. On the break, read the post-stop-burst flow: if fresh initiative keeps lifting and the retest holds outside with value building, it is a real release (buy the held retest, expansion-sized stop); if the tape goes quiet beyond the sweep and price snaps back inside, it is a false break (fade back toward the opposite edge, chasers as fuel).",
+  "decision_consequence": "Switch tactic families on a confirmed real break (stop fading edges, trade pullbacks in the displacement direction, stop sized for expansion). On a false break, trade the failed-break fade. Carry a coil-sized stop into expansion and it is executed in the first minutes of the release at the worst fill of the week.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "compression_coil", "label": "Compression coil: shrinking ranges, value overlap, dominant high-volume node", "required": true },
+    { "id": "stop_fuel_at_edge", "label": "Stop fuel clustered just beyond the compressed edge", "required": true },
+    { "id": "expansion_release", "label": "Expansion release: drive leaves balance on rising volume", "required": true },
+    { "id": "retest_real_vs_false", "label": "Retest evidence: held outside with initiative (real) vs snap back inside (false)", "required": true },
+    { "id": "regime_sized_stop", "label": "Regime-sized stop and tactic switch: a coil stop will not survive expansion", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "trade_the_first_tick", "description": "Trading the first tick through the edge instead of waiting for the retest answer (trading the question, not the answer)." },
+    { "id": "direction_from_coil", "description": "Pre-committing a directional thesis from the coil alone; compression is direction-agnostic." },
+    { "id": "coil_sized_stop_into_expansion", "description": "Carrying a coil-calibrated stop into the expansion regime, where it is executed in the first minutes of the release." }
   ],
-  "figure_type": "trap_storyboard",
+  "figure_type": "volatility_regime_map",
   "learning_mode": "step_through_sequence",
   "interaction": "step_through",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Expansion Release"
-    }
+    { "id": "price_path", "role": "price_path", "title": "Volatility cycle price path", "grid": "row:1 col:1-2" },
+    { "id": "read_branches", "role": "read_branches", "title": "Real vs false release", "grid": "row:2 col:1-2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-2 col:3" }
   ],
-  "annotations": [],
+  "sequence": [
+    { "step": 0, "caption": "Compression coil. ES ranges 38, 31, 26 points over three sessions, value stacking, fat node at 5450.", "reveal": ["price_path", "compression_coil"] },
+    { "step": 1, "caption": "Preparation. Edges marked at 5462 and 5438; stop fuel clusters just beyond both.", "reveal": ["stop_fuel_at_edge"] },
+    { "step": 2, "caption": "Release. The 5462 edge breaks and the stop cluster executes on rising volume.", "reveal": ["expansion_release"] },
+    { "step": 3, "caption": "The retest fork. Stops are spent. The answer is here, not at the break.", "reveal": ["read_branches", "retest_real_vs_false"] },
+    { "step": 4, "caption": "Real branch. Fresh initiative keeps lifting, the pullback holds 5466 with bids refreshing, value builds, run to 5484. Buy the held retest with an expansion-sized stop.", "reveal": ["regime_sized_stop"] },
+    { "step": 5, "caption": "False branch. The tape goes quiet beyond the sweep, no second buyer, price snaps back inside toward 5438, chasers trapped. Trade the failed-break fade.", "reveal": ["retest_real_vs_false"] }
+  ],
+  "annotations": [
+    { "id": "coil_zone", "type": "zone", "target": "compression_coil", "text": "Ranges 38, 31, 26; node 5450" },
+    { "id": "edge_bracket", "type": "bracket", "target": "stop_fuel_at_edge", "text": "Edges 5462 and 5438; stops beyond" },
+    { "id": "release_arrow", "type": "arrow", "target": "expansion_release", "text": "Edge breaks, stop cluster executes" },
+    { "id": "fork_label", "type": "label", "target": "read_branches", "text": "Answer is at the retest, not the break" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Expansion Release (mapped from \"Sequence visual\").",
-    "instruments": []
+    "description": "Synthetic ES volatility cycle. Three compressing sessions (ranges 38, 31, 26 points), value stacking with a dominant node at 5450, edges 5462 and 5438. Release breaks 5462 and consumes the stop cluster. Real branch: fresh initiative continues, pullback holds 5466 with bids refreshing, value builds outside, run to 5484. False branch: no second buyer beyond the sweep, snap back inside toward 5438, chasers trapped.",
+    "instruments": ["ES"],
+    "notes": "Numbers taken from the Compression-vs-Expansion and Compression-Breakouts worked examples in CH08 so the fixture can be checked against the manuscript."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH08",
-    "section_slug": "expansion-release",
-    "position": "after_section_heading"
+    "section_slug": "compression-vs-expansion-the-volatility-cycle",
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "volatility_regime_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "The compression coil and the expansion release are both drawn as phases of one cycle, not as a single breakout event.",
+    "Stop fuel is shown clustered beyond the compressed edge before the release.",
+    "Both the real (held retest, initiative continuation, value migration) and false (snap back inside, no second buyer) resolutions are shown from the retest fork.",
+    "The stop is shown re-sized for the expansion regime, not the coil.",
+    "Every required_evidence id is rendered and stamped (render-evidence check passes)."
   ]
 }
