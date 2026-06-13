@@ -1,66 +1,75 @@
 {
   "figure_id": "CH12_EXECUTION_PERMISSION_GATE_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH12",
-  "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
   "title": "Execution Permission Gate",
-  "concept": "Execution Permission Gate",
+  "concept": "Converting a graded read into a single permitted action by passing a seven-layer alignment check, an absolute veto list, and the legal label grammar",
   "source_refs": [
-    "CH12:execution-permission-gate"
+    "CH12:alignment-across-dimensions",
+    "CH12:action-vocabulary-the-label-set",
+    "CH12:execution-environment-quality"
   ],
-  "teaching_objective": "TODO: state what Execution Permission Gate teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to gate every entry: score the seven read-stack layers as agree, conflict, or neutral, apply an absolute veto list that no score can override, tie size mechanically to the score, and emit exactly one action label, where EXECUTE may only follow SETUP and SETUP may only follow a written WAIT thesis.",
+  "junior_error": "Confirmation shopping at the gate: counting the agreeing layers, dismissing the conflicting ones as weird-but-probably-nothing, and taking a partial-alignment day at full-alignment size. The mirror is boredom relabeling: a WAIT or NO-TRADE silently becoming SETUP because hours passed.",
+  "professional_read": "Full alignment with a clean veto list is the rare full-size condition. Partial alignment caps size; a load-bearing conflict (a catalyst inside the hold window, an intermarket leader fighting the move with size, an unreadable regime) is an absolute veto that outputs NO-TRADE or STAND ASIDE no matter how many layers agree. Identical chart shape, different gate result.",
+  "decision_consequence": "The gate outputs one label and the matching size: EXECUTE at score-tied size only when alignment passes and no veto fires; otherwise WAIT, NO-TRADE, or STAND ASIDE, logged affirmatively. Any EXECUTE not preceded by SETUP and a written WAIT thesis is an impulse trade by definition.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "alignment_layers", "label": "Seven read-stack alignment layers, each marked agree, conflict, or neutral", "required": true },
+    { "id": "veto_list", "label": "Absolute veto list that no score can override (pending catalyst, load-bearing intermarket conflict, unreadable regime)", "required": true },
+    { "id": "size_tied_to_score", "label": "Size tied mechanically to the alignment score: full alignment full size, conflicts cap size", "required": true },
+    { "id": "permission_label_output", "label": "Permission output as one action label: EXECUTE, SETUP, WAIT, NO-TRADE, or STAND ASIDE", "required": true },
+    { "id": "legal_transition_grammar", "label": "Legal transition grammar: EXECUTE only after SETUP, SETUP only after a written WAIT thesis with the trigger live", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "confirmation_shopping_layers", "description": "Confirmation shopping: counting the agreeing layers and dismissing the conflicting ones (advocacy, not analysis)." },
+    { "id": "boredom_relabel", "description": "Boredom relabeling: a WAIT or NO-TRADE silently becoming SETUP because hours passed, an illegal transition." },
+    { "id": "partial_alignment_full_size", "description": "Trading partial alignment at full-alignment size." }
   ],
   "figure_type": "setup_quality_gate",
   "learning_mode": "gate_checklist",
   "interaction": "decision_gate",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Execution Permission Gate"
-    }
+    { "id": "alignment_scorecard", "role": "matrix", "title": "Seven-layer alignment scorecard", "grid": "row:1 col:1-2" },
+    { "id": "gate_output", "role": "decision", "title": "Gate: permission or NO-TRADE", "grid": "row:2 col:1-2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-2 col:3" }
   ],
-  "annotations": [],
+  "sequence": [
+    { "step": 0, "caption": "Score the seven layers (catalyst, higher-timeframe auction, session, volatility regime, intermarket, location, tape) as agree, conflict, or neutral.", "reveal": ["alignment_scorecard", "alignment_layers"] },
+    { "step": 1, "caption": "Apply the veto list. A load-bearing conflict outputs NO-TRADE regardless of how many layers agree.", "reveal": ["veto_list"] },
+    { "step": 2, "caption": "Tie size to the score: full alignment permits full size, conflicts cap it, partial alignment never gets full size.", "reveal": ["size_tied_to_score"] },
+    { "step": 3, "caption": "Emit one action label as the gate output: EXECUTE, SETUP, WAIT, NO-TRADE, or STAND ASIDE.", "reveal": ["gate_output", "permission_label_output"] },
+    { "step": 4, "caption": "Enforce the grammar: EXECUTE only after SETUP, SETUP only after a written WAIT thesis with the trigger live.", "reveal": ["legal_transition_grammar"] }
+  ],
+  "annotations": [
+    { "id": "veto_callout", "type": "callout", "target": "veto_list", "text": "Catalyst inside the hold window vetoes regardless of score" },
+    { "id": "score_label", "type": "label", "target": "size_tied_to_score", "text": "Four of seven is not mostly aligned" },
+    { "id": "grammar_arrow", "type": "arrow", "target": "legal_transition_grammar", "text": "WAIT to SETUP to EXECUTE only" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Execution Permission Gate (mapped from \"Gate/checklist visual\").",
-    "instruments": []
+    "description": "Same long-ES open-drive idea on two synthetic days with identical chart shape. Day one (full alignment): CPI absorbed yesterday, higher timeframe one-timeframing up three sessions, open accepts above value, normal expansion regime, NQ leads and ZN sells off quietly, tested-edge location, tape confirms; gate output EXECUTE at full size. Day two (vetoed): identical shape but FOMC at 2:00 inside the hold window, ZN bid hard against equity strength, three-day compression; four layers agree, three conflict, one veto is load-bearing; gate output NO-TRADE / STAND ASIDE.",
+    "instruments": ["ES", "NQ", "ZN"],
+    "notes": "Scenario taken from the Alignment Across Dimensions worked example in CH12 so the fixture can be checked against the manuscript."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH12",
-    "section_slug": "execution-permission-gate",
-    "position": "after_section_heading"
+    "section_slug": "alignment-across-dimensions",
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "setup_quality_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "All seven alignment layers are drawn, each marked agree, conflict, or neutral, not a count of only the agreeing ones.",
+    "The veto list is shown as overriding the score (a single load-bearing conflict forces NO-TRADE).",
+    "Size is shown as a mechanical function of the alignment score.",
+    "The gate emits exactly one action label, and the legal transition grammar (WAIT to SETUP to EXECUTE) is enforced.",
+    "Every required_evidence id is rendered and stamped (render-evidence check passes)."
   ]
 }

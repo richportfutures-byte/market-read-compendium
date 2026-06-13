@@ -140,6 +140,20 @@ const ruleFamilies: Record<string, Rule[]> = {
     (s) => s.forbidden_errors.some((f) => /p&l|green.*proof|favorable price|profit.*intact/i.test(f.description)) ? null
       : "trade-state figure must forbid using green P&L as proof of an intact thesis",
   ],
+  setup_quality_rules: [
+    (s) => s.required_evidence.some((e) => /alignment|layer|dimension|read.?stack/i.test(e.label)) ? null
+      : "setup-quality figure must show the alignment layers / read-stack dimensions",
+    (s) => s.required_evidence.some((e) => /veto|absolute|override|load.?bearing/i.test(e.label)) ? null
+      : "setup-quality figure must show the absolute veto list",
+    (s) => s.required_evidence.some((e) => /size|score|full alignment|partial/i.test(e.label)) ? null
+      : "setup-quality figure must show size tied to the alignment score",
+    (s) => s.required_evidence.some((e) => /execute|setup|no.?trade|stand aside|permission/i.test(e.label)) ? null
+      : "setup-quality figure must show the permission / action label output",
+    (s) => s.required_evidence.some((e) => /transition|trigger|grammar|sequence/i.test(e.label)) ? null
+      : "setup-quality figure must show the legal transition grammar",
+    (s) => s.forbidden_errors.some((f) => /confirmation shopping|count.*agree|dismiss.*conflict|boredom/i.test(f.description)) ? null
+      : "setup-quality figure must forbid confirmation shopping / counting only the agreeing layers",
+  ],
 };
 
 export function hasRuleFamily(name: string): boolean {
