@@ -1,66 +1,75 @@
 {
   "figure_id": "CH10_CATALYST_TRANSMISSION_CHAIN_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH10",
-  "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
   "title": "Catalyst Transmission Chain",
-  "concept": "Catalyst Transmission Chain",
+  "concept": "Verifying a headline in real time by reading the order in which a catalyst propagates: leader proves the story, laggards prove the breadth",
   "source_refs": [
-    "CH10:catalyst-transmission-chain"
+    "CH10:transmission-mechanism-order-effects",
+    "CH10:new-information-vs-recycled-context"
   ],
-  "teaching_objective": "TODO: state what Catalyst Transmission Chain teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to pre-write the expected transmission chain for each scheduled release (first mover, transmitters, what confirms, what invalidates), use the leader as the truth instrument, treat order and breadth as the verification, and read a quiet index as a gamma-dampened pending leg rather than a cancelled one.",
+  "junior_error": "The laggard lottery: buying or selling whichever instrument has not moved yet on mechanical catch-up logic (ZN moved so NQ must follow), entering with no tape confirmation during the most adversely selected minutes of the day, getting stopped by noise before the genuine transmission arrives.",
+  "professional_read": "On a hot 8:30 print, ZN reprices in the first second and 6E in the first minute; a quiet NQ is a dampened second stage being absorbed by hedging, pending while ZN keeps bleeding, not a cancelled move. The real transmission arrives later at far better location. For energy and metals headlines, demand breadth (GC, ZN, FX participating) before extending to index.",
+  "decision_consequence": "Trade the leader as truth and wait for the laggard's own initiative flow at a usable location; the delayed transmission is the tradeable move. A coherent chain across instruments confirms the headline matters; a single-instrument twitch with silence around it round-trips.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "transmission_chain_order", "label": "Transmission chain in order: leader, transmitters, laggards", "required": true },
+    { "id": "leader_truth_instrument", "label": "Leader as truth instrument: rates (ZN) reprice first on macro data", "required": true },
+    { "id": "breadth_confirmation", "label": "Breadth confirmation across instruments: coherent chain vs single-instrument twitch", "required": true },
+    { "id": "gamma_filtered_second_stage", "label": "Dealer-gamma-filtered index leg: dampened, delayed second stage pending until hedging flips", "required": true },
+    { "id": "relative_magnitude_scaled", "label": "Relative magnitude, each move scaled to its own normal volatility, not raw points", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "laggard_lottery", "description": "The laggard lottery: trading whichever instrument has not moved yet on mechanical catch-up logic, with no tape confirmation." },
+    { "id": "trade_first_spike", "description": "Trading the headline's first spike before the chain confirms order and breadth." },
+    { "id": "lead_lag_inversion_ignored", "description": "Ignoring lead-lag inversion (equities moving before rates on a macro headline), a red flag for bad sourcing or a non-macro driver." }
   ],
-  "figure_type": "price_path_level_interaction",
-  "learning_mode": "static_explanatory",
-  "interaction": "none",
+  "figure_type": "catalyst_transmission_chain",
+  "learning_mode": "step_through_sequence",
+  "interaction": "step_through",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Catalyst Transmission Chain"
-    }
+    { "id": "chain_flow", "role": "timeline", "title": "Catalyst transmission chain", "grid": "row:1 col:1-2" },
+    { "id": "breadth_branches", "role": "read_branches", "title": "Confirmed chain vs single-instrument twitch", "grid": "row:2 col:1-2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-2 col:3" }
   ],
-  "annotations": [],
+  "sequence": [
+    { "step": 0, "caption": "Catalyst prints: a hot 8:30 employment-class release.", "reveal": ["chain_flow", "transmission_chain_order"] },
+    { "step": 1, "caption": "Leader. ZN drops 18 ticks in under a second; rates reprice the policy path first.", "reveal": ["leader_truth_instrument"] },
+    { "step": 2, "caption": "Transmitter. 6E loses 35 pips inside the first minute, confirming the rate-differential read.", "reveal": ["breadth_confirmation"] },
+    { "step": 3, "caption": "Index dampened. NQ falls 60 then chops a 40-point band for ten minutes while ZN keeps bleeding: the equity leg is gamma-absorbed and pending, not cancelled.", "reveal": ["gamma_filtered_second_stage"] },
+    { "step": 4, "caption": "Delayed transmission. At 09:40 NQ breaks the band and travels 140 points with shallow pullbacks, tradeable at far better location than the 8:30 vacuum.", "reveal": ["relative_magnitude_scaled"] },
+    { "step": 5, "caption": "Breadth contrast. A 13:10 geopolitical headline: CL +90c with GC, ZN, and ES participating is a coherent risk-off chain; the same class with CL moving alone round-trips inside twenty minutes.", "reveal": ["breadth_branches"] }
+  ],
+  "annotations": [
+    { "id": "leader_arrow", "type": "arrow", "target": "leader_truth_instrument", "text": "ZN first second, then 6E first minute" },
+    { "id": "gamma_callout", "type": "callout", "target": "gamma_filtered_second_stage", "text": "NQ quiet = hedging absorbing; leg pending, not cancelled" },
+    { "id": "breadth_label", "type": "label", "target": "breadth_confirmation", "text": "Leaders prove the story, laggards prove the breadth" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Catalyst Transmission Chain (mapped from \"Flow diagram\").",
-    "instruments": []
+    "description": "Two synthetic catalyst events. Macro: a hot 8:30 release, ZN drops 18 ticks in under a second, 6E loses 35 pips in the first minute, NQ falls 60 then chops a 40-point band for ten minutes while ZN bleeds, then at 09:40 NQ breaks and runs 140 points. Geopolitical 13:10: CL jumps 90 cents with GC popping, ZN bid, ES dipping (coherent risk-off chain) versus the same class where CL moves alone and round-trips inside twenty minutes.",
+    "instruments": ["ZN", "6E", "NQ", "CL", "GC", "ES"],
+    "notes": "Numbers taken from the Transmission Mechanism worked example in CH10 so the fixture can be checked against the manuscript."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH10",
-    "section_slug": "catalyst-transmission-chain",
-    "position": "after_section_heading"
+    "section_slug": "transmission-mechanism-order-effects",
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "catalyst_interpretation_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "The chain is drawn in order (leader, transmitters, laggards), not as simultaneous moves.",
+    "The leader is identified as the truth instrument and the index leg is shown as gamma-filtered and possibly delayed.",
+    "Breadth is shown as the test of whether the headline matters (coherent chain vs single-instrument twitch).",
+    "Magnitudes are scaled to each instrument's own volatility, not raw points.",
+    "Every required_evidence id is rendered and stamped (render-evidence check passes)."
   ]
 }

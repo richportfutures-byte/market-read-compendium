@@ -154,6 +154,20 @@ const ruleFamilies: Record<string, Rule[]> = {
     (s) => s.forbidden_errors.some((f) => /confirmation shopping|count.*agree|dismiss.*conflict|boredom/i.test(f.description)) ? null
       : "setup-quality figure must forbid confirmation shopping / counting only the agreeing layers",
   ],
+  catalyst_interpretation_rules: [
+    (s) => s.required_evidence.some((e) => /chain|leader|transmit|laggard|sequence|order/i.test(e.label)) ? null
+      : "catalyst figure must show the transmission chain order (leader, transmitters, laggards)",
+    (s) => s.required_evidence.some((e) => /rates|first mover|leader|truth|zn/i.test(e.label)) ? null
+      : "catalyst figure must show the leader as truth instrument (rates first on macro)",
+    (s) => s.required_evidence.some((e) => /breadth|confirm|coherent|participate/i.test(e.label)) ? null
+      : "catalyst figure must show breadth confirmation across instruments",
+    (s) => s.required_evidence.some((e) => /gamma|delay|second stage|damp|pending/i.test(e.label)) ? null
+      : "catalyst figure must show the gamma-filtered / delayed index second stage",
+    (s) => s.required_evidence.some((e) => /magnitude|scaled|volatility|relative/i.test(e.label)) ? null
+      : "catalyst figure must show relative magnitude scaled to each instrument's own volatility",
+    (s) => s.forbidden_errors.some((f) => /laggard|catch.?up|lottery/i.test(f.description)) ? null
+      : "catalyst figure must forbid the laggard lottery / catch-up logic",
+  ],
 };
 
 export function hasRuleFamily(name: string): boolean {
