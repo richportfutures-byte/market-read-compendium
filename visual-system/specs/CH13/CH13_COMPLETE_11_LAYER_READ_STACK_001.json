@@ -1,66 +1,67 @@
 {
   "figure_id": "CH13_COMPLETE_11_LAYER_READ_STACK_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH13",
-  "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
   "title": "Complete 11-Layer Read Stack",
-  "concept": "Complete 11-Layer Read Stack",
+  "concept": "Running the eleven context layers top-down, where the order is the content and each layer sets the conditions under which the next layer's evidence means anything",
   "source_refs": [
-    "CH13:complete-11-layer-read-stack"
+    "CH13:the-complete-read-stack-all-11-layers-in-sequence",
+    "CH13:common-full-stack-failures-where-the-chain-breaks"
   ],
-  "teaching_objective": "TODO: state what Complete 11-Layer Read Stack teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to run all eleven layers in order before the open with one written line each (calendar/catalyst, higher-timeframe auction, session, volatility regime, intermarket tone, structural location, tape confirmation, setup quality, execution permission, trade-state, review), letting the higher layer govern context and the lower govern timing, and re-running from the broken layer down when a state changes.",
+  "junior_error": "Signal shopping: treating the layers as a menu of independent signals and taking the same trade off the same visible thrust regardless of context, because the tape is the only layer his screen displays. A correct lower-layer read inside a wrong upper-layer context is not a smaller edge, it is a different trade, usually someone else's.",
+  "professional_read": "The same 9:32 thrust with identical delta is initiative continuation on a clean day (no events, prior imbalance with acceptance, quiet overnight, flat ZN) and unresolved post-event repricing on a corrupted day (hot 8:30 print, overnight spike-and-retrace, doubled realized vol, ZN one-timeframing lower). Same tape, different trade, because layers 1 through 5 differ.",
+  "decision_consequence": "The stack is the trade; the tape is its last sentence. A lower layer can delay a trade the upper layers permit but can never authorize one they forbid. A layer with no written output is skipped, not neutral.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "eleven_ordered_layers", "label": "All eleven layers in sequence: catalyst, HTF auction, session, volatility, intermarket, location, tape, setup, permission, trade-state, review", "required": true },
+    { "id": "order_is_content", "label": "Order is the content: each layer sets the conditions under which the next layer's evidence means anything (top-down)", "required": true },
+    { "id": "higher_governs_context", "label": "Higher layer governs context, lower layer governs timing; a lower layer can delay but never authorize", "required": true },
+    { "id": "same_tape_different_trade", "label": "Same tape, different trade: an identical thrust is a different trade when upper layers 1 to 5 differ", "required": true },
+    { "id": "written_layer_output", "label": "Each layer carries a written one-line output; a layer with no output is skipped, not neutral", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "signal_shopping", "description": "Signal shopping: treating the layers as a menu of independent signals and ordering from whichever one agrees with the trade already wanted." },
+    { "id": "tape_outside_context", "description": "Reading a tape signal outside its catalyst, regime, and location context (noise wearing a uniform)." },
+    { "id": "rerun_whole_stack_on_wiggle", "description": "Re-running the entire stack on every wiggle instead of re-running from the broken layer down." }
   ],
-  "figure_type": "price_path_level_interaction",
+  "figure_type": "read_stack_flow",
   "learning_mode": "static_explanatory",
   "interaction": "none",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Complete 11-Layer Read Stack"
-    }
+    { "id": "read_stack", "role": "chart", "title": "Eleven layers, top-down", "grid": "row:1 col:1-2" },
+    { "id": "same_tape_branches", "role": "read_branches", "title": "Same tape, two contexts", "grid": "row:2 col:1-2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-2 col:3" }
   ],
-  "annotations": [],
+  "annotations": [
+    { "id": "order_label", "type": "label", "target": "order_is_content", "text": "The order is the content; the top governs the bottom" },
+    { "id": "contrast_callout", "type": "callout", "target": "same_tape_different_trade", "text": "Identical 9:32 thrust; layers 1 to 5 differ" },
+    { "id": "govern_arrow", "type": "arrow", "target": "higher_governs_context", "text": "Lower layer delays, never authorizes" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Complete 11-Layer Read Stack (mapped from \"Stack-flow diagram\").",
-    "instruments": []
+    "description": "Two synthetic ES mornings with an identical 9:32 thrust (three up bars, cumulative delta near +7,000, open 5512 above prior value-area high 5506). Day one: no scheduled events, prior day imbalanced higher with acceptance, quiet overnight upper third, moderate regime, ZN flat, read as initiative continuation, prepared long on the pullback to 5508. Day two: identical thrust but a hot 8:30 release, overnight spiked down and fully retraced, realized volatility doubled, ZN one-timeframing lower, read as unresolved post-event repricing and at least as likely short-covering rotation.",
+    "instruments": ["ES", "ZN"],
+    "notes": "Scenario taken from the Complete Read Stack worked example in CH13 so the fixture can be checked against the manuscript."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH13",
-    "section_slug": "complete-11-layer-read-stack",
-    "position": "after_section_heading"
+    "section_slug": "the-complete-read-stack-all-11-layers-in-sequence",
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "read_stack_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "All eleven layers are drawn in their fixed top-down order, not as an unordered set.",
+    "The figure shows the higher layer governing context and the lower governing timing.",
+    "The same-tape, different-trade contrast is shown driven by the upper layers, not the tape.",
+    "Each layer is shown with a written one-line output slot, making a skipped layer visible.",
+    "Every required_evidence id is rendered and stamped (render-evidence check passes)."
   ]
 }

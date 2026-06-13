@@ -168,6 +168,20 @@ const ruleFamilies: Record<string, Rule[]> = {
     (s) => s.forbidden_errors.some((f) => /laggard|catch.?up|lottery/i.test(f.description)) ? null
       : "catalyst figure must forbid the laggard lottery / catch-up logic",
   ],
+  read_stack_rules: [
+    (s) => s.required_evidence.some((e) => /eleven|11|layer|stack/i.test(e.label)) ? null
+      : "read-stack figure must show all eleven ordered layers",
+    (s) => s.required_evidence.some((e) => /order|top.?down|sequence|govern/i.test(e.label)) ? null
+      : "read-stack figure must show that the order is the content (top-down)",
+    (s) => s.required_evidence.some((e) => /higher|lower|context|timing|conflict/i.test(e.label)) ? null
+      : "read-stack figure must show higher governs context, lower governs timing",
+    (s) => s.required_evidence.some((e) => /same tape|different trade|context/i.test(e.label)) ? null
+      : "read-stack figure must show same tape, different trade by upper-layer context",
+    (s) => s.required_evidence.some((e) => /written|output|one line|consult/i.test(e.label)) ? null
+      : "read-stack figure must show each layer's written output (no skipped layers)",
+    (s) => s.forbidden_errors.some((f) => /signal shopping|menu|isolation|skipping/i.test(f.description)) ? null
+      : "read-stack figure must forbid signal shopping / treating layers as an independent menu",
+  ],
 };
 
 export function hasRuleFamily(name: string): boolean {
