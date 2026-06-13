@@ -1,0 +1,40 @@
+{
+  "figure_id": "CH01_TOUCH_VS_READ_001",
+  "version": "1.0.0",
+  "chapter": "CH01",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
+  "title": "The Read vs. The Touch",
+  "concept": "The level did not hold or break; the flow at the level held or broke, and the flow was on the screen the whole time.",
+  "source_refs": ["CH01:the-read-vs-the-touch"],
+  "teaching_objective": "Convert a level touch into a conditional, evidence-based read before the outcome resolves, instead of treating the touch as an entry trigger.",
+  "junior_error": "The touch-as-signal reflex: shorting 5484.00 because price hit resistance, with no response signature required first.",
+  "professional_read": "The touch raises information density; the read comes from how the auction responds (volume, delta vs displacement, DOM behavior, speed, post-touch structure).",
+  "decision_consequence": "Absorption with no progression resolves to a responsive short; lift-through that holds the retest resolves to a continuation long. Same line, opposite decisions.",
+  "required_evidence": [
+    { "id": "volume_signature", "label": "Volume signature at the touch", "required": true },
+    { "id": "delta_vs_displacement", "label": "Delta against displacement", "required": true },
+    { "id": "dom_refresh_or_pull", "label": "DOM refresh vs pull", "required": true },
+    { "id": "speed_change", "label": "Speed change at the level", "required": true },
+    { "id": "post_touch_structure", "label": "Post-touch structure (retest)", "required": true }
+  ],
+  "forbidden_errors": [
+    { "id": "touch_as_signal", "description": "Do not imply the touch itself is a tradable signal." },
+    { "id": "no_evidence_entry", "description": "Do not show an entry without a stated response signature." }
+  ],
+  "figure_type": "event_evidence_read_decision_pipeline",
+  "learning_mode": "static_explanatory",
+  "interaction": "reveal",
+  "outputs": ["static_svg", "interactive_html"],
+  "placement": {
+    "chapter": "CH01",
+    "section_slug": "the-read-vs-the-touch",
+    "position": "after_in_practice"
+  },
+  "export": { "width": 1100, "height": 430 },
+  "qa": {
+    "domain_rule_family": "event_read_rules",
+    "render_evidence_check": true,
+    "visual_snapshot": true
+  }
+}

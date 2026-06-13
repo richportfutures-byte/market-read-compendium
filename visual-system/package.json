@@ -1,0 +1,20 @@
+{
+  "name": "visual-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Schema-driven visual learning system for the Market-Read Compendium. Slice-zero thread: spec -> registry -> render -> render-evidence QA -> spec QA -> SVG export -> chapter injection.",
+  "scripts": {
+    "validate:specs": "tsx packages/figure-spec/validateAllSpecs.ts",
+    "test:render-qa": "tsx scripts/runRenderQa.ts",
+    "test:domain": "tsx scripts/runDomainQa.ts",
+    "export:figures": "tsx packages/export/exportAll.ts",
+    "inject:chapters": "tsx packages/integration/injectFigures.ts",
+    "author:draft": "tsx packages/authoring/draftSpecFromChapter.ts",
+    "demo:negative": "tsx scripts/demoNegativeRender.ts",
+    "gate": "tsx scripts/gate.ts"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  }
+}
