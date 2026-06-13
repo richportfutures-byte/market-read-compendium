@@ -1,66 +1,71 @@
 {
   "figure_id": "CH05_MOMENTUM_VS_DRIFT_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH05",
-  "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
-  "title": "Momentum vs Drift",
-  "concept": "Momentum vs Drift",
-  "source_refs": [
-    "CH05:momentum-vs-drift"
-  ],
-  "teaching_objective": "TODO: state what Momentum vs Drift teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
+  "title": "Momentum vs. Drift",
+  "concept": "Two moves of identical size and duration are opposite trades: momentum is initiative participation displacing price through liquidity, drift is price sliding through a vacuum. The distinction is not slope or distance, it is whether new money is paying up to move the market.",
+  "source_refs": ["CH05:momentum-vs-drift"],
+  "teaching_objective": "Classify a directional move as momentum or drift from volume per unit of price, delta alignment, and book behavior, not from chart slope or distance, before applying any continuation tactic.",
+  "junior_error": "Seeing the same 60 points on both charts and treating them identically: buying the lunch 'breakout' with full size because the price shape matches the morning move that worked.",
+  "professional_read": "Momentum shows heavy volume with range expansion, sustained one-sided delta, dips bought within seconds, and offers consumed then reloading thinner. Drift shows small overlapping bars on shrinking volume, flat or trivial delta, a thin book on both sides, and a glide with no pullbacks.",
+  "decision_consequence": "Momentum authorizes continuation tactics at full size. Drift authorizes no continuation; it is mean-reversion fuel that the first real opposing flow returns to the drift origin in one leg.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "volume_signature", "label": "Volume signature: heavy with range expansion vs small bars on shrinking volume", "required": true },
+    { "id": "delta_behavior", "label": "Delta: sustained one-sided vs flat, mixed, or trivial", "required": true },
+    { "id": "dom_behavior", "label": "Book: consumed and reloading thinner vs thin on both sides", "required": true },
+    { "id": "pullback_character", "label": "Pullbacks: bought or sold quickly vs no pullbacks, a glide", "required": true },
+    { "id": "tape_speed_print_size", "label": "Tape: clustered large prints and speed vs minimum-size dribbles", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "distance_slope_equivalence", "description": "Do not imply momentum and drift are distinguishable by slope, distance, or chart shape; they look identical on a candle chart." },
+    { "id": "continuation_on_drift", "description": "Do not depict a full-size continuation trade on drift as correct; drift dies on first contact with real flow." },
+    { "id": "covering_as_demand", "description": "Do not show a short-covering burst as initiative demand." },
+    { "id": "price_is_participation", "description": "Do not imply price movement equals money or participation moving." }
   ],
-  "figure_type": "acceptance_rejection_comparison",
+  "figure_type": "momentum_participation_comparison",
   "learning_mode": "toggle_comparison",
   "interaction": "toggle",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Momentum vs Drift"
-    }
+    { "id": "shared_move", "role": "price_path", "title": "Two upward moves, both 60 points, both ~40 minutes (shared scale)", "grid": "row:1 col:1-3" },
+    { "id": "participation", "role": "chart", "title": "Volume and delta under the move (toggles: momentum / drift)", "grid": "row:2 col:1-2" },
+    { "id": "book", "role": "dom_ladder", "title": "Book depth at the working level", "grid": "row:2 col:3" },
+    { "id": "evidence", "role": "evidence_rail", "title": "Classify the participation", "grid": "row:1-2 col:4" },
+    { "id": "forbidden", "role": "forbidden_rail", "title": "Must not imply", "grid": "row:3 col:1-4" }
   ],
-  "annotations": [],
+  "sequence": [
+    { "step": 0, "caption": "Momentum: 09:52 break of the overnight high at 21,540, breakout bar volume triple the prior bar, cumulative delta sharply positive and held, every 2-3 point dip bought, offers consumed and reloading thinner.", "reveal": ["participation", "book", "volume_signature", "delta_behavior", "dom_behavior", "pullback_character", "tape_speed_print_size"] },
+    { "step": 1, "caption": "Drift: 12:25 creep from 21,560 to 21,620 in small overlapping bars, total volume below that single 09:52 breakout bar, flat delta, 3-4 lot quotes where the morning showed 30-lots. First real sell program unwinds it to origin in nine minutes.", "reveal": ["participation", "book", "volume_signature", "delta_behavior", "dom_behavior", "pullback_character", "tape_speed_print_size"] }
+  ],
+  "annotations": [
+    { "id": "anno_same_distance", "type": "bracket", "target": "shared_move", "text": "Same 60 points, same duration. Distance and slope cannot classify participation." },
+    { "id": "anno_origin", "type": "callout", "target": "participation", "text": "Drift state: first opposing flow returns price to the drift origin in one leg." }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Momentum vs Drift (mapped from \"Same-distance comparison\").",
-    "instruments": []
+    "description": "Two NQ upward moves of identical 60-point size and ~40-minute duration. MOMENTUM: starts 09:52 out of a tested opening low, breaks the overnight high 21,540, breakout 5-minute bar volume triple the prior bar, cumulative delta sharply positive and sustained, 2-3 point dips bought within seconds, offers consumed and reloading thinner. DRIFT: starts 12:25, creeps 21,560 to 21,620 in small overlapping bars, total volume across the whole move below the single 09:52 breakout bar, flat delta, DOM showing 3-4 lot quotes versus 30-lots in the morning, then a single sell program at 13:40 unwinds the move to its origin in nine minutes.",
+    "instruments": ["NQ"],
+    "notes": "Static teaching fixture, bounded volume/delta/DOM counts, renders in SVG without Canvas. The toggle exposes exactly two participation states over an identical-distance move."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH05",
     "section_slug": "momentum-vs-drift",
-    "position": "after_section_heading"
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1280, "height": 760 },
   "qa": {
     "domain_rule_family": "momentum_sponsorship_rules",
-    "render_evidence_check": false,
-    "visual_snapshot": false
+    "render_evidence_check": true,
+    "visual_snapshot": true
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "Both moves render at identical distance and duration, so the comparison isolates participation, not chart shape.",
+    "All five evidence items are drawn for each state with opposing values.",
+    "The momentum state shows a consumed and reloading book with sustained delta and bought dips; the drift state shows a thin book, flat delta, and no pullbacks.",
+    "The figure never depicts slope or distance as the classifier.",
+    "The drift state shows reversion to the drift origin as the consequence; the momentum state shows continuation.",
+    "The toggle switches between exactly two states, not more."
   ]
 }

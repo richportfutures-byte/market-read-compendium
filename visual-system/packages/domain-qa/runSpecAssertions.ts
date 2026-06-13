@@ -22,6 +22,16 @@ const ruleFamilies: Record<string, Rule[]> = {
     (s) => s.forbidden_errors.some((f) => /touch.*signal|signal.*touch/i.test(f.description)) ? null
       : "event-read figure must forbid treating the touch itself as a signal",
   ],
+  momentum_sponsorship_rules: [
+    (s) => s.required_evidence.some((e) => /volume/i.test(e.label)) ? null
+      : "momentum figure must show volume signature (volume per unit of price)",
+    (s) => s.required_evidence.some((e) => /delta/i.test(e.label)) ? null
+      : "momentum figure must show delta alignment",
+    (s) => s.required_evidence.some((e) => /dom|book|tape|print/i.test(e.label)) ? null
+      : "momentum figure must show book or tape participation",
+    (s) => s.forbidden_errors.some((f) => /slope|distance|shape/i.test(f.description)) ? null
+      : "momentum figure must forbid classifying by slope, distance, or chart shape",
+  ],
   auction_profile_rules: [
     (s) => s.required_evidence.some((e) => /profile shape|symmetric|elongated/i.test(e.label)) ? null
       : "auction-profile figure must show profile shape (symmetric vs elongated)",
