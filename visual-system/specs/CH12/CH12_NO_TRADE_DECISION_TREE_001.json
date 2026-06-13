@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH12_NO_TRADE_DECISION_TREE_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH12",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "No-Trade Decision Tree",
+  "concept": "No-Trade Decision Tree",
+  "source_refs": [
+    "CH12:no-trade-decision-tree"
+  ],
+  "teaching_objective": "TODO: state what No-Trade Decision Tree teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "setup_quality_gate",
+  "learning_mode": "gate_checklist",
+  "interaction": "decision_gate",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "No-Trade Decision Tree"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for No-Trade Decision Tree (mapped from \"Decision tree\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH12",
+    "section_slug": "no-trade-decision-tree",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "setup_quality_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH08_SHORT_GAMMA_ACCELERATION_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH08",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Short-Gamma Acceleration",
+  "concept": "Short-Gamma Acceleration",
+  "source_refs": [
+    "CH08:short-gamma-acceleration"
+  ],
+  "teaching_objective": "TODO: state what Short-Gamma Acceleration teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "volatility_regime_map",
+  "learning_mode": "toggle_comparison",
+  "interaction": "toggle",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Short-Gamma Acceleration"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Short-Gamma Acceleration (mapped from \"Regime-behavior diagram\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH08",
+    "section_slug": "short-gamma-acceleration",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "volatility_regime_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH08_COMPRESSION_COIL_ACROSS_SESSIONS_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH08",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Compression Coil Across Sessions",
+  "concept": "Compression Coil Across Sessions",
+  "source_refs": [
+    "CH08:compression-coil-across-sessions"
+  ],
+  "teaching_objective": "TODO: state what Compression Coil Across Sessions teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "volatility_regime_map",
+  "learning_mode": "toggle_comparison",
+  "interaction": "toggle",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Compression Coil Across Sessions"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Compression Coil Across Sessions (mapped from \"Volatility regime map\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH08",
+    "section_slug": "compression-coil-across-sessions",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "volatility_regime_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

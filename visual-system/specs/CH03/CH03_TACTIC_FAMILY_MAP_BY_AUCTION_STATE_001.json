@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH03_TACTIC_FAMILY_MAP_BY_AUCTION_STATE_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH03",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Tactic-Family Map by Auction State",
+  "concept": "Tactic-Family Map by Auction State",
+  "source_refs": [
+    "CH03:tactic-family-map-by-auction-state"
+  ],
+  "teaching_objective": "TODO: state what Tactic-Family Map by Auction State teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "setup_quality_gate",
+  "learning_mode": "gate_checklist",
+  "interaction": "decision_gate",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Tactic-Family Map by Auction State"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Tactic-Family Map by Auction State (mapped from \"Decision map\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH03",
+    "section_slug": "tactic-family-map-by-auction-state",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "auction_profile_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

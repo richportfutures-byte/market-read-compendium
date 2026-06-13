@@ -11,8 +11,10 @@
     "export:figures": "tsx packages/export/exportAll.ts",
     "inject:chapters": "tsx packages/integration/injectFigures.ts",
     "author:draft": "tsx packages/authoring/draftSpecFromChapter.ts",
+    "gen:specs": "tsx packages/authoring/generateSpecPack.ts",
     "demo:negative": "tsx scripts/demoNegativeRender.ts",
-    "gate": "tsx scripts/gate.ts"
+    "gate": "tsx scripts/gate.ts",
+    "coverage": "tsx scripts/coverage.ts"
   },
   "dependencies": {
     "zod": "^3.25.76"

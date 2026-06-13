@@ -1,20 +1,17 @@
 import type { FigureSpec } from "../figure-spec/schema.ts";
 import { renderPipeline, type RenderOptions } from "./pipelineRenderer.ts";
 
-// Renderer map keyed by figure_type. Only the slice-zero type is wired now;
-// the rest are added as each renderer is built (issue 2: thin thread first).
 const rendererMap: Partial<Record<FigureSpec["figure_type"],
   (spec: FigureSpec, opts: RenderOptions) => string>> = {
   event_evidence_read_decision_pipeline: renderPipeline,
 };
 
-export type RenderResult = {
-  svg: string;
-  drawnEvidenceIds: string[]; // parsed from the SVG output, NOT read from the spec
-};
+export function hasRenderer(figureType: FigureSpec["figure_type"]): boolean {
+  return figureType in rendererMap;
+}
 
-// Extracts the evidence ids that the renderer ACTUALLY stamped into the output.
-// This is the heart of the issue-1 fix: we inspect the drawing, not the spec.
+export type RenderResult = { svg: string; drawnEvidenceIds: string[] };
+
 function extractDrawnEvidenceIds(svg: string): string[] {
   const ids = new Set<string>();
   const re = /data-evidence-id="([a-z0-9_]+)"/g;

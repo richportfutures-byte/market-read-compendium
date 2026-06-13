@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH13_READ_SETUP_PERMISSION_MANAGEMENT_PIPELINE_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH13",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Read → Setup → Permission → Management Pipeline",
+  "concept": "Read → Setup → Permission → Management Pipeline",
+  "source_refs": [
+    "CH13:read-setup-permission-management-pipeline"
+  ],
+  "teaching_objective": "TODO: state what Read → Setup → Permission → Management Pipeline teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "event_evidence_read_decision_pipeline",
+  "learning_mode": "static_explanatory",
+  "interaction": "reveal",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Read → Setup → Permission → Management Pipeline"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Read → Setup → Permission → Management Pipeline (mapped from \"Operating-system pipeline\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH13",
+    "section_slug": "read-setup-permission-management-pipeline",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "read_stack_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

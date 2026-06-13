@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH03_FAILED_BREAK_ABOVE_VALUE_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH03",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Failed Break Above Value",
+  "concept": "Failed Break Above Value",
+  "source_refs": [
+    "CH03:failed-break-above-value"
+  ],
+  "teaching_objective": "TODO: state what Failed Break Above Value teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "market_profile_static",
+  "learning_mode": "static_explanatory",
+  "interaction": "none",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Failed Break Above Value"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Failed Break Above Value (mapped from \"Annotated profile + price path\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH03",
+    "section_slug": "failed-break-above-value",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "auction_profile_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

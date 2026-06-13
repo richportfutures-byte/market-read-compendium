@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH05_MOMENTUM_VS_DRIFT_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH05",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Momentum vs Drift",
+  "concept": "Momentum vs Drift",
+  "source_refs": [
+    "CH05:momentum-vs-drift"
+  ],
+  "teaching_objective": "TODO: state what Momentum vs Drift teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "acceptance_rejection_comparison",
+  "learning_mode": "toggle_comparison",
+  "interaction": "toggle",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Momentum vs Drift"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Momentum vs Drift (mapped from \"Same-distance comparison\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH05",
+    "section_slug": "momentum-vs-drift",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "momentum_sponsorship_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

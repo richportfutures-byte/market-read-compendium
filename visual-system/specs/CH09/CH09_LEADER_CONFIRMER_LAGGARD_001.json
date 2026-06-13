@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH09_LEADER_CONFIRMER_LAGGARD_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH09",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Leader / Confirmer / Laggard",
+  "concept": "Leader / Confirmer / Laggard",
+  "source_refs": [
+    "CH09:leader-confirmer-laggard"
+  ],
+  "teaching_objective": "TODO: state what Leader / Confirmer / Laggard teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "price_path_level_interaction",
+  "learning_mode": "static_explanatory",
+  "interaction": "none",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Leader / Confirmer / Laggard"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Leader / Confirmer / Laggard (mapped from \"Role diagram\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH09",
+    "section_slug": "leader-confirmer-laggard",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "intermarket_confirmation_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

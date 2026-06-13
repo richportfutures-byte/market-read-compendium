@@ -1,6 +1,6 @@
 {
   "figure_id": "CH01_TOUCH_VS_READ_001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "chapter": "CH01",
   "tier": "TIER_1_CANONICAL",
   "status": "validated",
@@ -9,8 +9,8 @@
   "source_refs": ["CH01:the-read-vs-the-touch"],
   "teaching_objective": "Convert a level touch into a conditional, evidence-based read before the outcome resolves, instead of treating the touch as an entry trigger.",
   "junior_error": "The touch-as-signal reflex: shorting 5484.00 because price hit resistance, with no response signature required first.",
-  "professional_read": "The touch raises information density; the read comes from how the auction responds (volume, delta vs displacement, DOM behavior, speed, post-touch structure).",
-  "decision_consequence": "Absorption with no progression resolves to a responsive short; lift-through that holds the retest resolves to a continuation long. Same line, opposite decisions.",
+  "professional_read": "The touch raises information density; the read is built from how the auction responds: volume signature, delta versus displacement, DOM refresh versus pull, speed change, and post-touch structure.",
+  "decision_consequence": "Absorption with no upward progression resolves to a responsive short; a lift-through that holds the retest resolves to a continuation long. Same line, opposite decisions.",
   "required_evidence": [
     { "id": "volume_signature", "label": "Volume signature at the touch", "required": true },
     { "id": "delta_vs_displacement", "label": "Delta against displacement", "required": true },
@@ -25,6 +25,28 @@
   "figure_type": "event_evidence_read_decision_pipeline",
   "learning_mode": "static_explanatory",
   "interaction": "reveal",
+  "panels": [
+    { "id": "event", "role": "callout", "title": "Event: touch of 5484.00", "grid": "row:1 col:1" },
+    { "id": "evidence", "role": "evidence_rail", "title": "Evidence on the tape", "grid": "row:1 col:2" },
+    { "id": "reads", "role": "read_branches", "title": "Read", "grid": "row:1 col:3" },
+    { "id": "decision", "role": "decision", "title": "Decision", "grid": "row:1 col:4" }
+  ],
+  "sequence": [
+    { "step": 0, "caption": "An event occurs: price touches 5484.00.", "reveal": ["event"] },
+    { "step": 1, "caption": "Read the evidence the touch makes observable.", "reveal": ["evidence"] },
+    { "step": 2, "caption": "Two reads diverge from the same touch.", "reveal": ["reads"] },
+    { "step": 3, "caption": "Each read yields a different decision.", "reveal": ["decision"] }
+  ],
+  "annotations": [
+    { "id": "anno_absorption", "type": "callout", "target": "reads", "text": "Effort without upward progression: absorption, then rejection." },
+    { "id": "anno_acceptance", "type": "callout", "target": "reads", "text": "Lift through, retest holds, sell delta shrinks: acceptance." }
+  ],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "Two synthetic touch sequences at 5484.00: (A) +1800 cumulative delta with five offer refreshes and no print above 5484.00, then flush to 5482.50; (B) similar delta but lift to 5484.75, pullback holds 5484.00 from above with shrinking sell delta.",
+    "instruments": ["ES"],
+    "notes": "Both sequences must resolve within a three-minute window to match the chapter's claim that every distinguishing fact was visible in three minutes."
+  },
   "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH01",
@@ -36,5 +58,12 @@
     "domain_rule_family": "event_read_rules",
     "render_evidence_check": true,
     "visual_snapshot": true
-  }
+  },
+  "acceptance_criteria": [
+    "All five required evidence items are drawn and visible.",
+    "Both reads (rejection and acceptance) branch from the same single touch event.",
+    "Each read terminates in a distinct decision state.",
+    "The figure never depicts the bare touch as an entry trigger.",
+    "Reveal sequence advances event -> evidence -> read -> decision in order."
+  ]
 }

@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH05_ELIGIBLE_TACTIC_FAMILIES_BY_DAY_TYPE_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH05",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Eligible Tactic Families by Day Type",
+  "concept": "Eligible Tactic Families by Day Type",
+  "source_refs": [
+    "CH05:eligible-tactic-families-by-day-type"
+  ],
+  "teaching_objective": "TODO: state what Eligible Tactic Families by Day Type teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "classification_matrix",
+  "learning_mode": "classification_drill",
+  "interaction": "classification",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Eligible Tactic Families by Day Type"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Eligible Tactic Families by Day Type (mapped from \"Permission matrix\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH05",
+    "section_slug": "eligible-tactic-families-by-day-type",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "momentum_sponsorship_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

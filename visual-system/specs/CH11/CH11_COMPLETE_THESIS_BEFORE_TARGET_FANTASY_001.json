@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH11_COMPLETE_THESIS_BEFORE_TARGET_FANTASY_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH11",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Complete Thesis Before Target Fantasy",
+  "concept": "Complete Thesis Before Target Fantasy",
+  "source_refs": [
+    "CH11:complete-thesis-before-target-fantasy"
+  ],
+  "teaching_objective": "TODO: state what Complete Thesis Before Target Fantasy teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "trade_state_lifecycle",
+  "learning_mode": "step_through_sequence",
+  "interaction": "step_through",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Complete Thesis Before Target Fantasy"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Complete Thesis Before Target Fantasy (mapped from \"Lifecycle visual\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH11",
+    "section_slug": "complete-thesis-before-target-fantasy",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "trade_state_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

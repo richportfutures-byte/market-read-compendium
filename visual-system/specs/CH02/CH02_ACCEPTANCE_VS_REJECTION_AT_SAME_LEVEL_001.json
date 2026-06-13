@@ -1,0 +1,71 @@
+{
+  "figure_id": "CH02_ACCEPTANCE_VS_REJECTION_AT_SAME_LEVEL_001",
+  "version": "1.0.0",
+  "chapter": "CH02",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
+  "title": "Acceptance vs. Rejection at the Same Level",
+  "concept": "The same break of the same level resolves into opposite trades depending on whether the auction accepts the new prices (time, volume, value migration) or rejects them (fast probe, snap-back, excess tail).",
+  "source_refs": ["CH02:acceptance-vs-rejection"],
+  "teaching_objective": "Judge a break as acceptance or rejection from time, volume, and behavior beyond the level, not from a price cross or a single candle close.",
+  "junior_error": "Verdict-by-touch: declaring the break real because price crossed the line or one candle closed above it, which means buying every rejection at its extreme.",
+  "professional_read": "Acceptance shows successive periods building volume beyond the reference, value migrating through it, pullbacks holding above where passive demand rebuilds, and two-sided business. Rejection shows a thin fast probe, the book above never lifted, a snap-back inside the range within minutes, negative delta answering the breakout buyers, and a single-print excess tail.",
+  "decision_consequence": "Acceptance authorizes trading with the break (continuation long above a held former resistance). Rejection flips the bias to a responsive short against the trapped breakout longs, who become the move's fuel.",
+  "required_evidence": [
+    { "id": "time_volume_beyond_level", "label": "Time and volume built beyond the level", "required": true },
+    { "id": "value_migration", "label": "Value area / POC migration relative to the level", "required": true },
+    { "id": "pullback_structure", "label": "Pullback holds above vs snap-back through", "required": true },
+    { "id": "delta_on_return", "label": "Delta behavior on the return", "required": true },
+    { "id": "profile_shape", "label": "Profile shape: fattened vs single-print excess tail", "required": true }
+  ],
+  "forbidden_errors": [
+    { "id": "verdict_by_touch", "description": "Do not depict a single price cross or one candle close above the level as acceptance." },
+    { "id": "accept_without_time", "description": "Do not show acceptance without successive periods of building time and volume." },
+    { "id": "symmetric_timescale", "description": "Do not imply rejection and acceptance resolve on the same timescale; rejection is fast, acceptance is slow to prove." },
+    { "id": "omit_trapped_longs", "description": "Do not omit that rejection traps the breakout longs and converts them into fuel." }
+  ],
+  "figure_type": "acceptance_rejection_comparison",
+  "learning_mode": "toggle_comparison",
+  "interaction": "toggle",
+  "panels": [
+    { "id": "level_ref", "role": "price_path", "title": "Prior day high 21,560 (shared reference)", "grid": "row:1 col:1-3" },
+    { "id": "state_path", "role": "price_path", "title": "Price path (toggles by state)", "grid": "row:2 col:1-2" },
+    { "id": "profile", "role": "profile", "title": "Profile at the level (toggles by state)", "grid": "row:2 col:3" },
+    { "id": "evidence", "role": "evidence_rail", "title": "Read the evidence", "grid": "row:1-2 col:4" },
+    { "id": "forbidden", "role": "forbidden_rail", "title": "Must not imply", "grid": "row:3 col:1-4" }
+  ],
+  "sequence": [
+    { "step": 0, "caption": "Acceptance: 40 minutes building 21,560-21,585, value migrating up through 21,560, pullbacks holding 21,561-63.", "reveal": ["state_path", "profile", "time_volume_beyond_level", "value_migration", "pullback_structure", "delta_on_return", "profile_shape"] },
+    { "step": 1, "caption": "Rejection: 90-second spike to 21,576 on thinning prints, back to 21,552 in 4 minutes, single prints 21,562-21,576.", "reveal": ["state_path", "profile", "time_volume_beyond_level", "value_migration", "pullback_structure", "delta_on_return", "profile_shape"] }
+  ],
+  "annotations": [
+    { "id": "anno_same_level", "type": "bracket", "target": "level_ref", "text": "Same level, same break time (10:05). The level does not decide; the response does." },
+    { "id": "anno_trapped", "type": "callout", "target": "state_path", "text": "Rejection state: trapped breakout longs above 21,560 are the short's fuel." }
+  ],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "Two NQ sequences at prior-day high 21,560, both breaking at 10:05. ACCEPT: lift to 21,574, then 40 minutes building 21,560-21,585 with volume fattening at 21,568, pullbacks bottoming 21,561-63 with bid refresh, developing VAH migrating up through 21,560. REJECT: 90-second spike to 21,576 on thinning prints, book above 21,576 never lifted, return to 21,552 within 4 minutes with deeply negative delta, single prints 21,562-21,576 leaving an excess tail.",
+    "instruments": ["NQ"],
+    "notes": "Counts and prices are fixed and bounded; static teaching fixture, renders in SVG without Canvas. The toggle exposes exactly two states (accept, reject) over an identical level reference."
+  },
+  "outputs": ["static_svg", "interactive_html"],
+  "placement": {
+    "chapter": "CH02",
+    "section_slug": "acceptance-vs-rejection",
+    "position": "after_in_practice"
+  },
+  "export": { "width": 1280, "height": 720 },
+  "qa": {
+    "domain_rule_family": "level_interaction_rules",
+    "render_evidence_check": true,
+    "visual_snapshot": true
+  },
+  "acceptance_criteria": [
+    "Both states render against the same level reference (21,560), so the comparison is genuinely same-level.",
+    "All five evidence items are drawn for each state with opposing values.",
+    "The acceptance state shows value migrating through the level; the rejection state shows value anchored inside plus a single-print excess tail.",
+    "The figure never depicts a single price cross or one candle close as acceptance.",
+    "The rejection state shows the trapped breakout longs as the consequence.",
+    "The toggle switches between exactly two states, not more."
+  ]
+}

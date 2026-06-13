@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH10_THESIS_EXPIRY_AT_EVENT_BOUNDARY_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH10",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Thesis Expiry at Event Boundary",
+  "concept": "Thesis Expiry at Event Boundary",
+  "source_refs": [
+    "CH10:thesis-expiry-at-event-boundary"
+  ],
+  "teaching_objective": "TODO: state what Thesis Expiry at Event Boundary teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "setup_quality_gate",
+  "learning_mode": "gate_checklist",
+  "interaction": "decision_gate",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Thesis Expiry at Event Boundary"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Thesis Expiry at Event Boundary (mapped from \"Lifecycle/gate visual\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH10",
+    "section_slug": "thesis-expiry-at-event-boundary",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "catalyst_interpretation_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

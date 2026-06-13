@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH02_FIRST_TOUCH_VS_THIRD_TOUCH_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH02",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "First Touch vs Third Touch",
+  "concept": "First Touch vs Third Touch",
+  "source_refs": [
+    "CH02:first-touch-vs-third-touch"
+  ],
+  "teaching_objective": "TODO: state what First Touch vs Third Touch teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "price_path_level_interaction",
+  "learning_mode": "static_explanatory",
+  "interaction": "none",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "First Touch vs Third Touch"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for First Touch vs Third Touch (mapped from \"Liquidity depletion visual\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH02",
+    "section_slug": "first-touch-vs-third-touch",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "level_interaction_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

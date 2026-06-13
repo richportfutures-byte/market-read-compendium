@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH12_VALID_TRIGGER_VS_LATE_TRIGGER_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH12",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Valid Trigger vs Late Trigger",
+  "concept": "Valid Trigger vs Late Trigger",
+  "source_refs": [
+    "CH12:valid-trigger-vs-late-trigger"
+  ],
+  "teaching_objective": "TODO: state what Valid Trigger vs Late Trigger teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "acceptance_rejection_comparison",
+  "learning_mode": "toggle_comparison",
+  "interaction": "toggle",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Valid Trigger vs Late Trigger"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Valid Trigger vs Late Trigger (mapped from \"Timing comparison\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH12",
+    "section_slug": "valid-trigger-vs-late-trigger",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "setup_quality_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

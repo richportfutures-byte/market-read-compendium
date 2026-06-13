@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH04_ACCEPTANCE_THROUGH_ABSORBED_LEVEL_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH04",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Acceptance Through Absorbed Level",
+  "concept": "Acceptance Through Absorbed Level",
+  "source_refs": [
+    "CH04:acceptance-through-absorbed-level"
+  ],
+  "teaching_objective": "TODO: state what Acceptance Through Absorbed Level teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "acceptance_rejection_comparison",
+  "learning_mode": "toggle_comparison",
+  "interaction": "toggle",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Acceptance Through Absorbed Level"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Acceptance Through Absorbed Level (mapped from \"Failed-absorption comparison\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH04",
+    "section_slug": "acceptance-through-absorbed-level",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "absorption_tape_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

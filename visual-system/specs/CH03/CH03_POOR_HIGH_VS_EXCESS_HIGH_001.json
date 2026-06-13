@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH03_POOR_HIGH_VS_EXCESS_HIGH_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH03",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Poor High vs Excess High",
+  "concept": "Poor High vs Excess High",
+  "source_refs": [
+    "CH03:poor-high-vs-excess-high"
+  ],
+  "teaching_objective": "TODO: state what Poor High vs Excess High teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "market_profile_static",
+  "learning_mode": "static_explanatory",
+  "interaction": "none",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Poor High vs Excess High"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Poor High vs Excess High (mapped from \"Profile anatomy diagram\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH03",
+    "section_slug": "poor-high-vs-excess-high",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "auction_profile_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

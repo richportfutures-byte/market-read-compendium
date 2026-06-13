@@ -9,8 +9,6 @@ export const TIERS = [
   "TIER_1_CANONICAL",
   "TIER_2_CHAPTER_SUPPORT",
   "TIER_3_ASSESSMENT",
-  // Note: the old TIER_4_OPTIONAL_DECORATIVE was removed.
-  // The system forbids decorative figures, so the tier that allowed them is gone.
 ] as const;
 
 export const FIGURE_STATUS = ["draft", "validated", "exported", "deprecated"] as const;
@@ -48,11 +46,23 @@ export const FIGURE_TYPES = [
   "setup_quality_gate",
   "trade_state_lifecycle",
   "read_stack_flow",
+  "classification_matrix",
+  "diagnostic_card",
 ] as const;
 
-// Where in the manuscript the figure is dropped (issue 4).
 export const PLACEMENT_POSITIONS = [
-  "after_section_heading", // immediately under the named heading
-  "after_in_practice",     // after the "In Practice" subsection of the section
-  "at_marker",             // at an explicit <!-- FIGURE:id --> comment in the chapter
+  "after_section_heading",
+  "after_in_practice",
+  "at_marker",
 ] as const;
+
+// Panel roles: the semantic slot a panel fills inside a figure.
+export const PANEL_ROLES = [
+  "price_path", "profile", "footprint", "dom_ladder", "delta",
+  "evidence_rail", "forbidden_rail", "read_branches", "decision",
+  "matrix", "timeline", "chart", "legend", "callout", "generic",
+] as const;
+
+export const ANNOTATION_TYPES = ["arrow", "bracket", "callout", "label", "zone"] as const;
+
+export const FIXTURE_KINDS = ["deterministic_synthetic", "none"] as const;

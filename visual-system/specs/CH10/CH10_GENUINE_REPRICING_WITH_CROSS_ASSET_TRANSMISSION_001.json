@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH10_GENUINE_REPRICING_WITH_CROSS_ASSET_TRANSMISSION_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH10",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Genuine Repricing with Cross-Asset Transmission",
+  "concept": "Genuine Repricing with Cross-Asset Transmission",
+  "source_refs": [
+    "CH10:genuine-repricing-with-cross-asset-transmission"
+  ],
+  "teaching_objective": "TODO: state what Genuine Repricing with Cross-Asset Transmission teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "catalyst_transmission_chain",
+  "learning_mode": "step_through_sequence",
+  "interaction": "step_through",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Genuine Repricing with Cross-Asset Transmission"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Genuine Repricing with Cross-Asset Transmission (mapped from \"Catalyst chain\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH10",
+    "section_slug": "genuine-repricing-with-cross-asset-transmission",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "catalyst_interpretation_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

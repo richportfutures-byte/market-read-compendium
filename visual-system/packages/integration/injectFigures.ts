@@ -55,10 +55,13 @@ function insertIndexFor(lines: string[], placement: any): number {
   return sectionEnd;
 }
 
-export function injectFigures(): { chaptersWritten: string[]; injected: string[] } {
+export function injectFigures(): { chaptersWritten: string[]; injected: string[]; skipped: string[] } {
   const reg = buildRegistry();
   const byChapterFile = new Map<string, typeof reg.entries>();
+  // Only validated figures are placed. Drafts have placeholder placements that
+  // do not bind to real headings yet, so they are not injected until promoted.
   for (const e of reg.entries) {
+    if (e.status !== "validated" && e.status !== "exported") continue;
     const file = join(ROOT, "chapters", `${e.chapter}.md`);
     if (!existsSync(file)) continue;
     (byChapterFile.get(file) ?? byChapterFile.set(file, []).get(file)!).push(e);
@@ -66,13 +69,19 @@ export function injectFigures(): { chaptersWritten: string[]; injected: string[]
 
   const chaptersWritten: string[] = [];
   const injected: string[] = [];
+  const skipped: string[] = [];
 
   for (const [file, entries] of byChapterFile) {
     let lines = readFileSync(file, "utf8").split("\n");
-    // insert from the bottom up so earlier indices stay valid
-    const planned = entries
-      .map((e) => ({ id: e.figure_id, at: insertIndexFor(lines, e.spec.placement) }))
-      .sort((a, b) => b.at - a.at);
+    const planned: { id: string; at: number }[] = [];
+    for (const e of entries) {
+      try {
+        planned.push({ id: e.figure_id, at: insertIndexFor(lines, e.spec.placement) });
+      } catch {
+        skipped.push(e.figure_id); // section not found yet; leave for human binding
+      }
+    }
+    planned.sort((a, b) => b.at - a.at); // insert bottom-up so indices stay valid
     for (const p of planned) {
       lines.splice(p.at, 0, embedBlock(p.id));
       injected.push(p.id);
@@ -81,11 +90,11 @@ export function injectFigures(): { chaptersWritten: string[]; injected: string[]
     writeFileSync(outFile, lines.join("\n"));
     chaptersWritten.push(outFile);
   }
-  return { chaptersWritten, injected };
+  return { chaptersWritten, injected, skipped };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const r = injectFigures();
-  console.log(`inject:chapters  injected ${r.injected.length} figure(s) into ${r.chaptersWritten.length} chapter file(s)`);
+  console.log(`inject:chapters  injected ${r.injected.length}, skipped ${r.skipped.length} (unresolved/section pending) into ${r.chaptersWritten.length} chapter file(s)`);
   for (const f of r.chaptersWritten) console.log(`  - ${f}`);
 }

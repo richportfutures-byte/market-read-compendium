@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH02_DEAD_LEVEL_AFTER_ACCEPTED_THROUGH_BEHAVIOR_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH02",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Dead Level After Accepted-Through Behavior",
+  "concept": "Dead Level After Accepted-Through Behavior",
+  "source_refs": [
+    "CH02:dead-level-after-accepted-through-behavior"
+  ],
+  "teaching_objective": "TODO: state what Dead Level After Accepted-Through Behavior teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "acceptance_rejection_comparison",
+  "learning_mode": "toggle_comparison",
+  "interaction": "toggle",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Dead Level After Accepted-Through Behavior"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Dead Level After Accepted-Through Behavior (mapped from \"Before/after level visual\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH02",
+    "section_slug": "dead-level-after-accepted-through-behavior",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "level_interaction_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

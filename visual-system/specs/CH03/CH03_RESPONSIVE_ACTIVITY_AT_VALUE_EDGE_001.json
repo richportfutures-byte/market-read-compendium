@@ -1,0 +1,66 @@
+{
+  "figure_id": "CH03_RESPONSIVE_ACTIVITY_AT_VALUE_EDGE_001",
+  "version": "0.0.1-draft",
+  "chapter": "CH03",
+  "tier": "TIER_2_CHAPTER_SUPPORT",
+  "status": "draft",
+  "title": "Responsive Activity at Value Edge",
+  "concept": "Responsive Activity at Value Edge",
+  "source_refs": [
+    "CH03:responsive-activity-at-value-edge"
+  ],
+  "teaching_objective": "TODO: state what Responsive Activity at Value Edge teaches the reader to do.",
+  "junior_error": "TODO: state the specific junior mistake this prevents.",
+  "professional_read": "TODO: state the professional read.",
+  "decision_consequence": "TODO: state the decision that follows.",
+  "required_evidence": [
+    {
+      "id": "todo_evidence",
+      "label": "TODO: define required evidence",
+      "required": true
+    }
+  ],
+  "forbidden_errors": [
+    {
+      "id": "todo_forbidden",
+      "description": "TODO: define a misread this figure must not imply."
+    }
+  ],
+  "figure_type": "market_profile_static",
+  "learning_mode": "static_explanatory",
+  "interaction": "none",
+  "panels": [
+    {
+      "id": "main",
+      "role": "generic",
+      "title": "Responsive Activity at Value Edge"
+    }
+  ],
+  "annotations": [],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "TODO: fixture for Responsive Activity at Value Edge (mapped from \"Profile interaction visual\").",
+    "instruments": []
+  },
+  "outputs": [
+    "static_svg",
+    "interactive_html"
+  ],
+  "placement": {
+    "chapter": "CH03",
+    "section_slug": "responsive-activity-at-value-edge",
+    "position": "after_section_heading"
+  },
+  "export": {
+    "width": 1100,
+    "height": 620
+  },
+  "qa": {
+    "domain_rule_family": "auction_profile_rules",
+    "render_evidence_check": false,
+    "visual_snapshot": false
+  },
+  "acceptance_criteria": [
+    "TODO: define acceptance criteria for this figure."
+  ]
+}

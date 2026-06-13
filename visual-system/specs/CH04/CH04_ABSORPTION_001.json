@@ -1,0 +1,75 @@
+{
+  "figure_id": "CH04_ABSORPTION_001",
+  "version": "1.0.0",
+  "chapter": "CH04",
+  "tier": "TIER_1_CANONICAL",
+  "status": "validated",
+  "title": "Absorption: Effort Without Result",
+  "concept": "Initiative aggressors spend heavy volume into a price that does not move, because passive size keeps reloading; the level holds and price resolves away from the absorbed side.",
+  "source_refs": ["CH04:tape-reading-and-microstructure"],
+  "teaching_objective": "Recognize absorption as effort without result, distinguished by aggressive volume and delta that fail to produce price progression because passive orders reload, then resolve away from the absorbed aggressors.",
+  "junior_error": "Reading heavy aggressive buying as bullish and joining it, or labeling any low-volume stall as absorption when no contest is actually being fought.",
+  "professional_read": "Aggressive traded volume and positive delta arrive into the level, the passive offer reloads repeatedly, price fails to print through, and the resolution comes against the side that spent the effort.",
+  "decision_consequence": "Confirmed absorption authorizes a responsive trade against the absorbed aggressors once price fails through and rolls; it does not authorize chasing the aggressive flow.",
+  "required_evidence": [
+    { "id": "aggressive_volume", "label": "Heavy aggressive traded volume into the level", "required": true },
+    { "id": "delta", "label": "Cumulative delta into the level", "required": true },
+    { "id": "passive_reload", "label": "Passive offer reloading at the level", "required": true },
+    { "id": "failure_to_progress", "label": "Failure to print through the level", "required": true },
+    { "id": "resolution_away", "label": "Resolution away from the absorbed side", "required": true }
+  ],
+  "forbidden_errors": [
+    { "id": "low_volume_pause_as_absorption", "description": "Do not label a low-volume pause as absorption; absorption requires a contest with heavy effort." },
+    { "id": "accepted_break_through", "description": "Do not show an accepted break through the absorbed level unless explicitly teaching failed absorption." },
+    { "id": "omit_delta", "description": "Do not omit delta; effort without result is unreadable without it." },
+    { "id": "omit_passive_reload", "description": "Do not omit the passive reload; it is the mechanism that produces the non-progression." },
+    { "id": "tape_authorizes_alone", "description": "Do not imply tape alone authorizes a trade outside auction context." }
+  ],
+  "figure_type": "footprint_dom_delta_sequence",
+  "learning_mode": "step_through_sequence",
+  "interaction": "step_through",
+  "panels": [
+    { "id": "price_path", "role": "price_path", "title": "Price path", "grid": "row:1 col:1" },
+    { "id": "footprint", "role": "footprint", "title": "Footprint", "grid": "row:1 col:2" },
+    { "id": "dom", "role": "dom_ladder", "title": "DOM ladder", "grid": "row:1 col:3" },
+    { "id": "delta", "role": "delta", "title": "Cumulative delta", "grid": "row:2 col:1-3" },
+    { "id": "evidence", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-2 col:4" },
+    { "id": "forbidden", "role": "forbidden_rail", "title": "Must not imply", "grid": "row:3 col:1-4" }
+  ],
+  "sequence": [
+    { "step": 0, "caption": "Aggressive buyers lift into the level; delta climbs.", "reveal": ["price_path", "delta", "aggressive_volume", "delta"] },
+    { "step": 1, "caption": "The passive offer reloads; the footprint shows volume without upward print progression.", "reveal": ["footprint", "dom", "passive_reload", "failure_to_progress"] },
+    { "step": 2, "caption": "Effort is spent. Price fails to print through the level.", "reveal": ["failure_to_progress"] },
+    { "step": 3, "caption": "Resolution comes against the absorbed aggressors.", "reveal": ["resolution_away"] }
+  ],
+  "annotations": [
+    { "id": "anno_effort", "type": "bracket", "target": "delta", "text": "Effort: large positive delta into the level." },
+    { "id": "anno_result", "type": "callout", "target": "price_path", "text": "Result: no print above the level." },
+    { "id": "anno_reload", "type": "arrow", "target": "dom", "text": "Offer refreshes repeatedly (iceberg signature)." }
+  ],
+  "fixture": {
+    "kind": "deterministic_synthetic",
+    "description": "A synthetic footprint/DOM/delta sequence at a single price: heavy aggressive buy volume with cumulative delta near +1800, an offer that refreshes at least five times, zero prints above the level, then a flush of roughly six ticks against the buyers.",
+    "instruments": ["ES"],
+    "notes": "Counts are bounded and fixed; this is a static teaching fixture, not live data, so it renders in SVG without Canvas."
+  },
+  "outputs": ["static_svg", "interactive_html"],
+  "placement": {
+    "chapter": "CH04",
+    "section_slug": "tape-reading-and-microstructure",
+    "position": "after_section_heading"
+  },
+  "export": { "width": 1280, "height": 720 },
+  "qa": {
+    "domain_rule_family": "absorption_tape_rules",
+    "render_evidence_check": true,
+    "visual_snapshot": true
+  },
+  "acceptance_criteria": [
+    "Aggressive volume, delta, passive reload, failure-to-progress, and resolution-away are all drawn and visible.",
+    "The figure never shows an accepted break through the absorbed level.",
+    "Delta is present in every step that claims effort.",
+    "The passive reload is visible on the DOM panel.",
+    "The resolution is drawn against the side that spent the effort, not with it."
+  ]
+}
