@@ -163,8 +163,8 @@ function drawPoc(parts: string[], opts: {
   side: "balance" | "trend";
 }): void {
   const y = priceY(opts.axisTop, opts.side === "balance" ? 6012 : 6024);
-  const labelX = opts.side === "balance" ? opts.x + 234 : opts.x + 104;
-  const labelY = opts.side === "balance" ? y - 38 : y + 16;
+  const labelX = opts.side === "balance" ? opts.x + 234 : opts.x + 86;
+  const labelY = opts.side === "balance" ? y - 38 : y + 26;
   const labelW = opts.side === "balance" ? 126 : 146;
   parts.push(line(opts.x + 72, y, opts.x + 256, y, c.evidence.price, 2.5));
   parts.push(rect(labelX, labelY, labelW, 26, {
@@ -187,22 +187,22 @@ function drawVolumeAtExtremes(parts: string[], opts: {
   y: number;
   side: "balance" | "trend";
 }): void {
+  const panelW = 182;
   const bars = opts.side === "balance"
     ? [
-      { label: "low", h: 34 },
-      { label: "mid", h: 88 },
-      { label: "high", h: 28 },
+      { label: "low", h: 24 },
+      { label: "mid", h: 58 },
+      { label: "high", h: 20 },
     ]
     : [
-      { label: "old", h: 32 },
-      { label: "break", h: 72 },
-      { label: "extension", h: 108 },
+      { label: "old", h: 22 },
+      { label: "break", h: 48 },
+      { label: "extension", h: 76 },
     ];
-  parts.push(rect(opts.x, opts.y, 172, 132, { fill: c.surface.panelRaised, stroke: c.text.muted, sw: 1, rx: 8 }));
-  parts.push(text(opts.x + 14, opts.y + 24, "EXTREME VOLUME", { size: 11, weight: 800, fill: c.text.secondary }));
+  parts.push(rect(opts.x, opts.y, panelW, 132, { fill: c.surface.panelRaised, stroke: c.text.muted, sw: 1, rx: 8 }));
   bars.forEach((bar, i) => {
     const bx = opts.x + 24 + i * 45;
-    const by = opts.y + 108 - bar.h;
+    const by = opts.y + 112 - bar.h;
     parts.push(rect(bx, by, 24, bar.h, {
       fill: opts.side === "balance" ? c.state.rejected : c.state.accepted,
       stroke: "none",
@@ -212,6 +212,7 @@ function drawVolumeAtExtremes(parts: string[], opts: {
     }));
     parts.push(text(bx + 12, opts.y + 122, bar.label, { size: 9, anchor: "middle", fill: c.text.muted }));
   });
+  parts.push(text(opts.x + 14, opts.y + 24, "EXTREME VOLUME", { size: 10, weight: 800, fill: c.text.secondary }));
   parts.push(text(opts.x + 14, opts.y + 48, opts.side === "balance" ? "contracts at high" : "expands on extension", {
     size: 10,
     fill: c.text.primary,
