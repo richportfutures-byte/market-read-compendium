@@ -94,10 +94,14 @@ function drawSharedOpeningPush(parts: string[], x: number, y: number, w: number)
 function drawPriceAxis(parts: string[], x: number, y: number): void {
   parts.push(line(x, y, x, y + 278, c.text.muted, 1));
   for (const bar of profileBars) {
-    const yy = y + (6032 - bar.price) * 9;
+    const yy = priceY(y, bar.price);
     parts.push(line(x - 5, yy, x + 5, yy, c.text.muted, 1));
     parts.push(text(x - 12, yy + 4, String(bar.price), { size: 10, anchor: "end", fill: c.text.muted, mono: true }));
   }
+}
+
+function priceY(axisTop: number, price: number): number {
+  return axisTop + (6032 - price) * 9;
 }
 
 function drawProfileBars(parts: string[], opts: {
@@ -110,7 +114,7 @@ function drawProfileBars(parts: string[], opts: {
   const scale = opts.side === "balance" ? 1 : 1.22;
   profileBars.forEach((bar, i) => {
     const width = Math.round((opts.side === "balance" ? bar.balance : bar.trend) * scale);
-    const yy = opts.y + i * 28;
+    const yy = priceY(opts.y, bar.price) - 8;
     const isPoc = opts.side === "balance" ? bar.price === 6012 : bar.price === 6024;
     parts.push(rect(opts.x, yy, width, 16, {
       fill: isPoc ? c.evidence.price : c.evidence.volume,
@@ -119,13 +123,6 @@ function drawProfileBars(parts: string[], opts: {
       rx: 3,
       evidenceId: opts.evidenceOnFirst && i === 0 ? "profile_shape" : undefined,
     }));
-    if (isPoc) {
-      parts.push(text(opts.x + width + 8, yy + 12, opts.side === "balance" ? "POC 6012" : "POC trails 6024", {
-        size: 11,
-        weight: 700,
-        fill: c.evidence.price,
-      }));
-    }
   });
   const shape = opts.side === "balance" ? "fat symmetric TPO bulge" : "elongated thin profile";
   smallLabel(parts, opts.x + maxW + 44, opts.y - 30, shape, c.evidence.volume, opts.side === "balance" ? 162 : 154);
@@ -162,19 +159,22 @@ function drawRotations(parts: string[], opts: {
 
 function drawPoc(parts: string[], opts: {
   x: number;
-  y: number;
+  axisTop: number;
   side: "balance" | "trend";
 }): void {
-  const y = opts.side === "balance" ? opts.y + 212 : opts.y + 128;
-  parts.push(line(opts.x + 72, y, opts.x + 418, y, c.evidence.price, 2.5));
-  parts.push(rect(opts.x + 326, y - 13, opts.side === "balance" ? 120 : 136, 26, {
+  const y = priceY(opts.axisTop, opts.side === "balance" ? 6012 : 6024);
+  const labelX = opts.side === "balance" ? opts.x + 234 : opts.x + 104;
+  const labelY = opts.side === "balance" ? y - 38 : y + 16;
+  const labelW = opts.side === "balance" ? 126 : 146;
+  parts.push(line(opts.x + 72, y, opts.x + 256, y, c.evidence.price, 2.5));
+  parts.push(rect(labelX, labelY, labelW, 26, {
     fill: c.surface.canvas,
     stroke: c.evidence.price,
     sw: 1,
     rx: 5,
     evidenceId: "poc_location",
   }));
-  parts.push(text(opts.x + (opts.side === "balance" ? 386 : 394), y + 4, opts.side === "balance" ? "POC parked" : "POC trailing up", {
+  parts.push(text(labelX + labelW / 2, labelY + 17, opts.side === "balance" ? "POC parked 6012" : "POC trails price", {
     size: 11,
     weight: 800,
     anchor: "middle",
@@ -234,13 +234,14 @@ function drawRegime(parts: string[], opts: {
 }): void {
   heading(parts, opts.x, opts.y, opts.title, opts.subtitle, opts.stroke);
   const bodyY = opts.y + 66;
+  const axisTop = bodyY + 72;
   parts.push(rect(opts.x, bodyY, 532, 448, { fill: c.surface.panel, stroke: opts.stroke, sw: 1.2, rx: 8 }));
   parts.push(text(opts.x + 18, bodyY + 28, "Developing profile", { size: 12, weight: 800, fill: c.text.secondary }));
-  drawPriceAxis(parts, opts.x + 70, bodyY + 72);
-  drawProfileBars(parts, { x: opts.x + 84, y: bodyY + 64, side: opts.side, evidenceOnFirst: true });
+  drawPriceAxis(parts, opts.x + 70, axisTop);
+  drawProfileBars(parts, { x: opts.x + 84, y: axisTop, side: opts.side, evidenceOnFirst: true });
   drawValueBehavior(parts, { x: opts.x + 270, y: bodyY + 20, side: opts.side });
   drawRotations(parts, { x: opts.x + 56, y: bodyY + 142, side: opts.side });
-  drawPoc(parts, { x: opts.x, y: bodyY + 64, side: opts.side });
+  drawPoc(parts, { x: opts.x, axisTop, side: opts.side });
   drawVolumeAtExtremes(parts, { x: opts.x + 342, y: bodyY + 248, side: opts.side });
   const tacticTitle = opts.side === "balance" ? "TACTIC: fade extremes" : "TACTIC: trade with extension";
   const tacticBody = opts.side === "balance"
@@ -253,16 +254,16 @@ function evidenceSummary(parts: string[], x: number, y: number): void {
   parts.push(rect(x, y, 170, 500, { fill: c.surface.panelRaised, stroke: c.evidence.price, sw: 1.2, rx: 8 }));
   parts.push(text(x + 16, y + 26, "REQUIRED EVIDENCE", { size: 11, weight: 800, fill: c.text.secondary }));
   const items = [
-    ["profile_shape", "fat profile vs thin profile"],
-    ["value_behavior", "overlap vs migration"],
-    ["volume_at_extremes", "contract vs expand"],
-    ["rotation_symmetry", "rotations vs extension"],
-    ["poc_location", "central vs trailing POC"],
+    ["Profile shape", "fat profile vs thin profile"],
+    ["Value behavior", "overlap vs migration"],
+    ["Extreme volume", "contract vs expand"],
+    ["Rotation quality", "rotations vs extension"],
+    ["POC location", "central vs trailing POC"],
   ];
   let yy = y + 54;
-  for (const [id, label] of items) {
+  for (const [title, label] of items) {
     parts.push(rect(x + 14, yy, 142, 48, { fill: c.surface.panel, stroke: c.evidence.price, sw: 1, rx: 6 }));
-    parts.push(text(x + 24, yy + 19, id, { size: 9, mono: true, weight: 800, fill: c.evidence.price }));
+    parts.push(text(x + 24, yy + 19, title, { size: 10, weight: 800, fill: c.evidence.price }));
     parts.push(text(x + 24, yy + 38, label, { size: 10, fill: c.text.primary }));
     yy += 62;
   }
@@ -309,7 +310,7 @@ export function renderMarketProfileStatic(spec: FigureSpec, _opts: RenderOptions
     stroke: c.state.accepted,
   });
 
-  parts.push(text(24, H - 20, "Card obligation: identical opening push; profile, value, volume, rotations, and POC decide the regime.", {
+  parts.push(text(24, H - 20, "Reader check: identical opening push; profile, value, volume, rotations, and POC decide the regime.", {
     size: 11,
     fill: c.text.muted,
   }));
