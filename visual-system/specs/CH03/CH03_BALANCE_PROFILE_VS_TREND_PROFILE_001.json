@@ -58,7 +58,7 @@
   "qa": {
     "domain_rule_family": "auction_profile_rules",
     "render_evidence_check": true,
-    "visual_snapshot": true
+    "visual_snapshot": false
   },
   "acceptance_criteria": [
     "Both regimes render from an identical opening push, so the comparison isolates the auction, not the candle.",

@@ -57,7 +57,7 @@
   "qa": {
     "domain_rule_family": "event_read_rules",
     "render_evidence_check": true,
-    "visual_snapshot": true
+    "visual_snapshot": false
   },
   "acceptance_criteria": [
     "All five required evidence items are drawn and visible.",

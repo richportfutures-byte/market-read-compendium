@@ -2,42 +2,37 @@
 
 Schema-driven visual judgment-training system for the Market-Read Compendium.
 
-This repository does not produce decorative diagrams. It produces validated,
-deterministic, reader-facing instructional figures whose job is to teach market-
-read distinctions from structured specs.
+This repository produces deterministic, reader-facing instructional figures from structured specs. The system is governed by `VISUAL_PRODUCTION_PROTOCOL.md`.
 
-## Governing standard
+## Governing Standard
 
-`CLAUDE.md` is the binding operating contract for renderer work and Phase B
-snapshot approval. If this README conflicts with `CLAUDE.md`, `CLAUDE.md` wins.
+`VISUAL_PRODUCTION_PROTOCOL.md` is the single source of truth for visual-aid production. `CLAUDE.md` is subordinate agent guidance. If any workflow, README text, prior approval label, generated review packet, or renderer-first practice conflicts with the protocol, the protocol wins.
 
-The governing approval standard is now absolute:
+Clean-slate visual approval state is now in force:
 
-> A Phase B PNG is approved only if it is a premium textbook-plate exemplar
-> strong enough to populate the finished handbook as-is and strong enough to
-> calibrate future figures of the same class.
+- Approved premium plates under the new protocol: zero.
+- Approved class grammars under the new protocol: zero.
+- Approved master plates under the new protocol: zero.
+- Existing specs and renderers may be legacy inputs, but they are not approved visual plates.
+- Prior rendered outputs and approval labels are legacy candidates only.
 
-That means:
-- No "acceptable for now" approvals.
-- No "good enough for Phase B" approvals.
-- No "correct but not final polish" approvals.
-- If a figure is correct and readable but still not premium, it is rejected.
+## Production Sequence
 
-## Current operating state
+The governing production sequence is:
 
-As of the current renderer-review pass, the spec pack contains:
-- 109 total figure specs.
-- 13 `validated` / gold specs.
-- 96 `draft` specs.
-- 13 renderer-backed gold figures in the current review tranche.
+1. Semantic spec.
+2. Class grammar.
+3. Approved composition target.
+4. Renderer implementation.
+5. QA.
+6. PNG review.
+7. Human sign-off.
 
-Verify live counts from the repo, not from this README:
+Renderer code remains production machinery, not art-direction authority. Coding agents implement approved targets after art direction and composition approval.
 
-```bash
-npm run coverage
-```
+Generated outputs under `out/` are not committed unless explicitly re-chartered.
 
-## Run it
+## Run It
 
 ```bash
 npm install
@@ -46,94 +41,29 @@ npm run coverage
 npm run snapshot:png <figure_id>
 ```
 
-The PNG is written to:
+The PNG snapshot command writes generated output to:
 
 ```txt
 out/png/<figure_id>.png
 ```
 
-`out/` is generated output and must not be committed.
+## Spec Pack Status
 
-## Phase semantics
+Figure specs carry `status` values such as `validated` or `draft`. Live counts must be verified from the repository, not from this README:
 
-### Phase B — premium exemplar review of the gold renderer tranche
+```bash
+npm run coverage
+```
 
-Phase B is the current operating phase for the 13 validated/gold renderer-backed
-figures.
+The gate refuses to render, domain-QA, or inject a draft until a human promotes it to `validated`.
 
-Phase B is not a smoke test and not a provisional publication pass. A human-
-approved Phase B snapshot must be premium final-book quality. Each approved PNG
-becomes a calibration exemplar for later figures.
+## Architecture Rules
 
-Required loop for each gold figure:
-1. Run the gate.
-2. Generate the PNG snapshot.
-3. Open the PNG.
-4. Review it as a reader against `CLAUDE.md`.
-5. If it fails, fix the renderer only.
-6. Re-run gate and snapshot.
-7. Commit focused renderer changes.
-8. Stop for human approval.
-
-A figure is not Phase B approved merely because it passes render QA. Render QA
-proves required evidence ids are present. Snapshot review proves readability.
-Human review decides whether the figure is a premium exemplar.
-
-Phase B hard rules:
-- The primary visual must encode the required evidence, not merely list it.
-- Generic placeholder renderers are hard failures.
-- Reader-facing labels must be clean instructional prose.
-- Raw internal ids, fixture keys, renderer keys, debug labels, and TODO/scaffold
-  text are not acceptable in approved snapshots unless the spec explicitly
-  requires them.
-- An approved figure must be worthy of insertion into the finished handbook as-is.
-- An approved figure must be worthy of serving as the visual precedent for its
-  figure class.
-- `qa.visual_snapshot` remains human-only.
-
-### Later phases
-
-Later phases expand scope; they do not lower the standard.
-- Full chapter expansion: promote and render the broader chapter inventory.
-- Assessment layer: build classification drills and decision-gate modules.
-- Capstone layer: build the CH13 integrated read-stack experience.
-- Packaging/final assembly: integrate approved figures into the finished handbook
-  and any presentation/export formats.
-
-## Spec pack status
-
-Each figure carries a `status`:
-- `validated` / gold: hand-authored, full teaching content, eligible for domain
-  QA, render QA, export, PNG snapshot review, and handbook population after
-  human approval.
-- `draft`: generated from the chapter inventory. Validates structurally, but is
-  not renderer work. Draft promotion is human/spec-authoring work.
-
-The gate refuses to render, domain-QA, or inject a draft until a human promotes
-it to `validated`.
-
-## QA responsibilities
-
-- Spec-level domain QA verifies that a validated spec declares the required
-  conceptual evidence and forbids dangerous misreads.
-- Render QA verifies that the rendered SVG actually stamps every required
-  `data-evidence-id`.
-- PNG snapshot review verifies readability and exemplar quality.
-- Human approval is the final decision.
-
-Do not confuse these layers. Gate GREEN is necessary, not sufficient.
-
-## Architecture rules
-
-- Specs are canonical.
-- The Figure Registry is the execution spine for inventory, QA, export, and
-  coverage.
+- Specs are semantic inputs, not composition authority.
+- The Figure Registry is the execution spine for inventory, QA, export, and coverage.
 - Renderers are pure deterministic `spec -> SVG string` functions.
-- No Canvas, browser APIs, DOM, localStorage, network, filesystem reads,
-  randomness, time dependence, runtime fetching, or animation in the renderer or
-  export path.
-- `snapshot:png` may use a headless browser only as a visual-review rasterizer,
-  off the export critical path.
+- No Canvas, browser APIs, DOM, localStorage, network, filesystem reads, randomness, time dependence, runtime fetching, or animation in the renderer or export path.
+- `snapshot:png` may use a headless browser only as a visual-review rasterizer, off the export critical path.
 - No live market data. Fixtures are deterministic synthetic only.
 - No broker, order, account, fill, margin, execution, P&L, or trading automation.
 
@@ -142,14 +72,14 @@ Do not confuse these layers. Gate GREEN is necessary, not sufficient.
 ```txt
 packages/
   figure-spec/        Zod schema + enums + validator
-  figure-registry/    single source of truth, built from validated specs
-  design-tokens/      token set; renderers never hardcode semantic color
+  figure-registry/    registry built from specs
+  design-tokens/      token set for renderers
   renderers/          pure SVG renderers + render map + evidence extraction
   domain-qa/          spec-level rules + output-level render assertions
   export/             headless SVG serialization + manifest
-  authoring/          draft-from-prose + full-pack generator
+  authoring/          authoring helpers and spec-pack tooling
   integration/        chapter injection
-specs/CH01..CH13/     109-figure spec pack
-scripts/              QA runners, negative demo, coverage, gate, snapshot
-out/svg/, out/png/    generated artifacts; never commit
+specs/CH01..CH13/     figure spec pack
+scripts/              QA runners, coverage, gate, snapshot
+out/                  generated artifacts, not committed unless re-chartered
 ```

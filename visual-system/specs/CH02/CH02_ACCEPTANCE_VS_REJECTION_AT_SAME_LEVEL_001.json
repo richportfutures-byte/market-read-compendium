@@ -58,7 +58,7 @@
   "qa": {
     "domain_rule_family": "level_interaction_rules",
     "render_evidence_check": true,
-    "visual_snapshot": true
+    "visual_snapshot": false
   },
   "acceptance_criteria": [
     "Both states render against the same level reference (21,560), so the comparison is genuinely same-level.",

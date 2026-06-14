@@ -79,7 +79,7 @@ export function draftSpecFromChapter(args: {
     outputs: ["static_svg", "interactive_html"],
     placement: { chapter: args.chapter, section_slug: slugify(args.sectionTitle), position: "after_in_practice" },
     export: { width: 1100, height: 360 },
-    qa: { domain_rule_family: args.ruleFamily, render_evidence_check: true, visual_snapshot: true },
+    qa: { domain_rule_family: args.ruleFamily, render_evidence_check: true, visual_snapshot: false },
   };
 
   const outPath = join(ROOT, "specs", args.chapter, `${args.figureId}.draft.json`);

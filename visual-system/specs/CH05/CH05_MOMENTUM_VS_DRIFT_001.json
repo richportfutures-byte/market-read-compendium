@@ -58,7 +58,7 @@
   "qa": {
     "domain_rule_family": "momentum_sponsorship_rules",
     "render_evidence_check": true,
-    "visual_snapshot": true
+    "visual_snapshot": false
   },
   "acceptance_criteria": [
     "Both moves render at identical distance and duration, so the comparison isolates participation, not chart shape.",

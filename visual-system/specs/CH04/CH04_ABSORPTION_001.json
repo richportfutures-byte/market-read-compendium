@@ -63,7 +63,7 @@
   "qa": {
     "domain_rule_family": "absorption_tape_rules",
     "render_evidence_check": true,
-    "visual_snapshot": true
+    "visual_snapshot": false
   },
   "acceptance_criteria": [
     "Aggressive volume, delta, passive reload, failure-to-progress, and resolution-away are all drawn and visible.",
