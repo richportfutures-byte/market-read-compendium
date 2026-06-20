@@ -1,46 +1,76 @@
 {
   "figure_id": "CH06_FORCED_EXIT_CASCADE_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH06",
   "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "status": "validated",
   "title": "Forced Exit Cascade",
-  "concept": "Forced Exit Cascade",
+  "concept": "A forced-exit cascade is not a large red move. It is a located trapped population crossing from optional exit to mandatory exit, then firing clustered stops into thinning liquidity.",
   "source_refs": [
-    "CH06:forced-exit-cascade"
+    "CH06:trapped-traders",
+    "CH06:failed-breakout-failed-breakdown",
+    "CH06:stop-runs-as-fuel",
+    "CH06:late-buyers-late-sellers"
   ],
-  "teaching_objective": "TODO: state what Forced Exit Cascade teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to read a forced-exit cascade as a sequence of located inventory conversion, not as generic downside momentum. The reader must locate the breakout entrant population, its stop pool, the deteriorating evidence at the extreme, the reentry trigger that turns optional exits into forced exits, the stop-pool activation path, and the defended branch that cancels the cascade. The cascade begins only after reentry and acceleration, never at the displacement bar and never from hindsight.",
+  "junior_error": "Seeing the fast break to 21,428 and calling it momentum or a trap only after the chart is complete, then shorting future breakouts before reentry because the last one cascaded. The junior misses the sequence: entrants first had to be located, absorption had to show they were vulnerable, 21,443 had to print with speed and sell volume, and the stops under 21,440 had to activate. Without that order, he is either late to the cascade or shorting a defended breakout.",
+  "professional_read": "The professional maps the 21,446 to 21,458 entrant population and the stop pool densest under 21,440 at the break of 21,445. Absorption at 21,456 to 21,458, positive delta with no price progress, marks vulnerability but not a trade. The cascade is live only when price fails back through 21,445 and 21,443 prints with a speed and sell-volume burst. That reentry forces late entrants out first, fires clustered stops from 21,443 through 21,440, thins the bid side, and carries the forced selling toward 21,428. If the pullback instead holds around 21,448 with bid refresh, sell absorption, and value migration toward 21,464, the cascade is cancelled.",
+  "decision_consequence": "Wait for the activation sequence before acting. A confirmed reentry and stop-pool activation can license a short toward the forced-exit target near 21,428, sized and managed as finite forced flow. Before activation, the correct action is no-trade or continuation-read evaluation. If the defended branch appears, the cascade thesis is dead and shorting the pullback is trading against value migration.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "entrant_population_entry_zone", "label": "Entrant population entry zone, 21,446 to 21,458, created by the break of 21,445", "required": true },
+    { "id": "forced_exit_stop_pool", "label": "Forced-exit stop pool, densest under 21,440, located before the cascade starts", "required": true },
+    { "id": "displacement_delta_and_volume", "label": "Displacement burst through 21,445 on positive delta and roughly 3x recent volume", "required": true },
+    { "id": "absorption_at_extreme", "label": "Absorption at the extreme, offers refresh at 21,456 to 21,458 while delta climbs and price does not progress", "required": true },
+    { "id": "reentry_trigger_21443", "label": "Reentry trigger, price fails back through 21,445 and 21,443 prints with a speed and sell-volume burst", "required": true },
+    { "id": "late_entrant_forced_exit_layer", "label": "First forced-exit layer, late entrants from the top of the band become forced sellers as price crosses back through their entries", "required": true },
+    { "id": "stop_pool_activation_layer", "label": "Stop-pool activation layer, clustered stops fire from 21,443 through 21,440", "required": true },
+    { "id": "liquidity_thinning_vacuum", "label": "Liquidity-thinning vacuum, bid-side depth pulls or thins as forced exits hit the same side", "required": true },
+    { "id": "cascade_target_21428", "label": "Cascade target near 21,428, the range-bottom destination reached by finite forced selling", "required": true },
+    { "id": "defended_branch_cascade_cancelled", "label": "Defended branch, pullback holds around 21,448, bids refresh, sells are absorbed, value migrates toward 21,464, and no cascade activates", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "hindsight_cascade_label", "description": "Calling the move a forced-exit cascade only in hindsight, after 21,428 has printed, with no pre-resolution entrant and stop locations." },
+    { "id": "trap_without_locations", "description": "Depicting trapped traders without locations: no named 21,446 to 21,458 entry band and no named forced-exit stop pool under 21,440." },
+    { "id": "cascade_before_reentry_trigger", "description": "Showing the cascade as active before price fails back through 21,445 and the 21,443 reentry trigger prints." },
+    { "id": "displacement_as_forced_exit", "description": "Treating the initial upside displacement as the forced-exit event instead of the later reentry and stop-pool activation." },
+    { "id": "stop_pool_as_entry_signal", "description": "Implying the stop pool alone is a short signal. The pool is latent fuel until failure and reentry activate it." },
+    { "id": "missing_defended_branch", "description": "Omitting the defended branch where the pullback holds, value migrates up, and the cascade never starts." },
+    { "id": "automatic_or_infinite_cascade", "description": "Implying a broker, order, or execution algorithm automatically creates an endless cascade. The figure must show finite forced flow that requires location and trigger evidence." },
+    { "id": "p_and_l_as_primary_lesson", "description": "Framing the lesson as profit from the short instead of participant location, forced-exit mechanics, and decision consequence." }
   ],
   "figure_type": "trap_storyboard",
   "learning_mode": "step_through_sequence",
   "interaction": "step_through",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Forced Exit Cascade"
-    }
+    { "id": "entrant_map", "role": "price_path", "title": "Entrant population and stop pool before activation", "grid": "row:1 col:1-2" },
+    { "id": "activation_sequence", "role": "timeline", "title": "Reentry, forced-exit layers, and liquidity thinning", "grid": "row:2 col:1-2" },
+    { "id": "cascade_path", "role": "price_path", "title": "Stop-pool activation path to 21,428", "grid": "row:3 col:1" },
+    { "id": "defended_branch", "role": "read_branches", "title": "Defended branch cancels the cascade", "grid": "row:3 col:2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-3 col:3" }
   ],
-  "annotations": [],
+  "sequence": [
+    { "step": 0, "caption": "Locate the population before the outcome. Break of 21,445 fills entrants in 21,446 to 21,458 and places their forced-exit stop pool densest under 21,440.", "reveal": ["entrant_map", "entrant_population_entry_zone", "forced_exit_stop_pool"] },
+    { "step": 1, "caption": "Displacement is not the cascade. The break prints on positive delta and roughly 3x volume, then stalls as offers refresh at 21,456 to 21,458 and price cannot progress.", "reveal": ["displacement_delta_and_volume", "absorption_at_extreme"] },
+    { "step": 2, "caption": "Activation. Price fails back through 21,445, 21,443 prints with speed and sell volume, and late entrants become forced sellers as price crosses back through their entries.", "reveal": ["activation_sequence", "reentry_trigger_21443", "late_entrant_forced_exit_layer"] },
+    { "step": 3, "caption": "Cascade. Stops fire from 21,443 through 21,440, bid-side liquidity thins, and forced selling carries toward the range-bottom target near 21,428.", "reveal": ["cascade_path", "stop_pool_activation_layer", "liquidity_thinning_vacuum", "cascade_target_21428"] },
+    { "step": 4, "caption": "Defended branch. If the pullback holds around 21,448 with bid refresh, absorption of sells, and value migration toward 21,464, no cascade activates.", "reveal": ["defended_branch", "defended_branch_cascade_cancelled"] }
+  ],
+  "annotations": [
+    { "id": "entry_zone_marker", "type": "zone", "target": "entrant_population_entry_zone", "text": "Entries 21,446 to 21,458, located before the outcome" },
+    { "id": "stop_pool_marker", "type": "zone", "target": "forced_exit_stop_pool", "text": "Stops densest under 21,440, latent until failure" },
+    { "id": "absorption_callout", "type": "callout", "target": "absorption_at_extreme", "text": "Offers refresh while delta rises, vulnerable but not yet forced" },
+    { "id": "reentry_arrow", "type": "arrow", "target": "reentry_trigger_21443", "text": "21,443 print activates the cascade read" },
+    { "id": "late_layer_label", "type": "label", "target": "late_entrant_forced_exit_layer", "text": "Late entrants exit first as price crosses back through the band" },
+    { "id": "stop_activation_bracket", "type": "bracket", "target": "stop_pool_activation_layer", "text": "Cluster fires 21,443 through 21,440" },
+    { "id": "vacuum_label", "type": "label", "target": "liquidity_thinning_vacuum", "text": "Liquidity thins as exits hit one side" },
+    { "id": "target_arrow", "type": "arrow", "target": "cascade_target_21428", "text": "Finite forced flow runs toward 21,428" },
+    { "id": "defended_cancel_arrow", "type": "arrow", "target": "defended_branch_cascade_cancelled", "text": "Hold and value build toward 21,464 cancels the cascade" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Forced Exit Cascade (mapped from \"Flow-sequence visual\").",
-    "instruments": []
+    "description": "Synthetic NQ morning session, continuous with the CH06 trap fixture family. Prior balance 21,410 to 21,445 holds 90 minutes; breakout reference 21,445. Displacement crosses 21,445 on positive delta and roughly 3x recent volume into the 21,446 to 21,458 entrant band. Forced-exit stop pool sits densest under 21,440. Absorption phase: offers refresh at 21,456 to 21,458 while delta climbs and price cannot progress. Activation phase: price fails back through 21,445 and 21,443 prints with a speed and sell-volume burst. Late entrants near 21,454 to 21,458 are forced out first; clustered stops fire from 21,443 through 21,440; bid-side liquidity thins; forced selling runs toward 21,428. Defended branch: pullback holds around 21,448, bids refresh, sells are absorbed, value builds above 21,445, the next push extends toward 21,464, and no cascade activates.",
+    "instruments": ["NQ"],
+    "notes": "Uses the shared CH06 numbers from the Trapped Traders worked example. This figure narrows the trap storyboard to the activation mechanics of forced exits: optional exit, reentry trigger, stop-pool activation, liquidity thinning, finite target, and defended cancellation."
   },
   "outputs": [
     "static_svg",
@@ -57,10 +87,19 @@
   },
   "qa": {
     "domain_rule_family": "trap_positioning_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "The entrant population entry zone (21,446 to 21,458) is visible and named before the outcome.",
+    "The forced-exit stop pool (densest under 21,440) is visible and named before activation.",
+    "The initial displacement through 21,445 shows positive delta and roughly 3x recent volume, but is not labeled as the cascade.",
+    "Absorption at 21,456 to 21,458 is visible, with offer refresh, rising delta, and no price progress.",
+    "The reentry trigger (21,443 printing with speed and sell volume after failure back through 21,445) is required before the cascade is active.",
+    "The late-entrant forced-exit layer is visible before the stop pool fires.",
+    "The stop-pool activation layer from 21,443 through 21,440 is visible and distinct from the earlier absorption phase.",
+    "Liquidity thinning or vacuum behavior is shown as an accelerant, not as an automated execution rule.",
+    "The finite cascade target near 21,428 is visible and tied to forced selling, not generic momentum.",
+    "The defended branch is present and shows that a hold around 21,448 with value migration toward 21,464 cancels the cascade."
   ]
 }

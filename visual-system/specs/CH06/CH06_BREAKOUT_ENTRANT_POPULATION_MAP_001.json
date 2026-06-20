@@ -1,66 +1,87 @@
 {
   "figure_id": "CH06_BREAKOUT_ENTRANT_POPULATION_MAP_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH06",
   "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "status": "validated",
   "title": "Breakout Entrant Population Map",
-  "concept": "Breakout Entrant Population Map",
+  "concept": "A breakout is not a price event, it is the creation of a located participant cohort. Map who entered, where they entered, where they are wrong, and what converts them to forced fuel, before the break is treated as a verdict.",
   "source_refs": [
-    "CH06:breakout-entrant-population-map"
+    "CH06:trapped-traders",
+    "CH06:failed-breakout-failed-breakdown",
+    "CH06:stop-runs-as-fuel",
+    "CH06:late-buyers-late-sellers"
   ],
-  "teaching_objective": "TODO: state what Breakout Entrant Population Map teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to read a breakout as the creation of a located entrant population, not as price merely crossing a level. The reader maps the breakout reference, the entrant entry band, the early-versus-late concentration, the forced-exit stop pool, and the pain threshold, so the trade decision waits for post-break evidence instead of treating the break itself as the verdict. The map is drawn at the break, before the outcome.",
+  "junior_error": "Treating the break of 21,445 as the event and the validation: buying the cross as confirmation, late in the entrant band, with the stop a few ticks under the level inside the stop pool, never having located who else is positioned or where their forced exit sits. The same junior then narrates the cohort as trapped only after the reversal, having mapped nothing in advance.",
+  "professional_read": "Before trading the break, locate the cohort. Entrants cluster in the 21,446 to 21,458 band above the 21,445 reference, with early entrants nearer the level (about 21,446 to 21,450) and late entrants chasing the top of the band (about 21,454 to 21,458). Their stops sit densest under 21,440. The break is unresolved until post-break behavior decides it: acceptance above the level, with bids refreshing and value building, leaves the cohort defended; failure back through the entry band, with a 21,443 reentry on a speed and sell-volume burst, converts the cohort to forced fuel toward 21,428. The population is mapped at the break, not narrated after the reversal.",
+  "decision_consequence": "With the population mapped, the trade waits for the post-break verdict: stand aside through the break, then either join continuation behind a defended hold or position for the forced-exit move on a confirmed failure back through the entry band. Trade the break itself and you become the late entrant the map describes: worst location in the band, stop inside the pool, first to be forced out.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "breakout_reference_level", "label": "Breakout reference level at 21,445, the prior-range ceiling the displacement crosses on expanding volume", "required": true },
+    { "id": "entrant_population_entry_zone", "label": "Breakout entrant population entry band, 21,446 to 21,458, where new longs are filled above the level", "required": true },
+    { "id": "early_vs_late_entrant_distribution", "label": "Early entrants near the break (about 21,446 to 21,450) versus late entrants chasing the top of the band (about 21,454 to 21,458), shown as entrant concentration", "required": true },
+    { "id": "forced_exit_stop_pool", "label": "Forced-exit stop pool, densest under 21,440, the resting market orders the cohort sits above", "required": true },
+    { "id": "pain_threshold_zone", "label": "Pain threshold: the cohort becomes vulnerable as price rotates back into the entry band toward 21,445, where late entrants are first underwater", "required": true },
+    { "id": "trap_condition_reentry", "label": "Trap-risk condition: price fails and re-enters through the entry band, the 21,443 reentry trigger printing on a speed and sell-volume burst", "required": true },
+    { "id": "defended_breakout_branch", "label": "Defended branch: the pullback holds above 21,445, bids refresh and sell attempts are absorbed, value builds above the level, and there is no trap", "required": true },
+    { "id": "decision_wait_for_post_break_evidence", "label": "The break itself is not the verdict: the read waits for post-break acceptance or failure before the cohort is judged defended or trapped", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "breakout_equals_validation", "description": "Implying the break of 21,445 itself validates the trade, instead of waiting for post-break acceptance or failure." },
+    { "id": "trap_without_locations", "description": "Implying a trap exists with no named entry band and no forced-exit location. No locations, no trap." },
+    { "id": "every_breakout_is_a_trap", "description": "Implying every breakout is a trap to be faded, omitting that a defended break leaves the cohort safe and value migrating up." },
+    { "id": "hindsight_population_mapping", "description": "Mapping the entrant population only in hindsight, after the reversal is complete, instead of locating it at the break before the outcome." },
+    { "id": "missing_defended_branch", "description": "Omitting the defended breakout branch, leaving only the trap outcome and implying every cohort is forced fuel." },
+    { "id": "stop_pool_as_entry_signal", "description": "Implying the stop pool alone is a trade signal, rather than latent fuel that requires a confirmed failure back through the entry band to ignite." },
+    { "id": "late_entry_as_moral_failure", "description": "Framing late entry as a psychology failure rather than a structural problem of poor location and weak invalidation geometry inside the band." }
   ],
   "figure_type": "price_path_level_interaction",
   "learning_mode": "static_explanatory",
   "interaction": "none",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Breakout Entrant Population Map"
-    }
+    { "id": "price_path_and_level", "role": "price_path", "title": "Range, breakout reference, displacement, and entrant band", "grid": "row:1 col:1-2" },
+    { "id": "participant_population", "role": "chart", "title": "Entrant concentration: early versus late", "grid": "row:2 col:1" },
+    { "id": "forced_exit_map", "role": "price_path", "title": "Pain threshold and forced-exit stop pool", "grid": "row:2 col:2" },
+    { "id": "branch_conditions", "role": "read_branches", "title": "Defended branch versus trap-risk branch", "grid": "row:3 col:1-2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-3 col:3" }
   ],
-  "annotations": [],
+  "annotations": [
+    { "id": "breakout_level_marker", "type": "label", "target": "breakout_reference_level", "text": "Break of 21,445: a reference crossed, not a verdict reached" },
+    { "id": "entry_band_zone", "type": "zone", "target": "entrant_population_entry_zone", "text": "Entrants fill 21,446 to 21,458; this cohort now owns these prices" },
+    { "id": "late_entrant_zone", "type": "zone", "target": "early_vs_late_entrant_distribution", "text": "Late entrants chase 21,454 to 21,458: worst location, first underwater" },
+    { "id": "stop_pool_zone", "type": "zone", "target": "forced_exit_stop_pool", "text": "Stops densest under 21,440: latent fuel if the break fails, not a signal alone" },
+    { "id": "pain_threshold_bracket", "type": "bracket", "target": "pain_threshold_zone", "text": "Rotation back into the band puts the cohort underwater" },
+    { "id": "defended_branch_arrow", "type": "arrow", "target": "defended_breakout_branch", "text": "Hold and value build above 21,445: cohort defended, no trap" },
+    { "id": "trap_trigger_arrow", "type": "arrow", "target": "trap_condition_reentry", "text": "21,443 reentry on a sell-volume burst: cohort converts to forced fuel" },
+    { "id": "not_a_verdict_label", "type": "label", "target": "decision_wait_for_post_break_evidence", "text": "Not a verdict yet: wait for acceptance or failure" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Breakout Entrant Population Map (mapped from \"Positioning map\").",
-    "instruments": []
+    "description": "Synthetic NQ morning session, continuous with the CH06 trap fixture. Prior balance 21,410 to 21,445 holds 90 minutes; breakout reference 21,445. The displacement crosses 21,445 on expanding volume and positive delta and prints the entrant band 21,446 to 21,458. Early entrants concentrate 21,446 to 21,450 near the break; late entrants concentrate 21,454 to 21,458 at the top of the band. Forced-exit stop pool densest under 21,440. Pain threshold: rotation back to 21,445 puts late entrants underwater first. Defended branch: the pullback holds above 21,445 (around 21,448), bids refresh, sell attempts are absorbed, value builds above the level, and the next push extends toward 21,464. Trap-risk branch: failure back through 21,445, the reentry trigger at 21,443 prints on a speed and sell-volume burst, and forced exits run toward 21,428.",
+    "instruments": ["NQ"],
+    "notes": "Numbers align with CH06_TRAP_SEQUENCE_STORYBOARD_001 and CH06_DEFENDED_BREAKOUT_VS_TRAPPED_BREAKOUT_001 for semantic continuity. This figure maps the entrant population upstream of the trap sequence and does not re-tell the full step-through storyboard; its emphasis is location of entrants, entry band, pain threshold, stop pool, and the two branch conditions."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg"],
   "placement": {
     "chapter": "CH06",
-    "section_slug": "breakout-entrant-population-map",
+    "section_slug": "trapped-traders",
     "position": "after_section_heading"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "trap_positioning_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "The breakout reference level (21,445) is visible and named in the body, drawn as the crossed reference, not as the verdict.",
+    "The entrant population entry band (21,446 to 21,458) is visible and named before any outcome is shown.",
+    "Early entrants near the break and late entrants at the top of the band (about 21,454 to 21,458) are visually distinct as entrant concentration.",
+    "The forced-exit stop pool (densest under 21,440) is visible and named.",
+    "The pain threshold where the cohort becomes vulnerable on rotation back into the band is visible.",
+    "The body makes clear the break itself is not the verdict; the read waits for post-break evidence.",
+    "The defended breakout branch is present and prevents the every-breakout-is-a-trap misread.",
+    "The trap-risk branch requires a failure and a reentry trigger (21,443 on a sell-volume burst), not a hindsight reversal label.",
+    "Every required_evidence id is renderable and stampable by a future renderer (render-evidence check)."
   ]
 }

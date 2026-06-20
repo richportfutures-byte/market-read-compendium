@@ -1,66 +1,94 @@
 {
   "figure_id": "CH06_SHORT_COVERING_VS_DEMAND_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH06",
   "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "status": "validated",
   "title": "Short Covering vs Demand",
-  "concept": "Short Covering vs Demand",
+  "concept": "A fast rally off a failed breakdown is forced-covering flow from trapped shorts until follow-on evidence proves real demand. The covering impulse and fresh buying look identical at the burst; the first pullback decides covering-only, demand-confirmed, or no-trade.",
   "source_refs": [
-    "CH06:short-covering-vs-demand"
+    "CH06:short-covering-vs-fresh-buying",
+    "CH06:failed-breakout-failed-breakdown",
+    "CH06:trapped-traders",
+    "CH06:stop-runs-as-fuel"
   ],
-  "teaching_objective": "TODO: state what Short Covering vs Demand teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to classify a fast rally off a failed breakdown as forced covering, real demand, or no-trade, by waiting for follow-on evidence rather than reading the burst itself. The reader learns that the first vertical impulse after a failed breakdown is covering flow from trapped shorts until proven otherwise, that covering is finite and exhausts when the shorts finish, that real demand shows bid rebuild, a shallow pullback that holds, value migration, and renewed initiative buying, and that no-trade remains valid when the follow-on evidence is mixed or incomplete.",
+  "junior_error": "Calling the covering rally fresh demand: buying the strongest part of the vertical impulse off the failed-breakdown low because the tape looks powerful, when the move is trapped shorts paying to exit. The covering finishes, no new longs were created to defend the higher prices, and price retraces through the impulse, leaving the junior long at the worst location.",
+  "professional_read": "After a failed breakdown prints below 21,410 into the 21,408 to 21,396 short-entry zone, late shorts chase near the low and their buy stops cluster above 21,410. A reclaim back above 21,410 fires that stop pool and forces covering: a vertical burst into 21,424 to 21,432. The burst alone does not distinguish covering from demand; the first pullback does. Covering-only: the pullback loses 21,410, bids do not rebuild, value does not migrate up, and the rally exhausts once the shorts are done. Demand-confirmed: the pullback is shallow and holds above 21,410, bids refresh, small sell prints are absorbed, two-sided trade builds above the reclaimed level, and the next push extends on renewed initiative buying with value migrating up. No-trade: the impulse is vertical but the follow-on evidence is incomplete or conflicting, so no classification is earned.",
+  "decision_consequence": "Do not buy the covering burst. Stand aside through the impulse and classify on the first pullback: covering-only means fade or stand aside as the rally exhausts; demand-confirmed means the long is behind bid rebuild and value migration above 21,410; mixed or incomplete evidence means no-trade. The burst is the question; the pullback is the answer.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "trapped_short_population", "label": "Trapped short population from the failed breakdown, entries clustered in the 21,408 to 21,396 short-entry zone with late shorts chasing near the low", "required": true },
+    { "id": "failed_breakdown_displacement", "label": "Failed-breakdown displacement below 21,410 into the short-entry zone on expanding volume, the move that did not earn acceptance lower", "required": true },
+    { "id": "forced_covering_trigger", "label": "Forced-covering trigger: a reclaim back above 21,410 fires the trapped shorts' buy-stop pool above support", "required": true },
+    { "id": "covering_impulse", "label": "Fast upside covering impulse into 21,424 to 21,432, forced buying from exits rather than new initiative opinion", "required": true },
+    { "id": "evidence_test_first_pullback", "label": "Evidence test: the first pullback and retest, not the burst, separate covering from real demand", "required": true },
+    { "id": "covering_only_exhaustion_branch", "label": "Covering-only branch: the pullback loses 21,410, bids do not rebuild, value does not migrate up, and the rally exhausts once shorts finish covering", "required": true },
+    { "id": "demand_confirmed_branch", "label": "Demand-confirmed branch: a shallow pullback holds above 21,410, bids refresh, small sell prints are absorbed, two-sided trade builds, and value migrates up on renewed initiative buying", "required": true },
+    { "id": "no_trade_branch_mixed_evidence", "label": "No-trade branch: the impulse is vertical but follow-on evidence is incomplete or conflicting, so no classification is earned", "required": true },
+    { "id": "decision_classification_covering_demand_notrade", "label": "Decision classification, made on follow-on evidence after the impulse: covering-only, demand-confirmed, or no-trade", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "covering_called_fresh_demand", "description": "Calling the covering rally fresh demand, reading the vertical burst as new initiative buying instead of forced exits from trapped shorts." },
+    { "id": "burst_shape_as_proof", "description": "Treating the burst's speed or size as proof of demand; covering produces the most violent tape with the least durable cause." },
+    { "id": "classify_before_pullback", "description": "Classifying covering versus demand at the burst, before the first-pullback and follow-through evidence resolves." },
+    { "id": "hindsight_covering_label", "description": "Labeling the rally covering only in hindsight, after it has already retraced, instead of classifying on first-pullback evidence." },
+    { "id": "all_rallies_are_covering", "description": "Implying every rally off a failed breakdown is covering to be faded; the demand-confirmed branch must remain possible." },
+    { "id": "missing_no_trade_branch", "description": "Omitting the no-trade branch when follow-on evidence is mixed or incomplete." },
+    { "id": "trap_without_locations", "description": "Depicting trapped shorts with no named short-entry zone and no buy-stop pool location. No locations, no trap." }
   ],
   "figure_type": "acceptance_rejection_comparison",
   "learning_mode": "toggle_comparison",
   "interaction": "toggle",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Short Covering vs Demand"
-    }
+    { "id": "shared_setup", "role": "price_path", "title": "Failed breakdown, short-entry zone, reclaim trigger, and covering impulse", "grid": "row:1 col:1-2" },
+    { "id": "covering_only_panel", "role": "price_path", "title": "Covering-only: rally exhausts", "grid": "row:2 col:1" },
+    { "id": "demand_confirmed_panel", "role": "price_path", "title": "Demand-confirmed: value migrates up", "grid": "row:2 col:2" },
+    { "id": "classification_decision", "role": "decision", "title": "Classify: covering-only, demand-confirmed, or no-trade", "grid": "row:3 col:1-2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-3 col:3" }
   ],
-  "annotations": [],
+  "sequence": [
+    { "step": 0, "caption": "Shared setup. Failed breakdown below 21,410 into the 21,408 to 21,396 short-entry zone; a reclaim above 21,410 fires the buy-stop pool and forces a covering impulse into 21,424 to 21,432. The burst is the question, not the answer.", "reveal": ["shared_setup", "trapped_short_population", "failed_breakdown_displacement", "forced_covering_trigger", "covering_impulse", "evidence_test_first_pullback"] },
+    { "step": 1, "caption": "Covering-only. The first pullback loses 21,410, bids do not rebuild, value does not migrate, and the rally exhausts once shorts finish covering.", "reveal": ["covering_only_panel", "covering_only_exhaustion_branch"] },
+    { "step": 2, "caption": "Demand-confirmed. The pullback is shallow and holds above 21,410, bids refresh, sells are absorbed, two-sided trade builds, and value migrates up on renewed initiative buying.", "reveal": ["demand_confirmed_panel", "demand_confirmed_branch"] },
+    { "step": 3, "caption": "No-trade. The impulse is vertical but the follow-on evidence is incomplete or conflicting; no classification is earned.", "reveal": ["classification_decision", "no_trade_branch_mixed_evidence", "decision_classification_covering_demand_notrade"] }
+  ],
+  "annotations": [
+    { "id": "breakdown_zone", "type": "zone", "target": "trapped_short_population", "text": "Failed breakdown 21,408 to 21,396: trapped shorts chase the low" },
+    { "id": "stop_pool_label", "type": "label", "target": "forced_covering_trigger", "text": "Buy stops above 21,410: the reclaim fires them, forcing covering" },
+    { "id": "covering_impulse_arrow", "type": "arrow", "target": "covering_impulse", "text": "Vertical burst to 21,424 to 21,432: forced exits, not new opinion" },
+    { "id": "evidence_test_label", "type": "label", "target": "evidence_test_first_pullback", "text": "First pullback decides, not the burst" },
+    { "id": "covering_exhaust_arrow", "type": "arrow", "target": "covering_only_exhaustion_branch", "text": "Loses 21,410, no bid rebuild: covering exhausts and retraces" },
+    { "id": "demand_hold_arrow", "type": "arrow", "target": "demand_confirmed_branch", "text": "Holds above 21,410, bids refresh, value builds: real demand" },
+    { "id": "no_trade_label", "type": "label", "target": "no_trade_branch_mixed_evidence", "text": "Mixed evidence: no classification earned, stand aside" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Short Covering vs Demand (mapped from \"Flow comparison\").",
-    "instruments": []
+    "description": "Synthetic NQ morning session, continuous with the CH06 fixture family but inverted to trapped shorts after a failed breakdown. Prior support reference around 21,410. A failed breakdown prints below 21,410 into the 21,408 to 21,396 short-entry zone; late shorts chase near the low, their buy stops clustered above 21,410. A reclaim back above 21,410 fires the buy-stop pool and forces a covering impulse into 21,424 to 21,432 on a volume burst. The first pullback classifies the move. Covering-only branch: the pullback loses 21,410 and 21,408, bids do not rebuild, value does not migrate up, and the rally exhausts back through the impulse once the shorts are done. Demand-confirmed branch: the pullback is shallow and holds above 21,410, bids refresh, small sell prints are absorbed, two-sided trade builds above 21,410, and the next push extends on renewed initiative buying with value migrating up. No-trade branch: the impulse is vertical but the follow-on evidence is incomplete or conflicting.",
+    "instruments": ["NQ"],
+    "notes": "Numbers adapt the CH06 fixture family (support around 21,410, the same level the breakout figures use as the range ceiling) to trapped shorts below support rather than trapped breakout longs above it. Continuity of the 21,410 reference is intentional; the short-entry zone (21,408 to 21,396), covering impulse (21,424 to 21,432), and branch conditions are specific to this figure and are not copied from the breakout-long fixtures."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH06",
-    "section_slug": "short-covering-vs-demand",
+    "section_slug": "short-covering-vs-fresh-buying",
     "position": "after_section_heading"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "trap_positioning_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "The failed-breakdown short-entry zone (21,408 to 21,396) and the trapped short population are visible and named before the outcome.",
+    "The forced-covering trigger (reclaim above 21,410 firing the buy-stop pool) is visible and named.",
+    "The covering impulse (21,424 to 21,432) is shown as forced-exit flow, not new initiative buying.",
+    "The first-pullback evidence test, not the burst, is what separates covering from demand.",
+    "The covering-only branch shows exhaustion: lost 21,410, no bid rebuild, no value migration.",
+    "The demand-confirmed branch shows bid rebuild, a shallow pullback holding above 21,410, value migration, and renewed initiative buying.",
+    "The no-trade branch is present for mixed or incomplete evidence.",
+    "The figure does not imply every rally off a failed breakdown is covering, nor that the burst alone proves demand.",
+    "The lesson is participant flow and post-impulse evidence, classified covering-only, demand-confirmed, or no-trade, not hindsight P&L.",
+    "Every required_evidence id is renderable and stampable by a future renderer (render-evidence check)."
   ]
 }

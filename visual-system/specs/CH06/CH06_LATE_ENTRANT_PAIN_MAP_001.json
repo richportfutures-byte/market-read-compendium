@@ -1,66 +1,91 @@
 {
   "figure_id": "CH06_LATE_ENTRANT_PAIN_MAP_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH06",
   "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "status": "validated",
   "title": "Late Entrant Pain Map",
-  "concept": "Late Entrant Pain Map",
+  "concept": "Late breakout entry is structurally weak because it destroys risk geometry before the read resolves. The late entrant sits near the extension, far from logical invalidation, with a comfort stop inside the crowd pool; the pain arrives first and is not redeemed by a defended outcome.",
   "source_refs": [
-    "CH06:late-entrant-pain-map"
+    "CH06:late-buyers-late-sellers",
+    "CH06:trapped-traders",
+    "CH06:failed-breakout-failed-breakdown",
+    "CH06:stop-runs-as-fuel"
   ],
-  "teaching_objective": "TODO: state what Late Entrant Pain Map teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader that the late entrant's problem is location and invalidation geometry, not mindset. The reader learns that late entry, near the top of the entrant band after displacement has consumed the best location, places the logical invalidation far below; that a comfort stop inside the normal pullback and sweep zone sits in the crowd pool; that the late cohort is the first to be underwater when price rotates back into the band; and that a defended outcome may rescue the position but does not redeem the poor geometry. The better action is to wait for the retest or branch evidence, or to stand aside.",
+  "junior_error": "Chasing the breakout into the late entrant zone near 21,458, treating the extension as confirmation, then placing a tight comfort stop just under the entry, inside the crowd pool. The geometry is already poor at entry: little room to a logical invalidation, a stop where ordinary sweep behavior reaches it, and the late cohort first underwater on any rotation. The junior then judges the entry only by whether it later worked.",
+  "professional_read": "Once price displaces above 21,445 into the 21,446 to 21,458 band, the best location is gone. Early entrants near 21,446 to 21,450 can define invalidation around the level; late entrants chasing 21,454 to 21,458 cannot, because logical invalidation now sits below the 21,440 structure, far from entry. A comfort stop placed just under the late entry sits inside the normal pullback and sweep zone, in the crowd pool. When price rotates back below 21,452 toward 21,448 the late cohort is underwater first, before the breakout has necessarily been proven false. If price fails through 21,445 and the 21,443 reentry fires the pool, the late cohort is forced out first toward 21,428. If instead the pullback holds around 21,448, bids refresh, sells are absorbed, and value builds toward 21,464, the late entry survives, but the entry was still poor geometry. The professional waits for the retest at 21,445 to 21,448 or for branch evidence, or stands aside when the only available entry is the late chase.",
+  "decision_consequence": "Do not chase the extension. Either enter on a retest near 21,445 to 21,448 where invalidation is defined and close, wait for branch evidence to resolve defended versus failed, or stand aside when proper invalidation is too wide to carry. Judge the decision by its geometry at entry, not by whether the trade later worked.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "breakout_reference_level", "label": "Breakout reference at 21,445, the prior-range ceiling the displacement crosses on expanding volume", "required": true },
+    { "id": "early_entrant_zone", "label": "Early entrant zone near the break, 21,446 to 21,450, where invalidation can be defined around the level", "required": true },
+    { "id": "late_entrant_zone", "label": "Late entrant zone near the extension high, 21,454 to 21,458, where new longs chase the top of the band", "required": true },
+    { "id": "deteriorated_entry_geometry", "label": "Late entry increases the distance to logical invalidation below the structure and worsens reward-to-risk geometry before the read has resolved", "required": true },
+    { "id": "late_entrant_pain_threshold", "label": "Late entrant pain threshold: rotation back below 21,452 toward 21,448 puts the chasing cohort underwater first", "required": true },
+    { "id": "crowd_stop_pool", "label": "Crowd stop pool below the failed-breakout structure, densest under 21,440", "required": true },
+    { "id": "evidence_based_invalidation", "label": "Evidence-based invalidation below the 21,440 structure, distinct from a comfort stop placed inside normal pullback and sweep behavior", "required": true },
+    { "id": "trap_risk_reentry_context", "label": "Trap-risk context: if price fails back through 21,445 the 21,443 reentry trigger fires the crowd stop pool and the late cohort is forced out first toward 21,428", "required": true },
+    { "id": "defended_branch_late_entry_survives", "label": "Defended branch: the pullback holds above 21,445, bids refresh, sells are absorbed, value migrates higher toward 21,464, and late entry may survive though the chase was still poor geometry", "required": true },
+    { "id": "professional_wait_or_no_trade_alternative", "label": "Professional alternative: wait for the retest at 21,445 to 21,448, wait for branch evidence, or stand aside if the only entry is the late chase", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "late_entry_as_moral_failure", "description": "Framing late entry as psychology or a moral failure rather than a structural problem of poor location and weak invalidation geometry." },
+    { "id": "hindsight_chase_label", "description": "Labeling the entry bad only because the trade later failed; the poor geometry must be visible at the moment of entry, not in hindsight." },
+    { "id": "no_invalidation_geometry", "description": "Criticizing the late entry without showing the logical invalidation and the crowd stop location. No locations, no trap." },
+    { "id": "comfort_stop_as_protection", "description": "Implying a tight comfort stop inside the normal pullback and sweep zone is protective logic; that stop sits in the crowd pool." },
+    { "id": "all_late_entries_fail", "description": "Implying every late entry fails; the defended branch must remain possible, where value migrates up and late entry survives." },
+    { "id": "missing_professional_alternative", "description": "Omitting the professional alternative: wait for the retest, wait for branch evidence, or classify as no-trade when proper invalidation is too wide." },
+    { "id": "p_and_l_as_primary_lesson", "description": "Making P&L the core teaching object; the lesson is market structure, participant location, and decision consequence, not the dollar outcome." }
   ],
   "figure_type": "price_path_level_interaction",
   "learning_mode": "static_explanatory",
   "interaction": "none",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Late Entrant Pain Map"
-    }
+    { "id": "breakout_context", "role": "price_path", "title": "Range, breakout reference, displacement, and early-versus-late entrant zones", "grid": "row:1 col:1-2" },
+    { "id": "pain_and_invalidation_map", "role": "price_path", "title": "Pain threshold, crowd stop pool, and evidence-based invalidation", "grid": "row:2 col:1-2" },
+    { "id": "professional_alternative", "role": "decision", "title": "Wait for retest, wait for branch evidence, or stand aside", "grid": "row:3 col:1" },
+    { "id": "defended_branch", "role": "price_path", "title": "Defended branch: late entry survives, geometry still poor", "grid": "row:3 col:2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-3 col:3" }
   ],
-  "annotations": [],
+  "annotations": [
+    { "id": "breakout_level_marker", "type": "label", "target": "breakout_reference_level", "text": "Break of 21,445: best location is already gone once displacement runs" },
+    { "id": "early_zone_band", "type": "zone", "target": "early_entrant_zone", "text": "Early entrants 21,446 to 21,450: invalidation can be defined around the level" },
+    { "id": "late_zone_band", "type": "zone", "target": "late_entrant_zone", "text": "Late entrants 21,454 to 21,458: entry near the top, invalidation now far below" },
+    { "id": "bad_geometry_label", "type": "label", "target": "deteriorated_entry_geometry", "text": "Bad geometry before any outcome: reward shrinks, risk to invalidation grows" },
+    { "id": "pain_threshold_bracket", "type": "bracket", "target": "late_entrant_pain_threshold", "text": "Rotation below 21,452 toward 21,448: late cohort underwater first" },
+    { "id": "comfort_stop_label", "type": "label", "target": "evidence_based_invalidation", "text": "Comfort stop in the pullback zone sits in the crowd pool; evidence invalidation is below 21,440" },
+    { "id": "crowd_pool_zone", "type": "zone", "target": "crowd_stop_pool", "text": "Crowd stops densest under 21,440: where ordinary sweep reaches" },
+    { "id": "retest_wait_zone", "type": "zone", "target": "professional_wait_or_no_trade_alternative", "text": "Wait for the retest at 21,445 to 21,448, or stand aside" },
+    { "id": "defended_hold_arrow", "type": "arrow", "target": "defended_branch_late_entry_survives", "text": "Hold and value build toward 21,464: late entry survives, geometry was still poor" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Late Entrant Pain Map (mapped from \"Positioning / pain-threshold visual\").",
-    "instruments": []
+    "description": "Synthetic NQ morning session, continuous with the CH06 trap, defended, entrant-map, and stop-pool fixtures. Prior balance 21,410 to 21,445 holds 90 minutes; breakout reference 21,445. The displacement crosses 21,445 on expanding volume and positive delta into the 21,446 to 21,458 entrant band. Early entrants concentrate 21,446 to 21,450 near the break; late entrants chase 21,454 to 21,458 near the extension high. Late entrant pain threshold: rotation back below 21,452 toward 21,448 puts the chasing cohort underwater first. Crowd stop pool densest under 21,440. A comfort stop placed just under 21,452 sits inside the normal pullback and sweep zone; evidence-based invalidation sits below the 21,440 structure. Trap-risk trigger: failure back through 21,445 with 21,443 printing on a speed and sell-volume burst, forced exits 21,443 through 21,440 toward 21,428. Defended branch: the pullback holds around 21,448, bids refresh, sells absorbed, value builds above 21,445, the next push extends toward 21,464, and late entry survives though the chase was poor process. Professional alternative: wait for the retest at 21,445 to 21,448 or stand aside if the only entry is the late chase.",
+    "instruments": ["NQ"],
+    "notes": "Numbers align with the existing CH06 fixtures (trap sequence, defended-vs-trapped, breakout entrant map, stop pool) for semantic continuity. Emphasis is late-entrant location and invalidation geometry, not mindset or P&L."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg"],
   "placement": {
     "chapter": "CH06",
-    "section_slug": "late-entrant-pain-map",
+    "section_slug": "late-buyers-late-sellers",
     "position": "after_section_heading"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "trap_positioning_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "The breakout reference (21,445) is visible and named.",
+    "Early entrants (21,446 to 21,450) and late entrants (21,454 to 21,458) are visually distinct zones.",
+    "The late entrant's deteriorated risk geometry (greater distance to logical invalidation) is visible before any outcome.",
+    "The late entrant pain threshold (rotation below 21,452 toward 21,448) is visible and named.",
+    "The crowd stop pool (densest under 21,440) is visible and named.",
+    "Evidence-based invalidation below the structure is distinct from a comfort stop inside the pullback zone.",
+    "The professional alternative, wait for the retest at 21,445 to 21,448, wait for branch evidence, or stand aside, is visible.",
+    "The defended branch is present, so the figure does not imply all late entries fail.",
+    "The lesson is structural location and invalidation geometry, not hindsight P&L.",
+    "Every required_evidence id is renderable and stampable by a future renderer (render-evidence check)."
   ]
 }

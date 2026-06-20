@@ -1,46 +1,72 @@
 {
   "figure_id": "CH06_USER_STOP_INSIDE_CROWD_STOP_POOL_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH06",
   "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "status": "validated",
   "title": "User Stop Inside Crowd Stop Pool",
-  "concept": "User Stop Inside Crowd Stop Pool",
+  "concept": "A personal stop placed inside the crowd stop pool is not private protection. It becomes one unit of the same forced-flow fuel the trader is trying to read.",
   "source_refs": [
-    "CH06:user-stop-inside-crowd-stop-pool"
+    "CH06:stop-runs-as-fuel",
+    "CH06:trapped-traders",
+    "CH06:failed-breakout-failed-breakdown",
+    "CH06:late-buyers-late-sellers"
   ],
-  "teaching_objective": "TODO: state what User Stop Inside Crowd Stop Pool teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to separate the crowd stop pool from his own stop placement decision. The reader learns to pre-mark the crowd pool below the failed-breakout structure, see when a personal comfort stop overlaps that pool, understand that the stop will be harvested with the crowd if the pool activates, and choose a professional risk alternative: evidence exit on failure, smaller size for a structural stop beyond the expected sweep, or no-trade. The figure must not advise hiding, removing, or automating stops.",
+  "junior_error": "Entering the breakout late in the 21,454 to 21,458 zone, then placing a tight stop around 21,439 to 21,440 because it feels disciplined and close. That stop is inside the densest crowd pool under 21,440, so the trader has volunteered to become part of the forced-flow fuel. He then interprets the sweep as personal bad luck or stop hunting, instead of a location error visible before entry.",
+  "professional_read": "Before accepting a breakout entry, map the crowd first. The 21,446 to 21,458 entrant population sits above the 21,445 breakout reference, and its stops are densest under 21,440. A user stop parked at 21,439 to 21,440 is not meaningfully separate from the pool. If price fails back through 21,445 and 21,443 prints with speed and sell volume, that personal stop fires with the crowd as forced selling drives toward 21,428. The professional either exits on the failure evidence before the pool activates, reduces size so a structural stop can sit beyond the expected sweep and outside the dense pool, or passes when neither choice fits. If the pullback holds around 21,448 and value migrates toward 21,464, the pool stays latent; its existence alone was never a trade signal.",
+  "decision_consequence": "Do not place a stop just because it is close. Place risk where the market read is actually wrong, or reduce size until that location is affordable, or stand aside. If the only acceptable loss requires parking in the crowd pool, the decision is no-trade. The lesson is risk location and participant mapping, not avoiding stops or blaming execution.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "breakout_reference_level", "label": "Breakout reference level at 21,445, the structure the entrant population and stop pool are organized around", "required": true },
+    { "id": "entrant_population_entry_zone", "label": "Entrant population entry zone, 21,446 to 21,458, with late entries near 21,454 to 21,458", "required": true },
+    { "id": "displacement_delta_and_volume", "label": "Displacement burst through 21,445 on positive delta and roughly 3x recent volume, the event that creates the cohort", "required": true },
+    { "id": "crowd_stop_pool_location", "label": "Crowd stop pool, densest under 21,440, located below the failed-breakout structure", "required": true },
+    { "id": "user_stop_inside_pool", "label": "User comfort stop placed around 21,439 to 21,440, overlapping the crowd stop pool instead of standing apart from it", "required": true },
+    { "id": "normal_pullback_and_sweep_zone", "label": "Normal pullback and sweep zone between the 21,445 reference and the under-21,440 stop pool, where a tight comfort stop is vulnerable", "required": true },
+    { "id": "absorption_warning_extreme", "label": "Absorption warning at 21,456 to 21,458, offers refresh while delta climbs and price does not progress", "required": true },
+    { "id": "failure_reentry_trigger", "label": "Failure and reentry trigger, price fails through 21,445 and 21,443 prints with speed and sell volume", "required": true },
+    { "id": "forced_exit_activation_path", "label": "Forced-exit activation path, the user stop and crowd stops fire from 21,443 through 21,440 toward 21,428", "required": true },
+    { "id": "professional_risk_alternatives", "label": "Professional risk alternatives: evidence exit on failure, reduced size for a structural stop beyond the expected sweep, or no-trade", "required": true },
+    { "id": "defended_branch_pool_latent", "label": "Defended branch, pullback holds around 21,448, bids refresh, sells are absorbed, value migrates toward 21,464, and the pool remains latent", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "crowd_pool_user_stop_confusion", "description": "Failing to distinguish the crowd stop pool from the user's individual stop placement decision." },
+    { "id": "comfort_stop_as_protection", "description": "Implying a tight stop is protective merely because it is close, even when it sits inside the obvious pool." },
+    { "id": "hide_or_remove_stops_advice", "description": "Advising the trader to hide, remove, or avoid stops. The figure must teach location, sizing, evidence exit, or no-trade, not stop evasion." },
+    { "id": "trap_without_locations", "description": "Depicting the risk without locations: no named entry zone, no named crowd stop pool, and no named forced-exit trigger." },
+    { "id": "hindsight_stop_mapping", "description": "Mapping the crowd pool only in hindsight after the stop-out, instead of marking it before entry as part of the risk decision." },
+    { "id": "stop_pool_as_entry_signal", "description": "Treating the existence of the crowd stop pool as a short signal. The pool is latent until failure and reentry activate it." },
+    { "id": "all_stops_are_wrong", "description": "Implying all stops are bad or that the professional has no stop. The professional changes location, size, evidence exit, or trade permission." },
+    { "id": "p_and_l_as_primary_lesson", "description": "Framing the lesson around the money lost on the stop-out instead of the pre-entry risk-location error." }
   ],
   "figure_type": "price_path_level_interaction",
   "learning_mode": "static_explanatory",
   "interaction": "none",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "User Stop Inside Crowd Stop Pool"
-    }
+    { "id": "entry_context", "role": "price_path", "title": "Breakout reference, entrant band, late user entry, and the user stop inside the crowd pool", "grid": "row:1 col:1-2" },
+    { "id": "failure_path", "role": "price_path", "title": "Failure trigger and stop-pool activation toward 21,428", "grid": "row:2 col:1-2" },
+    { "id": "risk_decision", "role": "decision", "title": "Professional risk alternatives", "grid": "row:3 col:1" },
+    { "id": "defended_branch", "role": "read_branches", "title": "Defended branch keeps the pool latent", "grid": "row:3 col:2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-3 col:3" }
   ],
-  "annotations": [],
+  "annotations": [
+    { "id": "reference_level_label", "type": "label", "target": "breakout_reference_level", "text": "21,445 reference organizes the breakout risk" },
+    { "id": "entry_zone_marker", "type": "zone", "target": "entrant_population_entry_zone", "text": "Entrants 21,446 to 21,458; late user entry near 21,454 to 21,458" },
+    { "id": "displacement_label", "type": "label", "target": "displacement_delta_and_volume", "text": "Positive delta and 3x volume create the cohort, not the verdict" },
+    { "id": "crowd_pool_zone", "type": "zone", "target": "crowd_stop_pool_location", "text": "Crowd pool densest under 21,440" },
+    { "id": "user_stop_pin", "type": "label", "target": "user_stop_inside_pool", "text": "User stop 21,439 to 21,440, inside the same pool" },
+    { "id": "sweep_zone_bracket", "type": "bracket", "target": "normal_pullback_and_sweep_zone", "text": "Ordinary pullback and sweep path reaches the pool" },
+    { "id": "absorption_warning_callout", "type": "callout", "target": "absorption_warning_extreme", "text": "Offer refresh and rising delta warn that entrants are vulnerable" },
+    { "id": "reentry_trigger_arrow", "type": "arrow", "target": "failure_reentry_trigger", "text": "21,443 with speed and sell volume activates failure" },
+    { "id": "forced_exit_arrow", "type": "arrow", "target": "forced_exit_activation_path", "text": "User stop fires with crowd stops toward 21,428" },
+    { "id": "risk_choice_label", "type": "label", "target": "professional_risk_alternatives", "text": "Evidence exit, smaller size for structural stop, or no-trade" },
+    { "id": "defended_branch_arrow", "type": "arrow", "target": "defended_branch_pool_latent", "text": "Hold around 21,448 and value build to 21,464, pool stays latent" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for User Stop Inside Crowd Stop Pool (mapped from \"Risk-location diagram\").",
-    "instruments": []
+    "description": "Synthetic NQ morning session, continuous with the CH06 breakout-trap fixture family. Prior balance 21,410 to 21,445 holds 90 minutes; breakout reference 21,445. Displacement crosses 21,445 on positive delta and roughly 3x recent volume into the 21,446 to 21,458 entrant band. The user takes a late breakout entry near 21,456 and parks a comfort stop around 21,439 to 21,440. The broader crowd stop pool is densest under 21,440, below the failed-breakout structure. Absorption warning: offers refresh at 21,456 to 21,458 while delta climbs and price does not progress. Failure path: price fails through 21,445, 21,443 prints with speed and sell volume, the user stop and crowd stops fire from 21,443 through 21,440, and forced exits run toward 21,428. Professional alternatives: exit on the failure evidence before the pool fires, reduce size so a structural stop can sit beyond the expected sweep and outside the dense pool, or stand aside. Defended branch: pullback holds around 21,448, bids refresh, sells are absorbed, value builds above 21,445, the next push extends toward 21,464, and the stop pool remains latent.",
+    "instruments": ["NQ"],
+    "notes": "Uses the shared CH06 fixture family while narrowing the lesson to risk location. The figure must distinguish the crowd pool from the user's stop, and must not imply stop-hunting automation, stop hiding, or execution advice."
   },
   "outputs": [
     "static_svg",
@@ -57,10 +83,20 @@
   },
   "qa": {
     "domain_rule_family": "trap_positioning_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "The breakout reference level (21,445) is visible and named.",
+    "The entrant population entry zone (21,446 to 21,458), including the late user entry area near 21,454 to 21,458, is visible and named.",
+    "The displacement through 21,445 shows positive delta and roughly 3x recent volume as cohort creation, not as a verdict.",
+    "The crowd stop pool (densest under 21,440) is visible and distinct from the user's individual stop.",
+    "The user's comfort stop around 21,439 to 21,440 visibly overlaps the crowd pool.",
+    "The normal pullback and sweep zone between 21,445 and the under-21,440 pool is visible, explaining why the tight stop is vulnerable.",
+    "Absorption warning at 21,456 to 21,458 is visible, with offer refresh, rising delta, and no price progress.",
+    "The failure and reentry trigger (21,443 with speed and sell volume) is required before the pool activates.",
+    "The forced-exit activation path shows the user stop and crowd stops firing from 21,443 through 21,440 toward 21,428.",
+    "The professional alternatives are visible: evidence exit on failure, reduced size for a structural stop beyond the expected sweep, or no-trade.",
+    "The defended branch is present and shows the pool remaining latent as value migrates toward 21,464."
   ]
 }

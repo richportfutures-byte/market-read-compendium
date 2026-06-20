@@ -1,66 +1,80 @@
 {
   "figure_id": "CH06_DEFENDED_BREAKOUT_VS_TRAPPED_BREAKOUT_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH06",
   "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "status": "validated",
   "title": "Defended Breakout vs Trapped Breakout",
-  "concept": "Defended Breakout vs Trapped Breakout",
+  "concept": "The same break resolves two opposite ways. The post-displacement behavior, not the break, is the event that decides defended from trapped.",
   "source_refs": [
-    "CH06:defended-breakout-vs-trapped-breakout"
+    "CH06:trapped-traders",
+    "CH06:failed-breakout-failed-breakdown"
   ],
-  "teaching_objective": "TODO: state what Defended Breakout vs Trapped Breakout teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to treat the post-displacement behavior, not the break itself, as the event that decides the read. The same break of 21,445 and the same burst to 21,458 resolve two opposite ways: a defended breakout that holds the pullback and migrates value up, or a trapped breakout that fails to hold, reenters the range, and pays the move down with the breakout crowd's forced exits. The reader learns to withhold judgment through the break and commit on the deciding evidence: hold plus value migration versus reentry plus acceleration.",
+  "junior_error": "Trading the break itself, treating the displacement through 21,445 as the event. Two symmetric leaks follow: chasing the breakout and becoming the trapped population when it fails, and fading a clean defended breakout as a trap because a prior break failed, then getting run over as value migrates up.",
+  "professional_read": "Both outcomes share one identical setup: break of 21,445, burst to the 21,446 to 21,458 entrant zone, stops densest under 21,440. The defended read requires the pullback to hold 21,448 with bids refreshing and sells absorbed, time building above 21,445, and the next push printing 21,464. The trapped read requires the pullback to fail, price to reenter through 21,445 and print 21,443 with a speed and sell-volume burst, cascading to 21,428 on forced exits. The deciding evidence arrives within minutes after the break, not at the break.",
+  "decision_consequence": "Read the post-displacement behavior and the trade follows the winner: long continuation behind the defended branch, or short the reentry on the trapped branch toward 21,428. Trade the break itself in either direction and you take the symmetric loss: long the failed breakout into the trap, or short the defended breakout into value migration.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "shared_displacement_setup", "label": "Identical setup in both panels: break of 21,445, burst to the 21,446 to 21,458 entrant zone, stop pool densest under 21,440", "required": true },
+    { "id": "shared_price_scale", "label": "Both panels share one identical price scale so the two outcomes are directly comparable", "required": true },
+    { "id": "defended_pullback_hold", "label": "Defended panel: pullback holds 21,448, bids refresh, sell prints absorbed", "required": true },
+    { "id": "defended_value_migration", "label": "Defended panel: time builds above 21,445 and the next push prints 21,464", "required": true },
+    { "id": "trapped_reentry_trigger", "label": "Trapped panel: the reentry trigger, price re-enters through 21,445 and 21,443 prints with a speed and sell-volume burst", "required": true },
+    { "id": "trapped_forced_exit_cascade", "label": "Trapped panel: forced exits cascade to the range bottom near 21,428", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "displacement_as_the_event", "description": "Treating the break of 21,445 as the event instead of the post-displacement behavior that decides it." },
+    { "id": "hindsight_trap_label", "description": "Narrating either outcome as trapped only in hindsight, with no shared pre-resolution setup and no named entry and forced-exit locations drawn before the result." },
+    { "id": "trap_without_locations", "description": "Depicting the trapped branch with no named entry zone and no forced-exit location. No locations, no trap." },
+    { "id": "defended_mislabeled_as_trap", "description": "Labeling the defended branch a trap, or implying every breakout is a trap to be faded." },
+    { "id": "unshared_price_scale", "description": "Drawing the two panels on different price scales, which makes the comparison dishonest." },
+    { "id": "missing_shared_setup", "description": "Letting the two panels start from different setups instead of the one identical displacement." }
   ],
   "figure_type": "acceptance_rejection_comparison",
   "learning_mode": "toggle_comparison",
   "interaction": "toggle",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Defended Breakout vs Trapped Breakout"
-    }
+    { "id": "shared_setup", "role": "price_path", "title": "Shared displacement, read made before the outcome", "grid": "row:1 col:1-2" },
+    { "id": "trapped_branch", "role": "price_path", "title": "Trapped resolution", "grid": "row:2 col:1" },
+    { "id": "defended_branch", "role": "price_path", "title": "Defended resolution", "grid": "row:2 col:2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Deciding evidence", "grid": "row:1-2 col:3" }
   ],
-  "annotations": [],
+  "sequence": [
+    { "step": 0, "caption": "Shared setup. Break of 21,445, burst to the 21,446 to 21,458 entrant zone on positive delta and ~3x volume, stop pool densest under 21,440. The read is made on what follows, not on the break.", "reveal": ["shared_setup", "shared_displacement_setup", "shared_price_scale"] },
+    { "step": 1, "caption": "Trapped resolution. The pullback fails, price reenters through 21,445, 21,443 prints with a speed and sell-volume burst, and forced exits cascade to 21,428.", "reveal": ["trapped_branch", "trapped_reentry_trigger", "trapped_forced_exit_cascade"] },
+    { "step": 2, "caption": "Defended resolution. The pullback holds 21,448, bids refresh, sells are absorbed, value builds above 21,445, and the next push prints 21,464.", "reveal": ["defended_branch", "defended_pullback_hold", "defended_value_migration"] }
+  ],
+  "annotations": [
+    { "id": "entry_zone_marker", "type": "zone", "target": "shared_displacement_setup", "text": "Entrant zone 21,446 to 21,458" },
+    { "id": "stop_pool_marker", "type": "zone", "target": "shared_displacement_setup", "text": "Stops densest under 21,440" },
+    { "id": "shared_read_label", "type": "label", "target": "shared_setup", "text": "Read made before the outcome" },
+    { "id": "trapped_trigger_arrow", "type": "arrow", "target": "trapped_reentry_trigger", "text": "21,443 reentry: speed and sell burst" },
+    { "id": "defended_value_arrow", "type": "arrow", "target": "defended_value_migration", "text": "Value migrates up to 21,464" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Defended Breakout vs Trapped Breakout (mapped from \"Toggle comparison\").",
-    "instruments": []
+    "description": "Synthetic NQ morning session shared across both panels. Range 21,410 to 21,445 holds 90 minutes; the break of 21,445 bursts to the 21,446 to 21,458 entrant zone on positive delta and roughly 3x recent per-minute volume; stop pool densest under 21,440. Trapped branch: the pullback fails, reentry at 21,443 with a speed and sell-volume burst, cascade to 21,428. Defended branch: the pullback holds 21,448, bids refresh at 21,447 to 21,448, sells absorbed, value builds above 21,445, next push prints 21,464. Both branches render on one shared price scale.",
+    "instruments": ["NQ"],
+    "notes": "Numbers taken verbatim from the Trapped Traders worked example in CH06 so this comparison and CH06_TRAP_SEQUENCE_STORYBOARD_001 share one fixture and calibrate together. The shared-scale rule (protocol section 7.5) governs the two panels."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg", "interactive_html"],
   "placement": {
     "chapter": "CH06",
-    "section_slug": "defended-breakout-vs-trapped-breakout",
-    "position": "after_section_heading"
+    "section_slug": "trapped-traders",
+    "position": "after_in_practice"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "trap_positioning_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "Both panels originate from one identical displacement setup (same break of 21,445, same burst to 21,446 to 21,458, same stop pool) and are drawn on one shared price scale.",
+    "The defended branch shows hold at 21,448, bid refresh, sells absorbed, and value migration to 21,464.",
+    "The trapped branch shows reentry at 21,443 with acceleration and a forced-exit cascade to 21,428.",
+    "Neither branch is depicted as knowable at the break; the deciding evidence is the post-displacement behavior.",
+    "The defended branch is never depicted or labeled as a trap.",
+    "Every required_evidence id is rendered and stamped (render-evidence check passes)."
   ]
 }

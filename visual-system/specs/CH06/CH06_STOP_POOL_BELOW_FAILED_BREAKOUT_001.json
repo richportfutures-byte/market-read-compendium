@@ -1,66 +1,87 @@
 {
   "figure_id": "CH06_STOP_POOL_BELOW_FAILED_BREAKOUT_001",
-  "version": "0.0.1-draft",
+  "version": "1.0.0",
   "chapter": "CH06",
   "tier": "TIER_2_CHAPTER_SUPPORT",
-  "status": "draft",
+  "status": "validated",
   "title": "Stop Pool Below Failed Breakout",
-  "concept": "Stop Pool Below Failed Breakout",
+  "concept": "A stop pool below a failed breakout is a conditional forced-flow zone. It is mere latent liquidity until the breakout fails; only reentry through the level activates it, and a defended breakout leaves it dormant.",
   "source_refs": [
-    "CH06:stop-pool-below-failed-breakout"
+    "CH06:failed-breakout-failed-breakdown",
+    "CH06:stop-runs-as-fuel",
+    "CH06:trapped-traders"
   ],
-  "teaching_objective": "TODO: state what Stop Pool Below Failed Breakout teaches the reader to do.",
-  "junior_error": "TODO: state the specific junior mistake this prevents.",
-  "professional_read": "TODO: state the professional read.",
-  "decision_consequence": "TODO: state the decision that follows.",
+  "teaching_objective": "Teach the trader to read the stop pool below a failed breakout as a conditional forced-flow zone, not a standalone signal. The reader learns that a failed breakout creates trapped long inventory whose invalidation stops cluster below the breakout structure, that the pool is latent until reentry through the level activates it, that activated stops supply forced selling that can pay the move down, and that a defended breakout leaves the pool dormant. The pool is located below the structure at the break, and judged actionable only on failure and reentry evidence.",
+  "junior_error": "Shorting merely because a stop pool sits below the level, treating latent liquidity as a signal: selling into a breakout that has not failed, or fading every breakout because there are stops below. The same junior maps the pool only after the collapse, having located nothing in advance, and sometimes frames it as stop-hunting to be evaded by hiding stops.",
+  "professional_read": "After a breakout above 21,445 fills longs into the 21,446 to 21,458 entry zone, their invalidation stops cluster below the failed-breakout structure, densest under 21,440. That pool is latent: it is liquidity, not forced flow, until the breakout fails. Activation requires price to fail back through 21,445, with the 21,443 reentry printing on a speed and sell-volume burst; the stops then fire from 21,443 through 21,440 and the trapped longs become forced sellers toward 21,428. If instead the pullback holds around 21,448, bids refresh, sells are absorbed, and value builds above 21,445 toward 21,464, the pool is never activated and there is no trade in it.",
+  "decision_consequence": "Do not short because a stop pool exists. Stand aside through the break, locate the pool below the structure, and act on the forced-flow move only after failure and reentry evidence. If the breakout is defended, the pool stays latent and there is no setup. The stop pool is fuel that requires ignition, never an entry signal by itself.",
   "required_evidence": [
-    {
-      "id": "todo_evidence",
-      "label": "TODO: define required evidence",
-      "required": true
-    }
+    { "id": "breakout_reference_level", "label": "Breakout reference at 21,445, the prior-range ceiling the displacement crosses on expanding volume and the structure the stop pool sits beneath", "required": true },
+    { "id": "trapped_long_entry_zone", "label": "Trapped long entry zone, the 21,446 to 21,458 breakout entrant band whose inventory may be forced out", "required": true },
+    { "id": "failed_breakout_reentry_trigger", "label": "Failure and reentry trigger: price fails back through 21,445 and 21,443 prints with a speed and sell-volume burst", "required": true },
+    { "id": "latent_stop_pool_below_structure", "label": "Latent stop pool below the failed-breakout structure, densest under 21,440, liquidity and not yet forced flow", "required": true },
+    { "id": "forced_exit_activation_path", "label": "Forced-exit activation path: the reentry at 21,443 fires stops from 21,443 through 21,440 toward 21,428", "required": true },
+    { "id": "forced_selling_flow", "label": "Trapped longs become forced sellers when their stops activate, supplying the move rather than expressing new opinion", "required": true },
+    { "id": "defended_branch_pool_not_activated", "label": "Defended branch: the pullback holds above 21,445, bids refresh, sells are absorbed, value migrates higher toward 21,464, and the stop pool stays latent", "required": true },
+    { "id": "decision_wait_for_failure_evidence", "label": "The stop pool is not an entry signal by itself: the read waits for failure and reentry evidence before the pool is actionable", "required": true }
   ],
   "forbidden_errors": [
-    {
-      "id": "todo_forbidden",
-      "description": "TODO: define a misread this figure must not imply."
-    }
+    { "id": "stop_pool_as_entry_signal", "description": "Implying the stop pool alone is a short signal, rather than latent fuel that requires confirmed failure and reentry to ignite." },
+    { "id": "trap_without_failed_breakout", "description": "Implying the pool is active before the breakout actually fails; latent stops are not forced flow until reentry through the level." },
+    { "id": "trap_without_locations", "description": "Depicting a trap with no named entry zone and no forced-exit location. No locations, no trap." },
+    { "id": "every_breakout_has_active_stops", "description": "Implying every breakout immediately activates its stop pool or must be faded, omitting the defended outcome." },
+    { "id": "missing_defended_branch", "description": "Omitting the defended breakout branch where price holds, value migrates up, and the stop pool stays latent and unactivated." },
+    { "id": "hindsight_stop_mapping", "description": "Identifying the stop pool only in hindsight, after the collapse is complete, instead of locating it below the structure at the break." },
+    { "id": "execution_automation_implication", "description": "Implying broker, order, or stop-hunting automation, or advising the reader to hide or remove stops. The figure maps liquidity, it does not automate or evade execution." }
   ],
   "figure_type": "price_path_level_interaction",
   "learning_mode": "static_explanatory",
   "interaction": "none",
   "panels": [
-    {
-      "id": "main",
-      "role": "generic",
-      "title": "Stop Pool Below Failed Breakout"
-    }
+    { "id": "breakout_context", "role": "price_path", "title": "Range, breakout reference, and trapped long entry zone", "grid": "row:1 col:1-2" },
+    { "id": "stop_pool_map", "role": "price_path", "title": "Latent stop pool below the failed-breakout structure", "grid": "row:2 col:1" },
+    { "id": "activation_trigger", "role": "price_path", "title": "Reentry trigger and forced-selling path", "grid": "row:2 col:2" },
+    { "id": "defended_branch", "role": "price_path", "title": "Defended branch: pool stays latent", "grid": "row:3 col:1-2" },
+    { "id": "evidence_rail", "role": "evidence_rail", "title": "Required evidence", "grid": "row:1-3 col:3" }
   ],
-  "annotations": [],
+  "annotations": [
+    { "id": "breakout_level_marker", "type": "label", "target": "breakout_reference_level", "text": "Break of 21,445: the structure the stop pool sits beneath" },
+    { "id": "entry_zone_band", "type": "zone", "target": "trapped_long_entry_zone", "text": "Breakout longs fill 21,446 to 21,458: the inventory that may be forced out" },
+    { "id": "stop_pool_zone", "type": "zone", "target": "latent_stop_pool_below_structure", "text": "Stops densest under 21,440: latent below the structure, not active yet" },
+    { "id": "latent_label", "type": "label", "target": "latent_stop_pool_below_structure", "text": "Latent, not active: a pool is liquidity until the break fails" },
+    { "id": "activation_label", "type": "label", "target": "failed_breakout_reentry_trigger", "text": "Activation requires failure and reentry: 21,443 on a sell-volume burst" },
+    { "id": "forced_path_arrow", "type": "arrow", "target": "forced_exit_activation_path", "text": "Stops fire 21,443 through 21,440 to 21,428: trapped longs become forced sellers" },
+    { "id": "forced_flow_bracket", "type": "bracket", "target": "forced_selling_flow", "text": "Forced supply, not new opinion, pays the move down" },
+    { "id": "defended_hold_arrow", "type": "arrow", "target": "defended_branch_pool_not_activated", "text": "Hold and value build above 21,445: pool stays latent, no trade in the pool" }
+  ],
   "fixture": {
     "kind": "deterministic_synthetic",
-    "description": "TODO: fixture for Stop Pool Below Failed Breakout (mapped from \"Liquidity map\").",
-    "instruments": []
+    "description": "Synthetic NQ morning session, continuous with the CH06 trap and defended fixtures. Prior balance 21,410 to 21,445 holds 90 minutes; breakout reference 21,445. The displacement crosses 21,445 on expanding volume and positive delta into the 21,446 to 21,458 trapped-long entry zone. A latent stop pool sits densest under 21,440, below the failed-breakout structure. Activation path: price fails back through 21,445, the reentry trigger at 21,443 prints on a speed and sell-volume burst, stops fire from 21,443 through 21,440, and forced selling runs toward 21,428. Defended branch: the pullback holds around 21,448, bids refresh, sells are absorbed, value builds above 21,445, the next push extends toward 21,464, and the stop pool stays latent and unactivated.",
+    "instruments": ["NQ"],
+    "notes": "Numbers align with CH06_TRAP_SEQUENCE_STORYBOARD_001, CH06_DEFENDED_BREAKOUT_VS_TRAPPED_BREAKOUT_001, and CH06_BREAKOUT_ENTRANT_POPULATION_MAP_001 for semantic continuity. Emphasis is the stop pool's location below the failed-breakout structure and its conditional activation, not the full trap step-through."
   },
-  "outputs": [
-    "static_svg",
-    "interactive_html"
-  ],
+  "outputs": ["static_svg"],
   "placement": {
     "chapter": "CH06",
-    "section_slug": "stop-pool-below-failed-breakout",
+    "section_slug": "stop-runs-as-fuel",
     "position": "after_section_heading"
   },
-  "export": {
-    "width": 1100,
-    "height": 620
-  },
+  "export": { "width": 1100, "height": 620 },
   "qa": {
     "domain_rule_family": "trap_positioning_rules",
-    "render_evidence_check": false,
+    "render_evidence_check": true,
     "visual_snapshot": false
   },
   "acceptance_criteria": [
-    "TODO: define acceptance criteria for this figure."
+    "The breakout reference (21,445) is visible and named as the structure the pool sits beneath.",
+    "The trapped long entry zone (21,446 to 21,458) is visible and named before the outcome.",
+    "The stop pool below the failed-breakout structure (densest under 21,440) is visible and named.",
+    "The figure visually distinguishes latent stops before failure from activated forced exits after reentry.",
+    "The reentry and failure trigger (21,443 on a sell-volume burst) is required before the pool is treated as actionable.",
+    "The forced-selling path from stop activation (21,443 through 21,440 to 21,428) is visible.",
+    "The defended branch is present and shows the pool remaining latent as value migrates toward 21,464.",
+    "The figure does not imply the stop pool alone is a trade signal.",
+    "The figure implies no broker, order, or stop-hunting automation and gives no advice to hide or remove stops.",
+    "Every required_evidence id is renderable and stampable by a future renderer (render-evidence check)."
   ]
 }
