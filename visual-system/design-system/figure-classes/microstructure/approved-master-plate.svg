@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="mp-title mp-desc">
+  <!--
+    Microstructure class master plate. STATUS: CANDIDATE, NOT APPROVED.
+    Candidate master plate, pending human Visual Art Director approval.
+    This is a low-fidelity composition target authored as design-authority reference.
+    It is NOT a renderer, NOT production output, and carries NO approval record.
+    Governed figure_type: footprint_dom_delta_sequence. Calibration spec: CH04 absorption.
+    Colors below mirror packages/design-tokens/tokens.ts by ROLE. A renderer that
+    implements this grammar must reference tokens, never hardcode these hex values.
+      canvas        #0E1116  surface.canvas
+      panel         #151A21  surface.panel
+      railRaised    #1B222C  surface.panelRaised
+      textPrimary   #E8E1D6  text.primary
+      textSecondary #B8AEA2  text.secondary
+      textMuted     #7F8792  text.muted
+      aggressorTeal #6FAE8C  evidence.deltaPositive / state.accepted   (initiative effort, buyers up)
+      outcomeRust   #C97868  evidence.deltaNegative / state.rejected   (defended level, resolution down)
+      passiveBlue   #8BA6C9  evidence.volume                           (passive reload, absorber)
+      accentSand    #C4A35A  state.stalk                               (effort bracket, evidence accent)
+      forbidRed     #D16262  risk.forbidden                            (forbidden-rail glyphs)
+      priceSand     #D8C7A1  evidence.price
+    Scaffolding overlays (region tags, label lanes, callout zones, sequence arrows)
+    are muted dashed guides. They are master-plate design law, not reader content.
+  -->
+  <title id="mp-title">Microstructure master plate: absorption as effort without result</title>
+  <desc id="mp-desc">Candidate class master plate. Four body panels (price path, footprint, DOM ladder, cumulative delta) carry the absorption read: aggressive volume and positive delta press into a defended level, the passive offer reloads, price fails to print through, and price resolves down against the buyers. An evidence rail and a forbidden-misread rail verify the body. Status: candidate, pending human Visual Art Director approval, not approved production.</desc>
+
+  <defs>
+    <marker id="ahRust" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C97868"/></marker>
+    <marker id="ahTeal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6FAE8C"/></marker>
+    <marker id="ahMuted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F8792"/></marker>
+    <marker id="ahSand" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C4A35A"/></marker>
+  </defs>
+
+  <!-- ===================== BACKGROUND ===================== -->
+  <rect x="0" y="0" width="1280" height="720" fill="#0E1116"/>
+
+  <!-- ===================== TITLE BAND ===================== -->
+  <text x="32" y="56" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="700" fill="#E8E1D6">Microstructure: Absorption as Effort Without Result</text>
+  <text x="32" y="76" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#B8AEA2">Class master plate calibrated on footprint, DOM, and delta. The body carries the read; the rails verify.</text>
+
+  <!-- ===================== CANDIDATE STATUS BANNER ===================== -->
+  <rect x="32" y="88" width="1216" height="32" rx="4" fill="#1B222C" stroke="#C4A35A" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <circle cx="52" cy="104" r="9" fill="none" stroke="#C4A35A" stroke-width="1.5"/>
+  <text x="52" y="108" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#C4A35A">!</text>
+  <text x="72" y="108" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#C4A35A">CANDIDATE MASTER PLATE, PENDING HUMAN VISUAL ART DIRECTOR APPROVAL.</text>
+  <text x="1240" y="108" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="end" fill="#B8AEA2">Not approved production. No approval record.</text>
+
+  <!-- ===================== ROW 1 PANEL A: PRICE PATH ===================== -->
+  <rect x="32" y="136" width="312" height="264" rx="6" fill="#151A21" stroke="#1B222C" stroke-width="1"/>
+  <text x="48" y="160" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#7F8792">PRICE PATH</text>
+  <text x="328" y="160" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="end" fill="#7F8792" opacity="0.7">region: price-path</text>
+
+  <!-- defended level (the result reference): structural rust dashed line, the ceiling that holds -->
+  <line x1="48" y1="232" x2="328" y2="232" stroke="#C97868" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="52" y="226" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#C97868">Defended level</text>
+  <text x="328" y="226" font-family="JetBrains Mono, ui-monospace, monospace" font-size="10" text-anchor="end" fill="#C97868">5484.00</text>
+
+  <!-- price path: rises to the level, flatlines (no print through), resolves down (away from absorbed buyers) -->
+  <polyline points="56,360 96,312 140,272 180,232 232,232 276,232 300,288 320,344" fill="none" stroke="#E8E1D6" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- callout zone (scaffolding) + result callout: effort produced no print through -->
+  <rect x="150" y="184" width="156" height="22" rx="3" fill="none" stroke="#7F8792" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+  <text x="228" y="199" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#B8AEA2">Result: no print through</text>
+  <line x1="228" y1="206" x2="228" y2="230" stroke="#7F8792" stroke-width="1" marker-end="url(#ahMuted)"/>
+
+  <!-- resolution away (down, against the buyers) -->
+  <line x1="296" y1="262" x2="314" y2="330" stroke="#C97868" stroke-width="2" marker-end="url(#ahRust)"/>
+  <text x="290" y="356" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#C97868">Resolution away</text>
+
+  <!-- sequence direction -->
+  <line x1="56" y1="384" x2="120" y2="384" stroke="#7F8792" stroke-width="1" marker-end="url(#ahMuted)"/>
+  <text x="124" y="388" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#7F8792">time</text>
+
+  <!-- ===================== ROW 1 PANEL B: FOOTPRINT ===================== -->
+  <rect x="360" y="136" width="312" height="264" rx="6" fill="#151A21" stroke="#1B222C" stroke-width="1"/>
+  <text x="376" y="160" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#7F8792">FOOTPRINT (bid &#215; ask)</text>
+  <text x="656" y="160" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="end" fill="#7F8792" opacity="0.7">region: footprint</text>
+
+  <text x="432" y="184" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#7F8792">BID</text>
+  <text x="516" y="184" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#7F8792">PRICE</text>
+  <text x="600" y="184" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#7F8792">ASK</text>
+
+  <!-- failure-to-progress: cells above the level are 0 x 0 (no print through) -->
+  <rect x="376" y="200" width="280" height="56" rx="3" fill="none" stroke="#C97868" stroke-width="1.25" stroke-dasharray="4 3"/>
+  <text x="652" y="212" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="end" fill="#C97868">no print</text>
+
+  <!-- footprint rows: high to low. 0x0 above the level, heavy aggressive ask at the level, normal below -->
+  <!-- row 5484.50 -->
+  <text x="432" y="220" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#7F8792">0</text>
+  <text x="516" y="220" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">5484.50</text>
+  <text x="600" y="220" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#7F8792">0</text>
+  <!-- row 5484.25 -->
+  <text x="432" y="248" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#7F8792">0</text>
+  <text x="516" y="248" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">5484.25</text>
+  <text x="600" y="248" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#7F8792">0</text>
+  <!-- row 5484.00 DEFENDED: aggressive ask volume -->
+  <rect x="572" y="264" width="56" height="22" rx="3" fill="#6FAE8C" opacity="0.20"/>
+  <text x="432" y="280" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#7F8792">0</text>
+  <text x="516" y="280" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#C97868">5484.00</text>
+  <text x="600" y="280" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#6FAE8C">1850</text>
+  <line x1="648" y1="278" x2="630" y2="278" stroke="#6FAE8C" stroke-width="1.25" marker-end="url(#ahTeal)"/>
+  <text x="656" y="282" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="end" fill="#6FAE8C">Aggressive volume (effort)</text>
+  <!-- row 5483.75 -->
+  <text x="432" y="312" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">120</text>
+  <text x="516" y="312" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">5483.75</text>
+  <text x="600" y="312" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">80</text>
+  <!-- row 5483.50 -->
+  <text x="432" y="340" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">350</text>
+  <text x="516" y="340" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">5483.50</text>
+  <text x="600" y="340" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">20</text>
+  <!-- row 5483.25 -->
+  <text x="432" y="368" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">150</text>
+  <text x="516" y="368" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">5483.25</text>
+  <text x="600" y="368" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">10</text>
+
+  <!-- ===================== ROW 1 PANEL C: DOM LADDER ===================== -->
+  <rect x="688" y="136" width="312" height="264" rx="6" fill="#151A21" stroke="#1B222C" stroke-width="1"/>
+  <text x="704" y="160" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#7F8792">DOM LADDER</text>
+  <text x="984" y="160" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="end" fill="#7F8792" opacity="0.7">region: dom-reload</text>
+
+  <text x="752" y="184" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#7F8792">BIDS</text>
+  <text x="844" y="184" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#7F8792">PRICE</text>
+  <text x="936" y="184" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#7F8792">ASKS</text>
+
+  <!-- label lane (scaffolding) for the reload annotation, right edge of DOM -->
+  <line x1="980" y1="200" x2="980" y2="368" stroke="#7F8792" stroke-width="1" stroke-dasharray="2 4" opacity="0.5"/>
+  <text x="984" y="372" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="end" fill="#7F8792" opacity="0.6">label lane</text>
+
+  <!-- row 5484.50 -->
+  <text x="844" y="220" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">5484.50</text>
+  <text x="936" y="220" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">450</text>
+  <!-- row 5484.25 -->
+  <text x="844" y="248" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">5484.25</text>
+  <text x="936" y="248" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">320</text>
+  <!-- row 5484.00 DEFENDED: passive reload (iceberg) on the ask -->
+  <rect x="904" y="266" width="8" height="18" rx="1" fill="#8BA6C9" opacity="0.45"/>
+  <rect x="916" y="266" width="8" height="18" rx="1" fill="#8BA6C9" opacity="0.65"/>
+  <rect x="928" y="266" width="8" height="18" rx="1" fill="#8BA6C9" opacity="0.85"/>
+  <text x="844" y="280" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#C97868">5484.00</text>
+  <text x="956" y="280" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" font-weight="700" text-anchor="start" fill="#8BA6C9">2000 &#8635;&#215;5</text>
+  <line x1="980" y1="290" x2="940" y2="290" stroke="#8BA6C9" stroke-width="1.25" marker-end="url(#ahMuted)"/>
+  <text x="980" y="304" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="end" fill="#8BA6C9">Passive reload (iceberg)</text>
+  <!-- row 5483.75 -->
+  <text x="844" y="312" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">5483.75</text>
+  <text x="752" y="312" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">150</text>
+  <!-- row 5483.50 -->
+  <text x="844" y="340" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">5483.50</text>
+  <text x="752" y="340" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">150</text>
+  <!-- row 5483.25 -->
+  <text x="844" y="368" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">5483.25</text>
+  <text x="752" y="368" font-family="JetBrains Mono, ui-monospace, monospace" font-size="12" text-anchor="middle" fill="#B8AEA2">90</text>
+
+  <!-- ===================== ROW 2: CUMULATIVE DELTA (spans body columns) ===================== -->
+  <rect x="32" y="416" width="968" height="104" rx="6" fill="#151A21" stroke="#1B222C" stroke-width="1"/>
+  <text x="48" y="440" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#7F8792">CUMULATIVE DELTA</text>
+  <text x="984" y="440" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="end" fill="#7F8792" opacity="0.7">region: delta</text>
+  <text x="120" y="440" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#7F8792">positive above the 0 line (sign by baseline position)</text>
+
+  <!-- zero baseline -->
+  <line x1="48" y1="504" x2="984" y2="504" stroke="#7F8792" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="40" y="508" font-family="JetBrains Mono, ui-monospace, monospace" font-size="10" text-anchor="end" fill="#B8AEA2">0</text>
+
+  <!-- shared time axis guide: aligns delta climb beneath the price path arrival at the level -->
+  <line x1="180" y1="452" x2="180" y2="504" stroke="#7F8792" stroke-width="1" stroke-dasharray="2 4" opacity="0.5"/>
+  <text x="184" y="500" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#7F8792" opacity="0.7">shared time axis: level arrival</text>
+
+  <!-- cumulative delta climbs strongly positive into the level, then plateaus (effort spent, no give-back) -->
+  <polyline points="56,500 96,488 140,470 180,454 232,450 300,448 520,449 984,450" fill="none" stroke="#6FAE8C" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- effort bracket -->
+  <path d="M 96,452 L 96,446 L 300,446 L 300,452" fill="none" stroke="#C4A35A" stroke-width="1.5"/>
+  <text x="198" y="442" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#C4A35A">Effort: delta &#43;1800 into the level</text>
+
+  <!-- ===================== EVIDENCE RAIL (spans rows 1 to 2) ===================== -->
+  <rect x="1016" y="136" width="232" height="384" rx="6" fill="#1B222C" stroke="#151A21" stroke-width="1"/>
+  <text x="1032" y="160" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#E8E1D6">REQUIRED EVIDENCE</text>
+  <text x="1032" y="176" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#7F8792">rail verifies, body teaches</text>
+  <text x="1232" y="160" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="end" fill="#7F8792" opacity="0.7">region: evidence-rail</text>
+
+  <!-- item 1 -->
+  <rect x="1032" y="196" width="12" height="12" rx="2" fill="none" stroke="#6FAE8C" stroke-width="1.5"/>
+  <text x="1052" y="200" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#E8E1D6">Aggressive traded volume</text>
+  <text x="1052" y="214" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#E8E1D6">into the level</text>
+  <!-- item 2 -->
+  <rect x="1032" y="248" width="12" height="12" rx="2" fill="none" stroke="#6FAE8C" stroke-width="1.5"/>
+  <text x="1052" y="252" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#E8E1D6">Signed delta pressing</text>
+  <text x="1052" y="266" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#E8E1D6">into the level</text>
+  <!-- item 3 -->
+  <rect x="1032" y="300" width="12" height="12" rx="2" fill="none" stroke="#8BA6C9" stroke-width="1.5"/>
+  <text x="1052" y="304" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#E8E1D6">Passive reload at the</text>
+  <text x="1052" y="318" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#E8E1D6">defended price</text>
+  <!-- item 4 -->
+  <rect x="1032" y="352" width="12" height="12" rx="2" fill="none" stroke="#C97868" stroke-width="1.5"/>
+  <text x="1052" y="356" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#E8E1D6">Failure to progress</text>
+  <text x="1052" y="370" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#E8E1D6">through the level</text>
+  <!-- item 5 -->
+  <rect x="1032" y="404" width="12" height="12" rx="2" fill="none" stroke="#C97868" stroke-width="1.5"/>
+  <text x="1052" y="408" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#E8E1D6">Resolution away from</text>
+  <text x="1052" y="422" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#E8E1D6">the absorbed side</text>
+
+  <line x1="1032" y1="468" x2="1232" y2="468" stroke="#151A21" stroke-width="1"/>
+  <text x="1032" y="488" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#7F8792">Each box must be ticked against</text>
+  <text x="1032" y="500" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#7F8792">the BODY, not the rail. The rail</text>
+  <text x="1032" y="512" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#7F8792">must not carry the read.</text>
+
+  <!-- ===================== FORBIDDEN-MISREAD RAIL (full width) ===================== -->
+  <rect x="32" y="536" width="1216" height="64" rx="6" fill="#1B222C" stroke="#151A21" stroke-width="1"/>
+  <rect x="32" y="536" width="4" height="64" rx="0" fill="#D16262"/>
+  <text x="48" y="558" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#D16262">MUST NOT IMPLY</text>
+  <text x="1232" y="558" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="end" fill="#7F8792" opacity="0.7">region: forbidden-misread-rail</text>
+
+  <!-- 5 forbidden items across the rail -->
+  <circle cx="58" cy="578" r="7" fill="none" stroke="#D16262" stroke-width="1.5"/><line x1="53" y1="578" x2="63" y2="578" stroke="#D16262" stroke-width="1.5"/>
+  <text x="74" y="576" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E8E1D6">Low-volume pause</text>
+  <text x="74" y="590" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E8E1D6">as absorption</text>
+
+  <circle cx="296" cy="578" r="7" fill="none" stroke="#D16262" stroke-width="1.5"/><line x1="291" y1="578" x2="301" y2="578" stroke="#D16262" stroke-width="1.5"/>
+  <text x="312" y="576" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E8E1D6">Accepted break-through</text>
+  <text x="312" y="590" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E8E1D6">as clean absorption</text>
+
+  <circle cx="560" cy="578" r="7" fill="none" stroke="#D16262" stroke-width="1.5"/><line x1="555" y1="578" x2="565" y2="578" stroke="#D16262" stroke-width="1.5"/>
+  <text x="576" y="576" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E8E1D6">Delta omitted</text>
+  <text x="576" y="590" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E8E1D6">(effort unreadable)</text>
+
+  <circle cx="760" cy="578" r="7" fill="none" stroke="#D16262" stroke-width="1.5"/><line x1="755" y1="578" x2="765" y2="578" stroke="#D16262" stroke-width="1.5"/>
+  <text x="776" y="576" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E8E1D6">Passive reload omitted</text>
+  <text x="776" y="590" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E8E1D6">(no mechanism)</text>
+
+  <circle cx="980" cy="578" r="7" fill="none" stroke="#D16262" stroke-width="1.5"/><line x1="975" y1="578" x2="985" y2="578" stroke="#D16262" stroke-width="1.5"/>
+  <text x="996" y="576" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E8E1D6">Tape alone authorizes</text>
+  <text x="996" y="590" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E8E1D6">the trade</text>
+
+  <!-- ===================== CAPTION ===================== -->
+  <text x="32" y="624" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#E8E1D6">Aggressors spend heavy volume and positive delta into the level; the passive offer reloads; price fails to print through and resolves against the buyers.</text>
+  <text x="32" y="642" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#B8AEA2">Read: a responsive trade against the absorbed aggressors once price fails and rolls, in context. Absorption is preparation evidence, not permission to chase the flow.</text>
+
+  <!-- ===================== FOOTER METADATA ===================== -->
+  <text x="32" y="672" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#7F8792">Class: Microstructure  |  Figure type: footprint_dom_delta_sequence  |  Calibration: CH04 absorption  |  Canvas 1280 &#215; 720  |  8 px grid</text>
+  <text x="1248" y="672" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="end" fill="#C4A35A">STATUS: CANDIDATE  |  not human-approved  |  no sign-off recorded</text>
+</svg>
