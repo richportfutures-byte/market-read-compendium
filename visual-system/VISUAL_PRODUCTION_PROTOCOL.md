@@ -648,9 +648,99 @@ Rules:
 
 - No ornament that competes with evidence.
 
-- Every figure is reproducible from its declared deterministic fixture.
+- Every synthetic renderer output is reproducible from its declared deterministic fixture.
 
-- No figure shows data not in its fixture.
+- No synthetic figure shows data not in its fixture.
+
+#### Source-evidence integrity
+
+Real-market evidence is allowed and should be preferred for canonical instructional visuals when it materially improves instructional fidelity and can be properly sourced.
+
+Real-market evidence may include market data, screenshots, platform captures, historical market artifacts, exported data, replay captures, and manually logged market evidence. It may be captured, cropped, normalized, redrawn, tokenized, restyled, annotated, and incorporated into the visual system, but the underlying market mechanics must not be falsified.
+
+The visual source model separates:
+
+- source class, where the evidence or reference came from
+
+- production method, how the figure is produced
+
+- value status, the truth status and transformation state of rendered market values
+
+Source classes:
+
+- REAL_MARKET_CAPTURE: platform-derived visual artifacts such as screenshots, replay captures, chart captures, heatmaps, DOM captures, footprint captures, TPO/profile captures, or screen-recording frames.
+
+- REAL_DATA_EXPORT: exported real market data such as tick data, footprint data, TPO/profile exports, DOM/depth exports, CSV files, vendor files, broker exports, or historical market data files.
+
+- MANUAL_MARKET_LOG: manually recorded observations of real market events. These must be labeled as manually logged and must not be presented as raw feed data.
+
+- MANUSCRIPT_REFERENCE: prose or source-text references from the handbook, chapter manuscript, or internal visual plan. These are not claims of historical market data.
+
+- SYNTHETIC_TEACHING_MODEL: invented, deterministic, manually constructed, or fixture-based data used for renderer development, tests, prototyping, QA edge cases, controlled concept drills, failure examples, or explicitly labeled conceptual teaching.
+
+Production methods:
+
+- RAW_CAPTURE
+
+- ANNOTATED_CAPTURE
+
+- DATA_DERIVED_RECONSTRUCTION
+
+- SYNTHETIC_RENDERER_OUTPUT
+
+Value status values:
+
+- raw
+
+- aggregated
+
+- redrawn
+
+- normalized
+
+- anonymized
+
+- synthetic
+
+Legacy string source_refs are manuscript/source-text references by default. They remain valid as MANUSCRIPT_REFERENCE records and are not synthetic market evidence or real-market provenance. Structured real-market source records belong in source_evidence and require provenance.
+
+When a figure is represented as real-market-derived, the underlying market mechanics must remain faithful to the source event. Price sequence, time order, traded volume, bid/ask volume, delta, TPO count, profile distribution, volume-at-price distribution, DOM state, passive reloads, passive pulls, liquidity pockets, liquidity sweeps, session context, intermarket context, and event outcome must not be invented, cosmetically changed, rearranged, exaggerated, smoothed, deleted, or cleaned up in a way that changes the event.
+
+Allowed transformations:
+
+- crop the event window
+
+- redact account, broker, user-identifying, or private information
+
+- remove platform clutter, redundant UI, grid noise, irrelevant panels, and watermarks where practically appropriate
+
+- normalize typography, color, spacing, stroke weight, panel structure, and hierarchy into the design-token system
+
+- rescale or reframe charts for readability
+
+- convert exported data into tokenized renderings only through rendering paths allowed by this repository
+
+- annotate with evidence rails, forbidden-misread rails, labels, callouts, arrows, state badges, highlights, and decision gates
+
+- simplify non-essential visual noise when simplification does not alter market-mechanical truth
+
+- use screenshots and platform captures as source evidence when provenance is recorded
+
+Forbidden transformations:
+
+- inventing or changing price action, traded volume, bid/ask volume, delta, TPO/profile structure, DOM liquidity, or event outcome
+
+- inventing passive reloads, passive pulls, iceberg behavior, liquidity pockets, stop pools, or forced-exit cascades without evidence or explicit conceptual labeling
+
+- presenting synthetic, reconstructed, or manually drawn data as historical fact
+
+- using screenshots as decorative proof without source metadata
+
+- weakening domain QA to make cleaner-looking visuals pass
+
+No runtime live-market fetching is allowed inside renderers, export, QA, visual snapshots, or handbook figure generation. Curated historical real-market evidence may be referenced, transformed, reconstructed, or rendered only through declared specs, provenance, and controlled source artifacts.
+
+Deterministic synthetic fixtures remain valid for tests, renderer development, layout prototyping, domain-QA edge cases, visual regression, and explicitly labeled conceptual teaching. They are not automatically the preferred canonical publication source when real-market-derived evidence would materially improve instructional fidelity and can be properly sourced. Synthetic fixtures must not be represented as historical market evidence.
 
 ### 7.8 Density and clutter
 
@@ -1262,6 +1352,22 @@ Rules:
 - run git status --short before and after every commit
 
 - report changed files explicitly
+
+- do not edit generated or stitched files directly when they declare a generated-file header
+
+- treat doctrine-like files with unclear source status as authority-unknown/protected and report them instead of patching them
+
+- do not mass-add generated-file headers during unrelated work
+
+Generated or stitched files created by repository automation must start with this header:
+
+```html
+<!-- GENERATED FILE - DO NOT EDIT DIRECTLY -->
+<!-- Source: <relative path to the source file(s)> -->
+<!-- Regenerate with: <exact command to rebuild this file> -->
+```
+
+Source-of-truth files must not contain the generated-file header. If one does, stop and report the conflict.
 
 ## 14. Tooling and agent policy
 

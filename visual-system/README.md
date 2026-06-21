@@ -64,7 +64,8 @@ The gate refuses to render, domain-QA, or inject a draft until a human promotes 
 - Renderers are pure deterministic `spec -> SVG string` functions.
 - No Canvas, browser APIs, DOM, localStorage, network, filesystem reads, randomness, time dependence, runtime fetching, or animation in the renderer or export path.
 - `snapshot:png` may use a headless browser only as a visual-review rasterizer, off the export critical path.
-- No live market data. Fixtures are deterministic synthetic only.
+- No runtime live-market fetching inside renderers, export, QA, or handbook figure generation.
+- Curated historical real-market evidence is allowed when declared through source metadata and provenance; deterministic synthetic fixtures remain valid for renderer proof, tests, and explicitly labeled conceptual teaching.
 - No broker, order, account, fill, margin, execution, P&L, or trading automation.
 
 ## Layout

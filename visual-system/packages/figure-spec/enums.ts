@@ -66,3 +66,27 @@ export const PANEL_ROLES = [
 export const ANNOTATION_TYPES = ["arrow", "bracket", "callout", "label", "zone"] as const;
 
 export const FIXTURE_KINDS = ["deterministic_synthetic", "none"] as const;
+
+export const SOURCE_CLASSES = [
+  "REAL_MARKET_CAPTURE",
+  "REAL_DATA_EXPORT",
+  "MANUAL_MARKET_LOG",
+  "MANUSCRIPT_REFERENCE",
+  "SYNTHETIC_TEACHING_MODEL",
+] as const;
+
+export const PRODUCTION_METHODS = [
+  "RAW_CAPTURE",
+  "ANNOTATED_CAPTURE",
+  "DATA_DERIVED_RECONSTRUCTION",
+  "SYNTHETIC_RENDERER_OUTPUT",
+] as const;
+
+export const VALUE_STATUS = [
+  "raw",
+  "aggregated",
+  "redrawn",
+  "normalized",
+  "anonymized",
+  "synthetic",
+] as const;
