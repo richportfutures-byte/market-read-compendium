@@ -49,7 +49,7 @@ The junior error is signal shopping: he sees the thrust both days and takes the 
 > The stack is the trade. What you see on the tape is just the last sentence of it.
 
 ### See Also
-Pre-Market Preparation Workflow, The Decision Gate: From Read to Execution Permission, Common Full-Stack Failures (Where the Chain Breaks), Auction and Market Profile (Ch. 3), Volatility Regime (Ch. 8), Intermarket Confirmation (Ch. 9)
+Pre-Market Preparation Workflow, The Decision Gate: From Read to Execution Permission, Common Full-Stack Failures (Where the Chain Breaks), Chapter 3: Auction and Market Profile, Chapter 8: Volatility Regime, Chapter 9: Intermarket Confirmation
 
 ---
 
@@ -94,7 +94,7 @@ The open pushes to 19,956 in five minutes, then sellers arrive; 19,902 breaks at
 > Prep means the open finds you with instructions, not opinions.
 
 ### See Also
-The Complete Read Stack (All 11 Layers in Sequence), Building the Opening Read, The No-Trade Decision as Professional Output, Catalyst Interpretation (Ch. 10), Session Context and Sequencing (Ch. 7)
+The Complete Read Stack (All 11 Layers in Sequence), Building the Opening Read, The No-Trade Decision as Professional Output, Chapter 10: Catalyst Interpretation, Chapter 7: Session Context and Sequencing
 
 ---
 
@@ -138,7 +138,7 @@ The junior error is trading the first print in the prepared direction. It feels 
 > Classify the open before you trade it; the first print is a question, not an answer.
 
 ### See Also
-Pre-Market Preparation Workflow, Intraday Read Maintenance & Thesis Updates, Session Context and Sequencing (Ch. 7), Auction and Market Profile (Ch. 3), Tape Reading and Microstructure (Ch. 4)
+Pre-Market Preparation Workflow, Intraday Read Maintenance & Thesis Updates, Chapter 7: Session Context and Sequencing, Chapter 3: Auction and Market Profile, Chapter 4: Tape Reading and Microstructure
 
 ---
 
@@ -182,7 +182,7 @@ The junior error is the permanent opening read. He wrote balance at 9:45, faded 
 > Update on evidence, hold through noise, and know in writing which one you are doing.
 
 ### See Also
-Building the Opening Read, The Decision Gate: From Read to Execution Permission, Common Full-Stack Failures (Where the Chain Breaks), Volatility Regime (Ch. 8), Intermarket Confirmation (Ch. 9)
+Building the Opening Read, The Decision Gate: From Read to Execution Permission, Common Full-Stack Failures (Where the Chain Breaks), Chapter 8: Volatility Regime, Chapter 9: Intermarket Confirmation
 
 ---
 
@@ -228,7 +228,7 @@ Now the collapsed gate, same afternoon. A junior watching the 13:05 thrust itsel
 > Six lines or no order. The gate is not where trades die; it is where they become trades.
 
 ### See Also
-The Complete Read Stack (All 11 Layers in Sequence), Trade-State Loop (Entry to Working to Exit to Review), The No-Trade Decision as Professional Output, Setup Quality and Action Vocabulary (Ch. 12), Layer 9 (execution permission)
+The Complete Read Stack (All 11 Layers in Sequence), Trade-State Loop (Entry to Working to Exit to Review), The No-Trade Decision as Professional Output, Chapter 12: Setup Quality and Action Vocabulary, Layer 9
 
 ---
 
@@ -273,7 +273,7 @@ The junior error is P&L-and-hope management. At minute eleven he is "only down t
 > Confirm, stall, threat, exit. If you cannot name the state, you are not managing the trade, you are watching it.
 
 ### See Also
-The Decision Gate: From Read to Execution Permission, Post-Trade Review Process, Trade-State Management (Ch. 11), Tape Reading and Microstructure (Ch. 4)
+The Decision Gate: From Read to Execution Permission, Post-Trade Review Process, Chapter 11: Trade-State Management, Chapter 4: Tape Reading and Microstructure
 
 ---
 
@@ -319,7 +319,7 @@ The junior error is relabeling NO-TRADE as SETUP because the urge to click neede
 > NO-TRADE, written and reasoned, is output. Clicking to avoid writing it is the most expensive paperwork dodge in trading.
 
 ### See Also
-The Decision Gate: From Read to Execution Permission, Pre-Market Preparation Workflow, The Review Loop as Skill Compounding Engine, Volatility Regime (Ch. 8), Catalyst Interpretation (Ch. 10)
+The Decision Gate: From Read to Execution Permission, Pre-Market Preparation Workflow, The Review Loop as Skill Compounding Engine, Chapter 8: Volatility Regime, Chapter 10: Catalyst Interpretation
 
 ---
 
@@ -363,7 +363,7 @@ The junior error is reviewing only losers, in P&L language. It feels right becau
 > If your review cannot call a winner a mistake, it is not a review, it is an applause track.
 
 ### See Also
-Trade-State Loop (Entry to Working to Exit to Review), The Review Loop as Skill Compounding Engine, Layer 11 (review loop), Setup Quality and Action Vocabulary (Ch. 12)
+Trade-State Loop (Entry to Working to Exit to Review), The Review Loop as Skill Compounding Engine, Layer 11, Chapter 12: Setup Quality and Action Vocabulary
 
 ---
 
@@ -452,7 +452,7 @@ The junior error is re-optimizing the visible layer: new indicator settings, new
 > Losers tell you a link broke. The audit tells you which one. Everything else is redecorating.
 
 ### See Also
-The Complete Read Stack (All 11 Layers in Sequence), The Review Loop as Skill Compounding Engine, The Decision Gate: From Read to Execution Permission, Trade-State Management (Ch. 11)
+The Complete Read Stack (All 11 Layers in Sequence), The Review Loop as Skill Compounding Engine, The Decision Gate: From Read to Execution Permission, Chapter 11: Trade-State Management
 
 ---
 
@@ -537,13 +537,3 @@ This chapter does not occupy a slot in the stack: it is the stack, assembled and
 **What it stands on:** the authored boundary, beneath every layer rather than after the last one. The eleven layers decide whether there is a trade and where; the boundary decides how much of you the trade can cost and when the session ends, and it is set before the first layer is read, not bolted on after the gate. Size, stop, and daily loss limit are the floor the entire stack rests on, the only VERIFIED quantities in a process otherwise assembled from UNKNOWN reads, true because you authored them rather than observed them. This is the one place the handbook's evidence discipline inverts: everywhere upstream the honest tier is UNKNOWN, and the capstone's job is to keep it honest; here the tier is VERIFIED, because your equity, your size, your stop price, and your point of ruin are facts you set and can read off the screen. A flawless stack on top of an unauthored boundary is the exact configuration that produces an excellent read and an empty account. Being right lives in the layers. Staying alive lives in the floor, and the floor is laid first.
 
 ---
-
-## Verification Report
-
-- **Canonical entries:** 10 of 10 from the Chapter 13 capsule, in capsule order, each with the seven mandatory sections in contract order.
-- **Chapter-level sections:** Competency Checkpoint (9 measurable items), Drill Progression (five stages with minimum evidence standards and a live-permission revocation rule including loss-limit breach), Failure Modes (9-row table), Assessment Prompts (9 applied), Read Stack Integration (lead, confirm, never-override, and stands-on all stated per capsule).
-- **Doctrines:** read/permission separation enforced in entries 5 and 10 and in the integration section; NO-TRADE as professional output (entry 7), with the loss-limit STAND-ASIDE making the boundary outrank the read; process/outcome separation and prediction-before-outcome embedded in entries 8 and 9 and in every drill; irreversibility and sequence risk carried as the Part Four spine, from the chapter opener through gate sizing (size the streak, not the single loss), the loss-limit circuit-breaker, and the integration floor; the authored boundary named as the only VERIFIED quantity in an otherwise UNKNOWN field; mechanism tables cite order flow, auction theory, liquidity cycles, dealer hedging, inventory, positioning, forced flow, and the absorbing boundary of sequence risk throughout; conditional phrasing maintained; no doctrine restated as filler.
-- **Evidence discipline:** all market sequences are hypothetical constructions; no historical events, current prices, current exchange rules, or live conditions asserted. Time references (8:30, 10:30, 14:00 ET) are standard calendar mechanics only. Contract point values used in cost arithmetic are stable contract mechanics.
-- **Template variation:** ten distinct drills (layer-line sheet, three-branch sheet, open-type classification, thesis ledger, gate cards, state log, no-trade ledger, both-sides review, one-constraint cycle, broken-link autopsy); contrast structures used where the concept requires them, cascade and diagnostic structures elsewhere.
-- **Cross-references:** every cross-chapter reference is reconciled to the canonical chapter map (auction to Ch. 3, tape to Ch. 4, session context to Ch. 7, volatility regime to Ch. 8, intermarket to Ch. 9, catalyst to Ch. 10, trade-state management to Ch. 11, setup quality and action vocabulary to Ch. 12), with both number and title corrected. Execution permission and the review loop have no standalone chapter in the map and are cited as read-stack layers (Layer 9, Layer 11), not chapters.
-- **Style:** no em-dashes or en-dashes anywhere in the chapter; the section header uses the "In Practice: Building the Read" colon form, matching the CH12 convention.

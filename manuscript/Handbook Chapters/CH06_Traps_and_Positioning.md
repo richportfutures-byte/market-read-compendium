@@ -57,7 +57,7 @@ The drill: tomorrow, in replay or live observation with no orders, mark every di
 > Find the entry, find the stop, and wait for the market to cross back through the entry; the move that follows is paid for by the people who got it wrong.
 
 ### See Also
-Failed Breakout / Failed Breakdown, Stop Runs as Fuel, Late Buyers / Late Sellers, Absorption (Ch. 4), Acceptance vs. Rejection (Ch. 2)
+Failed Breakout / Failed Breakdown, Stop Runs as Fuel, Late Buyers / Late Sellers, Absorption, Chapter 4: Tape Reading and Microstructure, Acceptance vs. Rejection, Chapter 2: Level Interaction and Acceptance
 
 ---
 
@@ -108,7 +108,7 @@ The drill: for ten sessions, log every break of a level that held at least an ho
 > Failed breaks are not patterns, they are populations: the level marks where they entered, and the reentry marks when they pay.
 
 ### See Also
-Trapped Traders, Stop Runs as Fuel, Late Buyers / Late Sellers, Value Migration (Ch. 5), Initiative vs. Responsive Activity (Ch. 3)
+Trapped Traders, Stop Runs as Fuel, Late Buyers / Late Sellers, Chapter 3: Auction and Market Profile, Initiative vs. Responsive Activity, Chapter 3: Auction and Market Profile
 
 ---
 
@@ -157,7 +157,7 @@ The drill: tomorrow pre-session, mark every likely stop pool in your product. Du
 > The market does not hunt you personally; it harvests the pool you parked in, so know where the pools are and stop parking in them.
 
 ### See Also
-Trapped Traders, Failed Breakout / Failed Breakdown, Late Buyers / Late Sellers, Liquidity Cycles (Ch. 7), Tape Speed and Print Size (Ch. 4)
+Trapped Traders, Failed Breakout / Failed Breakdown, Late Buyers / Late Sellers, Chapter 7: Session Context and Sequencing, Chapter 4: Tape Reading and Microstructure
 
 ---
 ## Crowded Trade Failure
@@ -205,7 +205,7 @@ The drill, journal-loop based: maintain a weekly crowding scorecard for each pro
 > When everyone who could buy already bought, the only flow left with size behind it is theirs, going the other way.
 
 ### See Also
-Pain Trade, Late Buyers / Late Sellers, Positioning Reset, Long Liquidation vs. Fresh Selling, Volatility Regime Shifts (Ch. 8)
+Pain Trade, Late Buyers / Late Sellers, Positioning Reset, Long Liquidation vs. Fresh Selling, Chapter 8: Volatility Regime
 
 ---
 
@@ -254,7 +254,7 @@ The drill: tomorrow, in observation only, find one absorption candidate and one 
 > Price moves inventory from hands that must react to hands that can wait; check which kind of hand your entry just made you.
 
 ### See Also
-Trapped Traders, Late Buyers / Late Sellers, Absorption (Ch. 4), Structural Location (Ch. 2), Position Sizing Discipline (Ch. 11)
+Trapped Traders, Late Buyers / Late Sellers, Absorption, Chapter 4: Tape Reading and Microstructure, Chapter 2: Level Interaction and Acceptance, Chapter 11: Trade-State Management
 
 ---
 
@@ -305,7 +305,7 @@ The drill: in replay, collect ten sharp rallies off multi-session lows in your p
 > The most violent rallies are shorts leaving, not buyers arriving; wait for the first pullback to learn which one you watched.
 
 ### See Also
-Long Liquidation vs. Fresh Selling, Pain Trade, Trapped Traders, Delta and Cumulative Delta (Ch. 4), Catalyst Repricing Chains (Ch. 10)
+Long Liquidation vs. Fresh Selling, Pain Trade, Trapped Traders, Chapter 4: Tape Reading and Microstructure, Chapter 10: Catalyst Interpretation
 
 ---
 ## Long Liquidation vs. Fresh Selling
@@ -353,7 +353,7 @@ The drill: in replay, build a deck of ten vertical breaks of at least a session-
 > A flush ends when the forced sellers are gone; a repricing ends when lower prices stop working. Short the second, never the first, and only buy the first.
 
 ### See Also
-Short-Covering vs. Fresh Buying, Positioning Reset, Weak Hands vs. Strong Hands, Acceptance vs. Rejection (Ch. 2), Volatility Expansion Events (Ch. 8)
+Short-Covering vs. Fresh Buying, Positioning Reset, Weak Hands vs. Strong Hands, Acceptance vs. Rejection, Chapter 2: Level Interaction and Acceptance, Chapter 8: Volatility Regime
 
 ---
 
@@ -402,7 +402,7 @@ The drill, journal-loop based: every Friday, for each product you trade, write t
 > The market is not seeking truth, it is seeking liquidity, and the deepest pool of forced liquidity sits behind the crowd's stops.
 
 ### See Also
-Crowded Trade Failure, Short-Covering vs. Fresh Buying, Dealer Gamma Dynamics, Positioning Reset, Catalyst State and Event Behavior (Ch. 10)
+Crowded Trade Failure, Short-Covering vs. Fresh Buying, Dealer Gamma Dynamics, Positioning Reset, Chapter 10: Catalyst Interpretation
 
 ---
 
@@ -451,7 +451,7 @@ The drill: take twenty completed trend moves in replay across your products. For
 > The crowd's confirmation and the move's fuel run out at the same moment, and the late entry buys both at the top.
 
 ### See Also
-Weak Hands vs. Strong Hands, Crowded Trade Failure, Trapped Traders, Stop Runs as Fuel, Setup Quality Grading (Ch. 12)
+Weak Hands vs. Strong Hands, Crowded Trade Failure, Trapped Traders, Stop Runs as Fuel, Chapter 12: Setup Quality and Action Vocabulary
 
 ---
 ## Positioning Reset
@@ -499,7 +499,7 @@ The drill, journal-loop based: identify the last three forced-flow events in you
 > Trends are born from flat positioning and die from full positioning; learn to recognize the quiet market that has just been emptied, because that is where the next real move starts.
 
 ### See Also
-Crowded Trade Failure, Long Liquidation vs. Fresh Selling, Pain Trade, Volatility Regime Classification (Ch. 8), Session Context and Range State (Ch. 7)
+Crowded Trade Failure, Long Liquidation vs. Fresh Selling, Pain Trade, Chapter 8: Volatility Regime, Chapter 7: Session Context and Sequencing
 
 ---
 
@@ -548,7 +548,7 @@ The drill: for ten sessions, before the open, write a one-line regime call for y
 > The biggest player in the index tape some days is a hedging machine with no opinion; figure out whether it is leaning against the move or chasing it, and stop fighting the machine.
 
 ### See Also
-Mechanical Flows, Pain Trade, Positioning Reset, Volatility Supply and Demand (Ch. 8), Expiry Calendar Effects (Ch. 10)
+Mechanical Flows, Pain Trade, Positioning Reset, Chapter 8: Volatility Regime, Chapter 10: Catalyst Interpretation
 
 ---
 
@@ -595,7 +595,7 @@ The drill, journal-loop based: build your flow calendar for the next month (peri
 > Some of the biggest orders in the market are written by calendars, not opinions; read the calendar before you read meaning into the move.
 
 ### See Also
-Dealer Gamma Dynamics, Positioning Reset, Crowded Trade Failure, Catalyst Novelty vs. Headline Noise (Ch. 10), Session Liquidity Cycles (Ch. 7)
+Dealer Gamma Dynamics, Positioning Reset, Crowded Trade Failure, Chapter 10: Catalyst Interpretation, Chapter 7: Session Context and Sequencing
 
 ---
 # Chapter-Level Training
@@ -675,7 +675,7 @@ This chapter is the positioning layer, sitting between intermarket tone and stru
 
 **What this chapter should lead.** Positioning leads the interpretation of speed and follow-through. It explains why price accelerates after failure, why vertical moves die or extend, why the same level behaves differently on different days, and what kind of move is even possible given current inventory (crowded, reset, gamma-dampened, gamma-amplified, mechanically pressured). It should also lead your sizing posture: with-pain versus against-pain alignment and move-phase classification modify size before any setup logic runs.
 
-**What this chapter should confirm.** Positioning reads confirm, and are confirmed by, the layers around them. A trap read must be confirmed by tape evidence (Ch. 4 mechanics: absorption, delta, speed, refresh behavior) and must respect structural location (Ch. 2): a trapped population only matters at the locations where its forced exits have somewhere to run. Catalyst state (Ch. 10) and volatility regime (Ch. 8) confirm whether forced flow has the conditions to cascade or be absorbed.
+**What this chapter should confirm.** Positioning reads confirm, and are confirmed by, the layers around them. A trap read must be confirmed by tape evidence, Chapter 4: Tape Reading and Microstructure mechanics: absorption, delta, speed, refresh behavior, and must respect structural location, Chapter 2: Level Interaction and Acceptance: a trapped population only matters at the locations where its forced exits have somewhere to run. Catalyst state, Chapter 10: Catalyst Interpretation, and volatility regime, Chapter 8: Volatility Regime, confirm whether forced flow has the conditions to cascade or be absorbed.
 
 **What this chapter must never override.** Positioning never overrides execution permission. "They are trapped" is a context statement; it grants no entry until location, trigger, invalidation, risk, and a trade-state plan align, and NO-TRADE remains the default professional state when they do not. Positioning reads also never override tape confirmation: a beautiful trap thesis with a tape that refuses to confirm forced exits is a story, and this chapter exists to replace stories with populations, locations, and evidence.
 

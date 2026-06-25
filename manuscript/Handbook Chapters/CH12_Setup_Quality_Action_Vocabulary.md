@@ -504,20 +504,3 @@ What it should confirm: the upstream reads. A high-quality setup is usually evid
 What it must never override: nothing overrides it, in either direction. No upstream read, however strong, bypasses this gate; a perfect macro read with a degraded setup is a NO-TRADE. And this gate never reaches upstream to manufacture context: a beautiful setup pattern cannot create a catalyst-clear calendar, repair an intermarket conflict, or thicken a hollow book. The gate grades what the stack delivers. It does not negotiate with it.
 
 ---
-
-## Verification Report
-
-- Canonical entries: 8/8 present, capsule order preserved.
-- Seven-section contract: all sections present, correct order, all 8 entries.
-- Core Concept: 3-6 sentences + closing blockquote, all entries. PASS.
-- Why It Happens: two-column table, 4-6 rows, mechanism-cited. No vague drivers. PASS.
-- Practical Implications: numbered, 4-6 items, next-session actionable. PASS.
-- How Traders Identify It: 4-5 bullets, real-time observables only. PASS.
-- In Practice: concrete sequence + contrast pair + named junior error + why it feels right + equity-curve cost + runnable drill, all 8. PASS.
-- One-Line Summary: standalone blockquote, all entries. PASS.
-- See Also: all entries link 2+ concepts. PASS.
-- Chapter-level sections: Competency Checkpoint (8 measurable), Drill Progression (5 stages with evidence standards), Failure Modes (7 rows), Assessment Prompts (10 applied), Read Stack Integration (lead/confirm/never-override stated). PASS.
-- Global doctrines: all preserved. No compliance theater. PASS.
-- Hypothetical sequences only; no historical events, current prices, or live exchange rules claimed. PASS.
-- Junior misuse patterns from capsule: all eight exposed. PASS.
-- Em-dash rule: none used. PASS.

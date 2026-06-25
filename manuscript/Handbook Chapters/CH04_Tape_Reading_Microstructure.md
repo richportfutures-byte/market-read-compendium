@@ -55,7 +55,7 @@ Drill for tomorrow: in replay, define an objective volume threshold (for example
 > When heavy paying meets a price that will not move, the side doing the paying is losing.
 
 ### See Also
-Refreshing Liquidity, Cumulative Delta & Delta Divergence, Stall & Snap-Back, Sweeps Through Liquidity, Level Interaction and Acceptance (Ch. 2)
+Refreshing Liquidity, Cumulative Delta & Delta Divergence, Stall & Snap-Back, Sweeps Through Liquidity, Chapter 2: Level Interaction and Acceptance
 
 ---
 
@@ -151,7 +151,7 @@ Drill: for one week, hard-forbid entries more than a defined distance beyond any
 > Pressing buys the beginning of acceptance with a tight place to be wrong; chasing buys the end of fuel with no place to be wrong.
 
 ### See Also
-Sweeps Through Liquidity, Stall & Snap-Back, Setup Quality and Action Vocabulary (Ch. 12), Trade-State Management (Ch. 11)
+Sweeps Through Liquidity, Stall & Snap-Back, Chapter 12: Setup Quality and Action Vocabulary, Chapter 11: Trade-State Management
 
 ---
 
@@ -199,7 +199,7 @@ Drill: in replay, collect twenty post-displacement stalls. At a fixed point mid-
 > Breakouts die quietly during the stall and get buried loudly on the snap; learn to attend the quiet part.
 
 ### See Also
-Chasing vs. Pressing, Absorption, Sweeps Through Liquidity, Level Interaction and Acceptance (Ch. 2)
+Chasing vs. Pressing, Absorption, Sweeps Through Liquidity, Chapter 2: Level Interaction and Acceptance
 
 ---
 
@@ -245,7 +245,7 @@ Drill: for two weeks, divide every session into blocks (open hour, mid-morning, 
 > Thin tape draws the same pictures as thick tape; only one of them is telling the truth.
 
 ### See Also
-Tape vs. Narrative, Spread Behavior, Session Context and Sequencing (Ch. 7), Volatility Regime (Ch. 8)
+Tape vs. Narrative, Spread Behavior, Chapter 7: Session Context and Sequencing, Chapter 8: Volatility Regime
 
 ---
 
@@ -293,7 +293,7 @@ Drill: build a two-column prediction page for every scheduled catalyst. Column o
 > Strong opinion, contradicting tape, held position: that is the configuration that ends accounts, and all three parts are visible in advance.
 
 ### See Also
-Absorption, Stall & Snap-Back, Catalyst Interpretation (Ch. 10), Read Discipline and Interpretation Method (Ch. 1)
+Absorption, Stall & Snap-Back, Chapter 10: Catalyst Interpretation, Chapter 1: Read Discipline and Interpretation Method
 
 ---
 
@@ -342,7 +342,7 @@ Drill: for ten sessions, log quoted spread and top-three-level depth at five fix
 > Tight spread and deep book: the tape is speaking. Wide spread and hollow book: it is screaming, and screaming is not information.
 
 ### See Also
-Tape Quality Spectrum, Liquidity Pulls & Replenishment, Catalyst Interpretation (Ch. 10), From Read to Trade (Ch. 13)
+Tape Quality Spectrum, Liquidity Pulls & Replenishment, Chapter 10: Catalyst Interpretation, Chapter 13: From Read to Trade
 
 ---
 
@@ -436,7 +436,7 @@ Drill: log twenty-five sweeps in replay. For each, record location type (range e
 > The sweep spends the stops; what happens after the spending tells you whether anyone with intent was behind it.
 
 ### See Also
-Liquidity Pulls & Replenishment, Chasing vs. Pressing, Stall & Snap-Back, Level Interaction and Acceptance (Ch. 2)
+Liquidity Pulls & Replenishment, Chasing vs. Pressing, Stall & Snap-Back, Chapter 2: Level Interaction and Acceptance
 
 ---
 
@@ -485,7 +485,7 @@ Drill: for ten sessions, mark every CD divergence you can find, but sort them at
 > Delta tells you who is spending; only price tells you whether the spending bought anything, and the trade lives where spending fails at a level that matters.
 
 ### See Also
-Absorption, Stall & Snap-Back, Tape Quality Spectrum, Level Interaction and Acceptance (Ch. 2)
+Absorption, Stall & Snap-Back, Tape Quality Spectrum, Chapter 2: Level Interaction and Acceptance
 
 ---
 

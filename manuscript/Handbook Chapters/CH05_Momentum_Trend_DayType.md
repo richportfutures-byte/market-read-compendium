@@ -512,7 +512,7 @@ Trend Day Structure, Close Quality, Momentum vs. Drift, Initial Balance and Rang
 
 ---
 
-# Chapter Competency Checkpoint
+## Chapter Competency Checkpoint
 
 **You are not done with this chapter until you can…**
 
@@ -525,7 +525,7 @@ Trend Day Structure, Close Quality, Momentum vs. Drift, Initial Balance and Rang
 7. Identify a climactic effort-versus-result divergence on live tape and explain why you are harvesting rather than joining, and why you are not yet fading.
 8. Produce the three-line close log (location, value relation, final-hour control) for every session and a written next-open expectation, graded the next day.
 
-# Chapter Drill Progression
+## Chapter Drill Progression
 
 **1. Observe.** In replay or saved data, build the chapter's evidence base: forty momentum/drift classifications, an impulse log across ten sessions, sixty historical sessions classified by day type, fifteen climax studies, and twenty range-edge breaks graded accept/fail. Minimum standard before advancing: every log exists, with written evidence per entry, not just labels.
 
@@ -537,7 +537,7 @@ Trend Day Structure, Close Quality, Momentum vs. Drift, Initial Balance and Rang
 
 **5. Risk.** Live micro-size only, and only on your two best-performing day types from the sim ledger. Permission conditions: stages 1 through 4 evidence complete; a written tactic-eligibility card per day type; and a standing rule that any live fade against intact one-timeframing or any add to a failed break revokes live permission and returns you to stage 4 for ten sessions.
 
-# Chapter Failure Modes
+## Chapter Failure Modes
 
 | Failure Mode | What It Looks Like | Account Cost | Correction |
 |---|---|---|---|
@@ -549,7 +549,7 @@ Trend Day Structure, Close Quality, Momentum vs. Drift, Initial Balance and Rang
 | Stale day-type lock | Classifying at 10:00 and never re-grading; running balance tactics through a 14:00 structural break, or trend tactics through a failed morning drive | Paying trend-day prices for balance-day trades and vice versa; losses concentrated on transition days | Staged classification at fixed checkpoint times with a written "this has become" re-grade rule; catalyst calendar pre-marked so unresolved days are never logged as balance days |
 | Direction as permission | Buying because price is strong, shorting because price is weak, or treating a trend label as if it authorizes any entry in that direction | Chasing the edge of the move after the auction has already spent its easiest fuel; large adverse selection when the next pullback is distributive or the break lacks acceptance | Direction is only a context input. Require participation, location, acceptance, pullback quality, and a defined failure level before any tactic becomes eligible |
 
-# Chapter Assessment Prompts
+## Chapter Assessment Prompts
 
 1. NQ creeps 55 points higher between 12:10 and 13:05 on volume one-quarter of the morning average, flat delta, and a thin book. At 13:10 it breaks the session high by six points. What is the classification of the prior move, what does it imply about the break, and what evidence would have to appear in the next ten minutes to upgrade the break to trade-eligible?
 2. ES prints its fourth consecutive up-leg of the day, the steepest and highest-volume leg of the session, into a prior weekly level. Delta in the final three minutes is the day's largest, but price advances only two points. Describe the read, the action for an existing long, the action for a flat trader, and the specific sequence that would have to print before a short becomes eligible.
@@ -562,7 +562,7 @@ Trend Day Structure, Close Quality, Momentum vs. Drift, Initial Balance and Rang
 9. Price rallies eight points in ninety seconds inside a down trend day, on a sharp positive delta burst, and dies to the tick at the prior 30-minute high before rolling over. Name the flow, explain the mechanism that distinguishes it from fresh demand, and state what trade, if any, it set up.
 10. Define, in your own numbers for your own instrument, the follow-through window and the pause-versus-rejection criteria you will apply to tomorrow's first range-edge break, then explain what population is created if the break fails and how that population becomes the next trade's fuel.
 
-# Read Stack Integration
+## Read Stack Integration
 
 This chapter is the momentum and day-type layer of the read stack, sitting at positions that synthesize rather than originate: it consumes calendar and catalyst state (Layer 1), the higher-timeframe auction picture (Layer 2), session context (Layer 3), volatility regime (Layer 4), intermarket tone (Layer 5), structural location (Layer 6), and tape confirmation (Layer 7), and it converts them into a moving assessment of directional quality and session character.
 

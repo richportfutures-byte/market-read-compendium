@@ -52,7 +52,7 @@ Drill: the novelty log. For the next twenty headline-driven moves you witness, l
 > Trade what the market just learned, not what the newsroom just reprinted.
 
 ### See Also
-Pricing-In, Source Quality, Transmission Mechanism & Order Effects, Tape Reading and Microstructure (Ch. 4), Volatility Regime (Ch. 8)
+Pricing-In, Source Quality, Transmission Mechanism & Order Effects, Chapter 4: Tape Reading and Microstructure, Chapter 8: Volatility Regime
 
 ---
 
@@ -100,7 +100,7 @@ Drill: the pre-event expectation card. For the next ten scheduled events on your
 > Price pays for surprises, not for confirmations it already bought.
 
 ### See Also
-New Information vs. Recycled Context, Catalyst-to-Trade Translation, Narrative Consensus & Disagreement, Volatility Regime (Ch. 8)
+New Information vs. Recycled Context, Catalyst-to-Trade Translation, Narrative Consensus & Disagreement, Chapter 8: Volatility Regime
 
 ---
 
@@ -148,7 +148,7 @@ Drill: the transmission map. For five scheduled macro releases, pre-write the ch
 > Read the chain, not the headline: leaders prove the story, laggards prove the breadth.
 
 ### See Also
-New Information vs. Recycled Context, Source Quality, Catalyst-to-Trade Translation, Intermarket Confirmation (Ch. 9), Volatility Regime (Ch. 8)
+New Information vs. Recycled Context, Source Quality, Catalyst-to-Trade Translation, Chapter 9: Intermarket Confirmation, Chapter 8: Volatility Regime
 
 ---
 
@@ -196,7 +196,7 @@ Drill: the event-day playbook. Write your two or three permitted post-catalyst e
 > Right about the news and wrong about the entry is just wrong, and it costs the same.
 
 ### See Also
-Pricing-In, Transmission Mechanism & Order Effects, Catalyst Effect on Thesis, Setup Quality and Action Vocabulary (Ch. 12), Tape Reading and Microstructure (Ch. 4)
+Pricing-In, Transmission Mechanism & Order Effects, Catalyst Effect on Thesis, Chapter 12: Setup Quality and Action Vocabulary, Chapter 4: Tape Reading and Microstructure
 
 ---
 
@@ -245,7 +245,7 @@ Drill: the thesis card protocol. For ten sim or replay trades, write the two to 
 > When the world changes, re-mark the thesis; the stop was priced for the old world.
 
 ### See Also
-Catalyst-to-Trade Translation, New Information vs. Recycled Context, Trade-State Management (Ch. 11), Setup Quality and Action Vocabulary (Ch. 12)
+Catalyst-to-Trade Translation, New Information vs. Recycled Context, Chapter 11: Trade-State Management, Chapter 12: Setup Quality and Action Vocabulary
 
 ---
 
@@ -293,7 +293,7 @@ Drill: the reaction-function journal. Pick one product. For four weeks, log ever
 > When everyone finally agrees, the trade is not early anymore; it is inventory looking for a door.
 
 ### See Also
-Pricing-In, Catalyst Effect on Thesis, Source Quality, Auction and Market Profile (Ch. 3)
+Pricing-In, Catalyst Effect on Thesis, Source Quality, Chapter 3: Auction and Market Profile
 
 ---
 
@@ -341,7 +341,7 @@ Drill: source-tier tagging. For two weeks, tag every catalyst-driven move you ob
 > If you cannot name the source, you are not trading information; you are trading other people's reflexes.
 
 ### See Also
-New Information vs. Recycled Context, Transmission Mechanism & Order Effects, Catalyst-to-Trade Translation, Tape Reading and Microstructure (Ch. 4)
+New Information vs. Recycled Context, Transmission Mechanism & Order Effects, Catalyst-to-Trade Translation, Chapter 4: Tape Reading and Microstructure
 
 ---
 
