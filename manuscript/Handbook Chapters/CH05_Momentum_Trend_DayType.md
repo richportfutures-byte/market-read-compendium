@@ -1,13 +1,15 @@
 # Chapter 5: Momentum, Trend, and Day Type
 
-Speed is the most seductive thing on a screen. A junior trader sees price moving fast and his nervous system reads it as opportunity. A senior trader sees price moving fast and asks a colder set of questions: who is doing this, how mature is it, is value following, and what does this leg cost to join right now. This chapter builds that second reflex. Momentum is not velocity. It is a composite read built from impulse quality, participation, displacement, follow-through, pullback character, auction structure, volatility state, and time of day. Trend is not a line on a chart. It is a day-long behavior pattern with a recognizable structure, recognizable participants, and recognizable traps for the trader who fades it or chases it at the wrong point. Day type is the frame that tells you which tactics are even eligible. Every entry here sits after structure and tape in the read stack, and before setup permission. Nothing in this chapter is, by itself, a trade.
+Speed is the most seductive thing on a screen. A junior trader sees price moving fast and his nervous system reads it as opportunity. A senior trader sees price moving fast and asks a colder set of questions: who is doing this, how mature is it, is value following, and what does this leg cost to join right now. This chapter builds that second reflex. Momentum is not velocity. It is sustained participation producing displacement, acceptance, and continuation pressure. Trend is not a line on a chart. It is a session regime in which value migrates, pullbacks remain corrective, and the same tactics that work in balance become dangerous. Day type is the phase classifier that tells you which tactics are even eligible. Every entry here sits after structure and tape in the read stack, and before setup permission. Nothing in this chapter is, by itself, a trade.
+
+The governing question is not whether price is strong. It is whether the auction is changing state. If value is rotating, directional strength near an edge may be the last push before reversion. If value is migrating, the same strength may be the front edge of repricing. The chart can look similar on both sides of that boundary, which is why this chapter refuses the simplest and most expensive misuse: treating trend, impulse, or directional speed as standalone entry permission. Movement is evidence only when it is tied to participation, location, follow-through, pullback quality, and failure conditions.
 
 ---
 
 ## Momentum vs. Drift
 
 ### Core Concept
-Momentum is directional price movement driven by initiative participation: aggressive orders displacing price through resting liquidity, with volume and delta confirming that someone is paying up to reprice the market. Drift is directional price movement produced by the absence of opposition: thin participation, withdrawn passive liquidity, inventory adjustment, or simple lack of interest, letting price migrate without anyone committing to the move. On a 5-minute chart both can print a clean staircase, which is exactly why juniors confuse them. The distinction is not slope or distance; it is whether new money is initiating at progressively worse prices, or whether price is sliding through a vacuum. Momentum supports continuation tactics. Drift supports nothing except the expectation that the first real initiative flow can erase it in minutes.
+Momentum is directional price movement driven by initiative participation: aggressive orders displacing price through resting liquidity, with volume and delta confirming that someone is paying up to reprice the market. Drift is directional price movement produced by the absence of opposition: thin participation, withdrawn passive liquidity, inventory adjustment, or simple lack of interest, letting price migrate without anyone committing to the move. On a 5-minute chart both can print a clean staircase, which is exactly why juniors confuse them. The distinction is not slope or distance; it is whether new money is initiating at progressively worse prices, and whether the auction is accepting those prices afterward, or whether price is sliding through a vacuum. Momentum can support continuation tactics only after location and follow-through agree. Drift supports nothing except the expectation that the first real initiative flow can erase it in minutes.
 
 > If you cannot say who is paying up to move this market, you are probably looking at drift, and drift dies on first contact with real flow.
 
@@ -23,7 +25,7 @@ Momentum is directional price movement driven by initiative participation: aggre
 | Short covering | Trapped shorts buying to exit create fast upward movement that looks like initiative demand but exhausts the moment the covering population is cleared |
 
 ### Practical Implications
-1. Before applying any continuation tactic, classify the move as momentum or drift using volume per unit of price and delta alignment, not chart slope. No classification, no continuation trade.
+1. Before applying any continuation tactic, classify the move as momentum or drift using volume per unit of price, delta alignment, and acceptance at the new prices, not chart slope. No classification, no continuation trade.
 2. Do not trade breakouts that occur during drift conditions (lunch hour, pre-data, low-volume creep) without fresh initiative volume on the break itself; cut planned size at least in half if you take them at all.
 3. Treat drift as mean-reversion fuel: note where the drift started, because first real opposing flow frequently returns price to that origin in one leg.
 4. In long-gamma, compressed-volatility regimes, downgrade every directional move one notch by default; the structural flow is against continuation.
@@ -50,14 +52,14 @@ Drill for tomorrow: at the end of each session, mark every directional move of m
 > Price moving is not money moving; classify the participation before you classify the opportunity.
 
 ### See Also
-Impulse Quality, Follow-Through, Day-Type Taxonomy, Absorption (Ch. 2), Volatility Regime Classification (Ch. 6), Initiative vs. Responsive Activity (Ch. 1)
+Impulse Quality, Follow-Through, Day-Type Taxonomy, Absorption (Chapter 4, Tape Reading and Microstructure), Volatility Regime Classification (Chapter 8, Volatility Regime), Initiative vs. Responsive Activity (Chapter 3, Auction and Market Profile)
 
 ---
 
 ## Impulse Quality
 
 ### Core Concept
-An impulse is a discrete directional leg, and impulse quality is the graded assessment of how much genuine repricing power that leg contains. Quality is read from where the impulse launches (out of balance versus after an extended run), how it displaces (range expansion through known liquidity versus grind), what it consumes (does it eat real resting size), what it leaves behind (gaps, single prints, low-volume zones that show conviction), and how fresh it is (first leg from value versus third extension of a mature move). The same nominal move can be an A-grade impulse at 10:00 from the edge of three-day balance and a D-grade impulse at 14:30 as the fourth push of a tired trend. Juniors grade impulses by size and speed; professionals grade them by origin, freshness, and what the leg structurally proves.
+An impulse is a discrete directional leg, and impulse quality is the graded assessment of how much genuine repricing power that leg contains. Quality is read from where the impulse launches (out of balance versus after an extended run), how it displaces (range expansion through known liquidity versus grind), what it consumes (does it eat real resting size), what it leaves behind (gaps, single prints, low-volume zones that show conviction), how fresh it is (first leg from value versus third extension of a mature move), and whether the next auction accepts the new location. The same nominal move can be an A-grade impulse at 10:00 from the edge of three-day balance and a D-grade impulse at 14:30 as the fourth push of a tired trend. Juniors grade impulses by size and speed; professionals grade them by origin, freshness, and what the leg structurally proves.
 
 > The first impulse out of balance is information; the fourth impulse in the same direction is an invitation to be someone's exit liquidity.
 
@@ -73,7 +75,7 @@ An impulse is a discrete directional leg, and impulse quality is the graded asse
 | Late-stage participation rotation | In mature moves, the initiating institutional flow finishes and is replaced by breakout systems and retail chasers; the impulse keeps its visual character but its sponsorship has degraded |
 
 ### Practical Implications
-1. Grade every impulse you consider trading on three axes before entry: origin (from balance or from extension), volume character (expanding or fading versus prior legs), and structure left behind (clean low-volume displacement or labored overlap). Two of three must be favorable or the impulse does not qualify for continuation tactics.
+1. Grade every impulse you consider trading on four axes before entry: origin (from balance or from extension), volume character (expanding or fading versus prior legs), structure left behind (clean low-volume displacement or labored overlap), and early acceptance beyond the impulse. Three of four must be favorable or the impulse does not qualify for continuation tactics.
 2. Never assign the same trade plan to the first leg out of balance and the third leg of an established move; the third leg gets reduced size, tighter invalidation, and faster profit-taking by rule.
 3. When an impulse launches by sweeping an obvious stop level, demand evidence of fresh initiative within the next few minutes (sustained delta, new volume at the new prices); absent that, treat the move as spent fuel.
 4. Compare the current impulse's volume to the previous impulse in the same direction; a sequence of legs on declining volume is a maturing move and should shift your tactics from joining continuation toward harvesting and watching for failure.
@@ -100,7 +102,7 @@ Drill for tomorrow: build an impulse log. Every directional leg of more than a d
 > Grade the impulse by its origin and its fuel, not by its speed; the fastest leg of the day is usually the last one.
 
 ### See Also
-Momentum vs. Drift, Exhaustion, Follow-Through, Excess and Poor Highs/Lows (Ch. 1), Tape Speed and Print Clustering (Ch. 2), Stop Runs and Liquidity Sweeps (Ch. 2)
+Momentum vs. Drift, Exhaustion, Follow-Through, Excess and Poor Highs or Lows (Chapter 3, Auction and Market Profile), Tape Speed and Print Clustering (Chapter 4, Tape Reading and Microstructure), Stop Runs and Liquidity Sweeps (Chapter 6, Traps and Positioning)
 
 ---
 
@@ -125,7 +127,7 @@ Follow-through is the market's behavior immediately after an impulse: whether ne
 ### Practical Implications
 1. After any impulse you care about, set an explicit follow-through clock: the move must show building volume and at least one higher-timeframe period of acceptance at new prices within your defined window (typically 15 to 45 minutes for index futures) or the continuation thesis expires.
 2. Distinguish pause from rejection by behavior, not by feeling: sideways trade on declining volume holding the upper third of the impulse is a pause; fast responsive prints driving price back inside the prior range is rejection. Only the second invalidates.
-3. Do not add to a position on the impulse itself; the add belongs after acceptance evidence, even though the price is worse. Paying up for confirmation is a professional cost, not a flaw.
+3. Do not add to a position on the impulse itself; the add belongs after acceptance evidence, even though the price is worse. Paying up for confirmation is a professional cost, not a flaw, and chasing the first burst is usually paying for information you do not yet have.
 4. When follow-through fails, do not merely exit; actively evaluate the reversal trade, because a failed impulse traps a known population whose exit will fuel the other direction.
 5. Track value migration, not just price: if price holds higher but the developing value area refuses to migrate, the move is renting the new level, not owning it, and your continuation size should reflect that.
 6. After catalyst-driven impulses, demand follow-through evidence from the correlated instrument too (ES confirming NQ, ZN confirming the rates story); single-instrument acceptance against intermarket conflict is a downgraded read.
@@ -152,7 +154,7 @@ Drill for tomorrow: take twenty historical breakouts in replay. At the moment of
 > The breakout is the question; the next half hour is the answer; trade the answer.
 
 ### See Also
-Impulse Quality, Failed Continuation, One-Timeframing, Value Migration and Acceptance (Ch. 1), Absorption (Ch. 2), Catalyst Repricing Chains (Ch. 7)
+Impulse Quality, Failed Continuation, One-Timeframing, Value Migration and Acceptance (Chapter 3, Auction and Market Profile), Absorption (Chapter 4, Tape Reading and Microstructure), Catalyst Repricing Chains (Chapter 10, Catalyst Interpretation)
 
 ---
 
@@ -204,7 +206,7 @@ Drill for tomorrow: for ten sessions, maintain a one-timeframe state log: at eve
 > One-timeframing is the market telling you who is in control in plain language; fading it is volunteering to be his liquidity.
 
 ### See Also
-Trend Day Structure, Follow-Through, Pullback Quality, Auction Rotations and Period Structure (Ch. 1), Session Context and Open Types (Ch. 4), Failed Continuation
+Trend Day Structure, Follow-Through, Pullback Quality, Auction Rotations and Period Structure (Chapter 3, Auction and Market Profile), Session Context and Open Types (Chapter 7, Session Context and Sequencing), Failed Continuation
 
 ---
 
@@ -231,7 +233,7 @@ Pullback quality is the assessment of whether a counter-directional move inside 
 2. Locate the pullback's termination against structure, not against retracement percentages alone: a 50 percent retracement that holds above the breakout level and the prior period extreme is healthier than a 30 percent retracement that has already filled the impulse's low-volume zone.
 3. Do not enter the pullback while it is still moving against the trend; require a termination signature (absorption prints, delta flip, failure of the counter-move to extend) so you are buying the turn, not catching the argument.
 4. In a mature trend (third leg or later), tighten pullback tolerance by rule: what you would forgive in the first pullback of the day disqualifies the fourth.
-5. When a pullback fills the entire low-volume zone an impulse left behind, retire the continuation thesis for that leg; the market has revisited and rebuilt argument where conviction used to be.
+5. When a pullback fills the entire low-volume zone an impulse left behind, retire the continuation thesis for that leg; the market has revisited and rebuilt argument where conviction used to be. A clean trend does not need to reclaim the whole area it supposedly rejected.
 6. Track your pullback entries by grade for a month; most juniors discover their losses concentrate in pullbacks they entered while opposing initiative volume was still expanding.
 
 ### How Traders Identify It
@@ -254,14 +256,14 @@ Drill for tomorrow: in replay, take five trend sessions and log every pullback: 
 > The dip that finally feels safe to buy, after a day of dips paying, is the one carrying real supply; grade it, don't trust it.
 
 ### See Also
-Impulse Quality, Trend Day Structure, Exhaustion, Failed Continuation, Absorption (Ch. 2), Low-Volume Zones and Profile Memory (Ch. 1)
+Impulse Quality, Trend Day Structure, Exhaustion, Failed Continuation, Absorption (Chapter 4, Tape Reading and Microstructure), Low-Volume Zones and Profile Memory (Chapter 3, Auction and Market Profile)
 
 ---
 
 ## Trend Day Structure
 
 ### Core Concept
-A trend day is a session-long directional repricing in which one timeframe controls from near the open to the close: the profile elongates, value migrates continuously, counter-rotations stay shallow, and the close occurs near the directional extreme. Trend days are rare (roughly one session in seven to ten in index futures, regime-dependent) but they are disproportionately important: they produce an outsized share of monthly range, they punish fading more brutally than any other day type, and they pay continuation tactics that lose money on most other days. The professional's task is early classification with staged confidence: identifying the candidate signature in the first hour, upgrading or downgrading as period evidence arrives, and committing tactics to the day type rather than to a feeling about price being "too high" or "too low."
+A trend day is a session-long directional repricing in which one timeframe controls from near the open to the close: the profile elongates, value migrates continuously, counter-rotations stay shallow, and the close occurs near the directional extreme. Trend days are rare (roughly one session in seven to ten in index futures, regime-dependent) but they are disproportionately important: they produce an outsized share of monthly range, they punish fading more brutally than any other day type, and they pay continuation tactics that lose money on most other days. The professional's task is early classification with staged confidence: identifying the candidate signature in the first hour, upgrading or downgrading as period evidence arrives, and committing tactics to the day type rather than to a feeling about price being "too high" or "too low." A trend label does not grant permission to chase. It changes the eligible playbook, then demands a graded pullback, acceptance, or continuation structure before risk is justified.
 
 > On a trend day your job changes from finding trades to not interrupting the one trade the market is giving you.
 
@@ -304,7 +306,7 @@ Drill for tomorrow: pull the last sixty sessions and classify each as trend, bal
 > Classify the day before you trade the day; a trend day fades your fades, pays your patience, and grades your discipline in public.
 
 ### See Also
-Day-Type Taxonomy, One-Timeframing, Pullback Quality, Close Quality, Open Types and Conviction (Ch. 4), Gamma Regimes and Range Behavior (Ch. 6)
+Day-Type Taxonomy, One-Timeframing, Pullback Quality, Close Quality, Open Types and Conviction (Chapter 7, Session Context and Sequencing), Gamma Regimes and Range Behavior (Chapter 8, Volatility Regime)
 
 ---
 
@@ -356,7 +358,7 @@ Drill for tomorrow: collect twenty range-edge breaks in replay. Freeze at break 
 > A failed break is paid-for information: it tells you where the trapped traders live and which direction their exits will push.
 
 ### See Also
-Follow-Through, Exhaustion, One-Timeframing, Look-Above/Below and Fail (Ch. 1), Trapped Traders and Forced Flow (Ch. 2), Intermarket Confirmation and Conflict (Ch. 7)
+Follow-Through, Exhaustion, One-Timeframing, Look-Above or Look-Below and Fail (Chapter 3, Auction and Market Profile), Trapped Traders and Forced Flow (Chapter 6, Traps and Positioning), Intermarket Confirmation and Conflict (Chapter 9, Intermarket Confirmation)
 
 ---
 
@@ -406,7 +408,7 @@ Drill for tomorrow: build a climax study file. In replay, find fifteen extended 
 > When maximum effort buys minimum progress, the move is spending its last buyers; harvest, don't join, and fade only after the failure prints.
 
 ### See Also
-Impulse Quality, Failed Continuation, Pullback Quality, Absorption (Ch. 2), Climactic Volume and Delta Divergence (Ch. 2), Volatility Expansion Events (Ch. 6)
+Impulse Quality, Failed Continuation, Pullback Quality, Absorption (Chapter 4, Tape Reading and Microstructure), Climactic Volume and Delta Divergence (Chapter 4, Tape Reading and Microstructure), Volatility Expansion Events (Chapter 8, Volatility Regime)
 
 ---
 
@@ -456,14 +458,14 @@ Drill for tomorrow: start the three-line close log tonight using today's session
 > Log the close like it is tomorrow's first signal, because it is.
 
 ### See Also
-Trend Day Structure, Day-Type Taxonomy, One-Timeframing, Overnight Inventory and Gap Logic (Ch. 4), Session Context Carryover (Ch. 4), Calendar and Rebalance Flows (Ch. 7)
+Trend Day Structure, Day-Type Taxonomy, One-Timeframing, Overnight Inventory and Gap Logic (Chapter 7, Session Context and Sequencing), Session Context Carryover (Chapter 7, Session Context and Sequencing), Calendar and Rebalance Flows (Chapter 10, Catalyst Interpretation)
 
 ---
 
 ## Day-Type Taxonomy
 
 ### Core Concept
-Day-type taxonomy is the working classification of sessions by their structural behavior: trend days, double-distribution days, normal and normal-variation days, neutral days (both extremes of the initial balance violated, close near center) and neutral-extreme days (both violated, close at one extreme), and pure balance days. The taxonomy matters not as labeling for its own sake but because day type is the master switch for tactic eligibility: continuation tactics that print money on trend days bleed steadily on balance days, and responsive fade tactics that harvest balance days get destroyed on trend days. Classification is probabilistic and staged, never instant: the open type sets a prior, each 30-minute period updates it, and the professional holds the classification loosely enough to re-grade when structure breaks. The junior's two failure modes are running one playbook across all day types and locking a classification at 10:00 that the market overturns at 11:30.
+Day-type taxonomy is the working classification of sessions by their structural behavior: trend days, double-distribution days, normal and normal-variation days, neutral days (both extremes of the initial balance violated, close near center) and neutral-extreme days (both violated, close at one extreme), and pure balance days. The taxonomy matters not as labeling for its own sake but because day type is the master switch for tactic eligibility: continuation tactics that print money on trend days bleed steadily on balance days, and responsive fade tactics that harvest balance days get destroyed on trend days. Classification is probabilistic and staged, never instant: the open type sets a prior, each 30-minute period updates it, value behavior either confirms or contests it, and the professional holds the classification loosely enough to re-grade when structure breaks. The junior's two failure modes are running one playbook across all day types and locking a classification at 10:00 that the market overturns at 11:30.
 
 > You do not have one playbook; you have a playbook per day type, and the first job of every session is figuring out which book is open.
 
@@ -506,7 +508,7 @@ Drill for tomorrow: classify the last forty sessions from saved profiles into th
 > Edge is conditional on day type; the trader who classifies the session before trading it is playing a different game from the one who doesn't.
 
 ### See Also
-Trend Day Structure, Close Quality, Momentum vs. Drift, Initial Balance and Range Extension (Ch. 1), Open Types and Conviction (Ch. 4), Gamma Regimes and Range Behavior (Ch. 6), Scheduled Catalyst Behavior (Ch. 7)
+Trend Day Structure, Close Quality, Momentum vs. Drift, Initial Balance and Range Extension (Chapter 3, Auction and Market Profile), Open Types and Conviction (Chapter 7, Session Context and Sequencing), Gamma Regimes and Range Behavior (Chapter 8, Volatility Regime), Scheduled Catalyst Behavior (Chapter 10, Catalyst Interpretation)
 
 ---
 
@@ -545,6 +547,7 @@ Trend Day Structure, Close Quality, Momentum vs. Drift, Initial Balance and Rang
 | Buying covering as demand | Entering longs on sharp upward bursts that are short-covering: delta spike, instant stall at the prior period extreme, no acceptance | Entries at local tops of counter-rotations inside down moves; high loss rate disguised as bad luck | Require acceptance evidence (time, volume, value migration) after any burst before joining; treat burst-and-stall at a structural level as a fade tell, not an entry |
 | Adding to failed breaks | Averaging into a position after price re-enters the range, "improving the basis" on a dead thesis | Converts planned one-unit losses into multi-unit losses; the single habit most associated with junior blowups | Pre-written failure level on every continuation trade; re-entry through it triggers a mechanical exit; adds are only permitted after fresh acceptance evidence, never after failure |
 | Stale day-type lock | Classifying at 10:00 and never re-grading; running balance tactics through a 14:00 structural break, or trend tactics through a failed morning drive | Paying trend-day prices for balance-day trades and vice versa; losses concentrated on transition days | Staged classification at fixed checkpoint times with a written "this has become" re-grade rule; catalyst calendar pre-marked so unresolved days are never logged as balance days |
+| Direction as permission | Buying because price is strong, shorting because price is weak, or treating a trend label as if it authorizes any entry in that direction | Chasing the edge of the move after the auction has already spent its easiest fuel; large adverse selection when the next pullback is distributive or the break lacks acceptance | Direction is only a context input. Require participation, location, acceptance, pullback quality, and a defined failure level before any tactic becomes eligible |
 
 # Chapter Assessment Prompts
 
@@ -561,26 +564,10 @@ Trend Day Structure, Close Quality, Momentum vs. Drift, Initial Balance and Rang
 
 # Read Stack Integration
 
-This chapter is the momentum and day-type layer of the read stack, sitting at positions that synthesize rather than originate: it consumes calendar and catalyst state (layer 1), the higher-timeframe auction picture (layer 2), session context (layer 3), volatility regime (layer 4), intermarket tone (layer 5), structural location (layer 6), and tape confirmation (layer 7), and it converts them into a moving assessment of directional quality and session character.
+This chapter is the momentum and day-type layer of the read stack, sitting at positions that synthesize rather than originate: it consumes calendar and catalyst state (Layer 1), the higher-timeframe auction picture (Layer 2), session context (Layer 3), volatility regime (Layer 4), intermarket tone (Layer 5), structural location (Layer 6), and tape confirmation (Layer 7), and it converts them into a moving assessment of directional quality and session character.
 
 **What this chapter should lead:** tactic selection and tactic eligibility. Day type decides which playbook is open; impulse grade, pullback grade, one-timeframe status, and follow-through evidence decide which continuation or fade tactics are permitted, at what size class, and with what management style. Trend-day identification should also lead position-holding behavior: the decision to trail a core position instead of round-tripping comes from this layer.
 
-**What this chapter should confirm:** structural and tape reads made by lower layers. A balance-edge location read (layer 6) and an absorption read on the tape (layer 7) become trade-relevant when this layer confirms the day type and momentum state support the tactic. Close quality confirms or appeals the session's verdict and hands the conclusion to tomorrow's session-context layer.
+**What this chapter should confirm:** structural and tape reads made by lower layers. A balance-edge location read (Layer 6) and an absorption read on the tape (Layer 7) become trade-relevant when this layer confirms the day type and momentum state support the tactic. Close quality confirms or appeals the session's verdict and hands the conclusion to tomorrow's session-context layer.
 
-**What this chapter must never override:** setup quality, execution permission, trade-state management, and the review loop (layers 8 through 11). A confirmed trend day is not a trade; it is eligibility. The trade still requires a graded setup, a defined trigger, an invalidation, sized risk, and a trade-state plan, and no day-type conviction, however clean, substitutes for them. Nor may this layer override catalyst state: an A-grade momentum read in front of a scheduled release defers to the calendar, every time. Read is not trade; this chapter sharpens the read and then hands it forward.
-
----
-
-## Verification Report
-
-**Structure compliance.** Chapter contains the title, introduction, and all ten canonical entries from the Chapter 5 capsule in order: Momentum vs. Drift, Impulse Quality, Follow-Through, One-Timeframing, Pullback Quality, Trend Day Structure, Failed Continuation, Exhaustion, Close Quality, Day-Type Taxonomy. Every entry carries the seven mandatory sections in contract order: Core Concept with closing blockquote, Why It Happens as a two-column table with 4 to 6 mechanism rows, Practical Implications as a numbered list of 4 to 6 items, How Traders Identify It as 4 to 5 real-time-observable bullets, In Practice as a flowing developmental section, One-Line Summary blockquote, and See Also with at least one link and cross-chapter "(Ch. N)" suffixes.
-
-**Entry contract.** Each In Practice section includes a concrete hypothetical market sequence, the named junior error, why the error feels right, explicit equity-curve cost, and a runnable next-day drill; contrasting scenarios are used where the concept requires contrast (Momentum vs. Drift, Impulse Quality, Follow-Through, Close Quality, Day-Type Taxonomy, Pullback Quality). Tape-level detail (prints, delta, refreshing, absorption, speed) is shown for microstructure-dependent entries. All market sequences are hypothetical; no historical events, current prices, or current exchange rules are claimed.
-
-**Chapter-level contract.** Competency Checkpoint (8 measurable items), Drill Progression (five stages with concrete minimum evidence standards), Failure Modes table (6 recurring-drag failure modes), Assessment Prompts (10 applied judgment questions), and Read Stack Integration (lead, confirm, never-override) are all present after the entries.
-
-**Capsule coverage.** Required mechanisms covered: fresh versus mature impulse (Impulse Quality), initiative displacement (Impulse Quality, Momentum vs. Drift), follow-through and value migration (Follow-Through), one-timeframing (dedicated entry), pullback quality (dedicated entry), short-covering versus fresh buying (Momentum vs. Drift, Trend Day Structure, failure-modes table, assessment prompt 9), trend versus balanced day (Trend Day Structure, Day-Type Taxonomy), close quality (dedicated entry). All six listed junior misuse patterns are exposed in entries and the failure-modes table.
-
-**Doctrines.** Read Is Not Trade, No-Trade as active decision, process over outcome, prediction before outcome, mechanism over narrative, and conditionality are embedded in drills, progression standards, and the Read Stack section rather than restated as rules.
-
-**Formatting note.** Per standing instruction, no em-dashes appear anywhere in the chapter; the entry section header specified in the contract with an em-dash ("In Practice" plus "Building the Read") is rendered as "In Practice: Building the Read" to comply with that instruction while preserving the section name and order.
+**What this chapter must never override:** setup quality, execution permission, trade-state management, and the review loop (Layers 8 through 11). A confirmed trend day is not a trade; it is eligibility. The trade still requires a graded setup, a defined trigger, an invalidation, sized risk, and a trade-state plan, and no day-type conviction, however clean, substitutes for them. Nor may this layer override catalyst state: an A-grade momentum read in front of a scheduled release defers to the calendar, every time. Read is not trade; this chapter sharpens the read and then hands it forward.
