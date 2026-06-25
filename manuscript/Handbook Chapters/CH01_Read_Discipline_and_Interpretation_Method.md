@@ -1,8 +1,22 @@
-# Chapter 1: Read Discipline & Interpretation Method
+# Chapter 1: Read Discipline and Interpretation Method
 
 Markets produce events continuously. Events are free. Reads are built. The difference between a junior and a professional is not the indicator stack or the screen count: it is that the professional converts events into stated, conditional, falsifiable interpretations and then audits them, while the junior reacts to events and explains afterward. This chapter installs the method by which every later chapter gets used. Auction structure, tape, regime, intermarket pressure, catalysts, setups: all of it is raw material that this method either converts into judgment or wastes.
 
-Eight entries follow. Each one names a hole through which analytical skill leaks out of an account: the touch traded as a signal, the conflict never classified, the coincident evidence mistaken for prediction, the context spent as permission, the invalidation renegotiated after entry, the narrative traded against the tape, the playbook ported to the wrong product, and the precision the market never offered. The mechanisms underneath each hole are real market mechanics, not psychology. The drills close the holes with logged evidence, not intentions.
+A market read is not a trade, a bias, a prediction, or a reason to click. It is a structured interpretation of auction evidence under uncertainty. That distinction is the foundation of Part One. The Part opener forbids reading the individual order as if intention lived inside a single print. The read lives in the distribution: price response, value behavior, accepted and rejected areas, displayed liquidity, pulled liquidity, forced flow, and the tape evidence that shows which side is actually transacting. A single event can raise information density. It cannot authorize a conclusion by itself.
+
+The operating sequence is fixed:
+
+1. Observe what the market did, without directional language.
+2. Classify the evidence by source, timeframe, and auction state.
+3. Infer what the behavior means about value, liquidity, positioning, or participation.
+4. State a conditional thesis, including what would make it more likely and what would make it wrong.
+5. Define invalidation in market terms before any action vocabulary appears.
+6. Pass the read forward to setup quality and execution permission only if a later chapter's gate is present.
+7. Review the read against the evidence available at the time, never against the later outcome alone.
+
+This sequence matters because the common first error is not bad prediction. It is premature interpretation. A junior says "bullish" before naming evidence, turns a read directly into a trade, treats confidence as certainty, and then grades the read by whether the market later paid. That is outcome contamination. A correct review asks whether the observations were real, whether the inference followed from them, whether the thesis was conditional, whether invalidation was honored, and whether no-trade remained available. Price later moving in the expected direction does not prove the original read was good. Price later moving against it does not prove the original read was bad. Only process quality can answer that.
+
+Eight entries follow. Each one names a hole through which analytical skill leaks out of the operator's process: the touch traded as a signal, the conflict never classified, the coincident evidence mistaken for prediction, the context spent as permission, the invalidation renegotiated after entry, the narrative traded against the tape, the playbook ported to the wrong product, and the precision the market never offered. The mechanisms underneath each hole are real market mechanics, not psychology. The drills close the holes with logged evidence, not intentions.
 
 ## The Read vs. The Touch
 
@@ -39,13 +53,13 @@ An event is something the market does: price arrives at a level, a bar closes, d
 - Speed change: tape acceleration into the level followed by a sudden stall, or a long stall followed by a sudden flush, marks the moment the contest resolves.
 - Post-touch structure: a shallow pullback that retests the level from the far side and holds is acceptance; immediate displacement away without retest is rejection.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 
 ES trades up into a prior-day high at 5484.00. Watch two versions of the same touch. Version one: prints climb 5483.50, 5483.75, then heavy lifting at 5484.00; cumulative delta gains roughly +1,800 over ninety seconds, but the best offer at 5484.00 refreshes five times and price never prints 5484.25. Effort without result. Then bids at 5483.75 pull, and price flushes to 5482.50 in seconds. That is absorption followed by rejection: initiative buyers spent themselves into a passive seller who never moved. Version two: the same arrival, similar delta, but price lifts through to 5484.75, pulls back to 5484.00, and holds it from above while sell delta into the retest shrinks. Value begins building in the 5484 to 5486 band. Same line, same touch, opposite reads, and every distinguishing fact was visible on the tape within three minutes.
 
 The junior error is the touch-as-signal reflex: short at 5484.00 because "price hit resistance." It feels right for honest reasons. The line is clean, it held before, and the times it works deliver instant gratification that welds the reflex in place. The cost shows up on trend days: the trader shorts the first touch, gets stopped, shorts the retest "for the real rejection," gets stopped, and donates a third stop into the afternoon grind. The equity-curve signature is unmistakable: many small losses punctuated by clustered minus-three-R days whenever the market trends, which is exactly when the touch reflex fires most often.
 
-Drill, runnable tomorrow in replay: pre-mark five references, then for twenty touches record, before looking at the outcome, four fields: volume at touch versus the prior five-minute average, delta direction and whether it produced print progression, DOM refresh-or-pull behavior, and displacement within two minutes. Classify each touch (absorbed, rejected, accepted, no-information), then score your classification against the subsequent fifteen minutes. The log is the evidence; twenty touches with seventy percent classification accuracy is the standard before this read earns sim risk.
+Drill, runnable tomorrow in replay: pre-mark five references, then for twenty touches record, before looking at the outcome, four fields: volume at touch versus the prior five-minute average, delta direction and whether it produced print progression, DOM refresh-or-pull behavior, and displacement within two minutes. Classify each touch (absorbed, rejected, accepted, no-information), then score the classification against the subsequent auction. The log is the evidence. A touch read earns simulated risk only after the classification process is consistent, not after one attractive outcome.
 
 ### One-Line Summary
 
@@ -53,7 +67,7 @@ Drill, runnable tomorrow in replay: pre-mark five references, then for twenty to
 
 ### See Also
 
-Confirmation & Invalidation Discipline, Tape-Confirms-Narrative Rule, False Precision & Observation Tracking, Absorption & Iceberg Behavior (Ch. 3), Acceptance vs. Rejection (Ch. 2)
+Confirmation & Invalidation Discipline, Tape-Confirms-Narrative Rule, False Precision & Observation Tracking, Chapter 4: Tape Reading and Microstructure, Chapter 2: Level Interaction and Acceptance
 
 ## Signal Conflict Taxonomy (Structural vs. Tactical, Real vs. Apparent)
 
@@ -90,11 +104,11 @@ Every session produces evidence pointing both directions; the professional skill
 - Mechanical-clock clustering: conflicts that appear around settlement windows, expiry hedging windows, or scheduled data are apparent until proven otherwise.
 - Repetition: the same tactical failure at the same structural location twice running stops being tactical; repetition at structure is how tactical evidence earns promotion.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 
 NQ has built higher value three sessions running and holds overnight above prior-day value. The open drives down hard: between 9:32 and 9:40 sell delta runs roughly minus 4,000 and the opening low breaks. The junior flips bearish on the spot. Classify first: three sessions of value migration is structural; eight minutes of opening sell flow is tactical. The question that decides whether this conflict is real is whether sellers achieve acceptance below prior-day value, because that is where tactical evidence would convert to structural evidence.
 
-Scenario one: the selloff stalls at the prior day's value-area high, responsive buying absorbs the last push, and value rebuilds higher through late morning. The conflict was apparent: opening inventory correction inside an intact uptrend, and the dip was precisely the entry the structure had been promising. Scenario two: sellers drive through the value-area high and the prior POC, spend time below, and two separate retests of the value-area high fail from underneath. Now tactical evidence has repeated at structural locations: the conflict is real and a structural revision is warranted, written as a new conditional read, not as a panic flip.
+Scenario one: the selloff stalls at the prior day's value-area high, responsive buying absorbs the last push, and value rebuilds higher through late morning. The conflict was apparent: opening inventory correction inside an intact uptrend. The structural read held, but permission would still require location, trigger, and invalidation. Scenario two: sellers drive through the value-area high and the prior POC, spend time below, and two separate retests of the value-area high fail from underneath. Now tactical evidence has repeated at structural locations: the conflict is real and a structural revision is warranted, written as a new conditional read, not as a panic flip.
 
 The junior error is thesis-flipping on each tactical impulse: long into the close yesterday, short at 9:35, long again at 10:20 when the absorption appears, short again at lunch. It feels right because the most recent evidence is the most vivid, and reacting feels like responsiveness rather than what it is, which is letting the loudest eight minutes outvote three days. The cost is double-sided: stop-outs in both directions inside one structure, spread and commission bleed on every flip, and the deeper damage that by the time the real resolution comes, the trader is emotionally and financially done for the session. This pattern alone can turn a flat-read week into a losing one.
 
@@ -106,7 +120,7 @@ Drill: keep a conflict journal for ten sessions. Every time you feel signals dis
 
 ### See Also
 
-Context vs. Execution Permission, Leading vs. Coincident Signals, Value Migration & Acceptance (Ch. 2), Session Type Classification (Ch. 4), Gamma Regime Effects (Ch. 5)
+Context vs. Execution Permission, Leading vs. Coincident Signals, Chapter 2: Level Interaction and Acceptance, Chapter 7: Session Context and Sequencing, Chapter 8: Volatility Regime
 
 ## Leading vs. Coincident Signals
 
@@ -143,13 +157,13 @@ A leading signal is observable before displacement and exists because large flow
 - Intermarket lead: the correlated leader already displaced while your product still sits at its reference, giving you minutes of warning the chart of your own product does not contain.
 - Compression with rising volume near a reference: range contracting while participation grows, energy loading before release, observable well before the release bar.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 
 CL spends twenty minutes coiling above 78.20 after a morning markdown. The leading evidence assembles in plain sight: sell prints into 78.20 to 78.25 are repeatedly absorbed and the bid at 78.21 refreshes after every hit; cumulative delta makes a lower low while price holds the identical low, effort without result against the sellers; offers between 78.40 and 78.50 quietly thin. Then the displacement bar: 78.30 to 78.65 in under a minute on roughly +2,400 delta.
 
 Trader A bought 78.27 on the third absorption with invalidation defined as acceptance below 78.12, risking roughly fifteen ticks against a read that the seller was exhausted into a refreshed bid. Trader B bought 78.62 on the breakout bar "for confirmation" with a stop at 78.40. Same directional read, but B's reward-to-risk is a fraction of A's, B paid the displacement spread and slippage, and the routine pullback to 78.45 that A barely noticed took B out before continuation. The junior error is calling the displacement bar the signal. It feels right because every large move on every historical chart begins with a large bar, and hindsight presents that bar as the cause rather than the effect. The cost compounds quietly: systematically worse location means smaller R-multiples on winners and stop-outs inside ordinary retests, so the equity curve chronically underperforms the trader's actual read quality, which then corrupts his confidence in reads that were never the problem.
 
-Drill: the ten-displacement audit. In replay, scroll bar by bar toward a known displacement and stop on the bar before it begins. Write down everything observable at that moment: prints, delta, book behavior, compression, intermarket state. Then advance through the move and write what you would have cited afterward. The pre-displacement column becomes your leading inventory; the post-displacement column is your list of coincident impostors, and it goes on a banned list taped to the monitor.
+Drill: the ten-displacement audit. In replay, scroll bar by bar toward a known displacement and stop on the bar before it begins. Write down everything observable at that moment: prints, delta, book behavior, compression, intermarket state. Then advance through the move and write what you would have cited afterward. The pre-displacement column becomes your leading inventory; the post-displacement column is your list of coincident impostors. Later outcome is allowed to test whether the evidence had information value. It is not allowed to rewrite what was visible before the move.
 
 ### One-Line Summary
 
@@ -157,7 +171,7 @@ Drill: the ten-displacement audit. In replay, scroll bar by bar toward a known d
 
 ### See Also
 
-The Read vs. The Touch, Tape-Confirms-Narrative Rule, Cumulative Delta & Divergence (Ch. 3), Transmission Chains & Lead-Lag (Ch. 6), Compression & Energy States (Ch. 5)
+The Read vs. The Touch, Tape-Confirms-Narrative Rule, Chapter 4: Tape Reading and Microstructure, Chapter 9: Intermarket Confirmation, Chapter 8: Volatility Regime
 
 ## Context vs. Execution Permission
 
@@ -173,7 +187,7 @@ Context is the stacked condition set that defines which trades are plausible and
 |---|---|
 | Risk geometry is set by distance to invalidation | A mid-range entry puts the logical invalidation a full structure-width away, forcing either oversized dollar risk or an arbitrary stop parked inside rotational noise; either way the geometry is broken before the trade begins. |
 | Mid-range is two-way liquidity | Away from references, neither side is committed; rotational flow transacts both directions and stops out both sides even when the day's directional context is completely correct. |
-| Context persists while entries die | A bearish context can remain valid for six hours while routine rotations kill five structureless entries inside it; the read survives the day, the account does not. |
+| Context persists while entries die | A bearish context can remain valid for six hours while routine rotations kill five structureless entries inside it; the read survives the day, the operator's process does not. |
 | Adverse-excursion distribution by location | Entries taken at structural references show shallow maximum adverse excursion when correct; structureless entries show deep adverse excursion even on eventual winners, forcing wide stops and small size on the trader's best ideas. |
 | Consensus context is loaded positioning | When the context is obvious to everyone, the consensus side is already positioned, and its stops are the market's nearest fuel; the path to the contextually correct destination routinely runs through a squeeze against it first. |
 
@@ -182,7 +196,7 @@ Context is the stacked condition set that defines which trades are plausible and
 1. Keep two physical artifacts: a context card updated at session landmarks (pre-open, post-open structure, midday, last hour) and a permission checklist run only at candidate locations; never let one document do both jobs.
 2. Enforce five gates for permission: location, trigger, invalidation stated in market terms, risk within fixed R at that invalidation, and a written trade-state plan; any missing gate converts the idea to a logged NO-TRADE.
 3. Tag and count context-only entries every week; the count is a process metric and the target is zero, independent of how those entries happened to resolve.
-4. When context is strong but no location exists, write down the specific prices where permission could exist and set alerts there; this converts the urge to act into preparation instead of a fill.
+4. When context is strong but no location exists, write down the specific prices where permission could exist and set alerts there; this converts the urge to act into preparation instead of participation.
 5. After a correctly-read move you never traded, grade the read correct and the no-trade correct if permission never appeared; log it explicitly as a process win, because unlogged it will be remembered as a failure and pressure the next mid-range click.
 
 ### How Traders Identify It
@@ -193,15 +207,15 @@ Context is the stacked condition set that defines which trades are plausible and
 - The urgency you feel scales with the hours of analysis you performed, not with anything the market just did.
 - The stop is a round number or a dollar amount rather than a price beyond evidence, which means the trade was sized off comfort, not off structure.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 
-A 6E session. The context stack is uniformly bearish: dollar bid since the London open, value migrating lower three consecutive sessions, the rates contract softening, equity tone heavy. Price sits mid-range at 1.0862, between the overnight low at 1.0841 and a broken shelf at 1.0885. The junior shorts 1.0862 because everything is bearish, with a stop at 1.0875 chosen because thirteen ticks "feels reasonable." A normal rotation lifts price into the broken shelf, prints 1.0879, takes his stop at 1.0875, and then the market sells off to 1.0820 exactly as his context predicted. The read was right. The account is red.
+A 6E session. The context stack is uniformly bearish: dollar bid since the London open, value migrating lower three consecutive sessions, the rates contract softening, equity tone heavy. Price sits mid-range at 1.0862, between the overnight low at 1.0841 and a broken shelf at 1.0885. The junior shorts 1.0862 because everything is bearish, with a stop at 1.0875 chosen because thirteen ticks "feels reasonable." A normal rotation lifts price into the broken shelf, prints 1.0879, takes his stop at 1.0875, and then the market sells off to 1.0820 exactly as his context predicted. The read was directionally useful. The action was still a process failure.
 
 Contrast the trader who wrote, at 9:40, the two places permission could exist: a retest of the broken shelf at 1.0883 to 1.0887 showing failure tape (sellers absorbing the lift, no acceptance back above), or a downside continuation entry on a failed reclaim after acceptance below 1.0841. He set alerts and did nothing for ninety minutes. The shelf retest came at 1.0884, the lift died on refreshing offers, he shorted with invalidation above 1.0892, and rode the same move to 1.0820. Identical context, identical directional opinion, professional location: positive geometry instead of donated stop.
 
 The junior error has a precise emotional engine: analysis creates ownership. Having done the work, the trader feels the read demands expression, and waiting feels like wasting it. This is sunk-cost reasoning applied to research, and it is why the error disproportionately afflicts juniors with genuinely good analytical skills. The cost is the cruelest expectancy leak in the book: right on direction, negative on the year, which the trader then misdiagnoses as a problem with his analysis and fixes by analyzing harder.
 
-Drill: one week of split logging. Every directional opinion goes into the context log, where entries are forbidden. Orders are permitted only off the five-gate permission checklist. At week's end, reconstruct the hypothetical P&L of every context-only impulse you logged but did not take, next to the actual results of checklist entries. Most juniors only retire this error after seeing the two columns side by side in their own handwriting.
+Drill: one week of split logging. Every directional opinion goes into the context log, where participation is forbidden. Action language is permitted only off the five-gate permission checklist. At week's end, reconstruct every context-only impulse you logged but did not take next to the process grade of checklist-based decisions. Most juniors only retire this error after seeing the two columns side by side in their own handwriting.
 
 ### One-Line Summary
 
@@ -209,7 +223,7 @@ Drill: one week of split logging. Every directional opinion goes into the contex
 
 ### See Also
 
-Confirmation & Invalidation Discipline, Signal Conflict Taxonomy, Structural Location & References (Ch. 2), Setup Grading (Ch. 8), Entry Triggers & Trade-State Plans (Ch. 9)
+Confirmation & Invalidation Discipline, Signal Conflict Taxonomy, Chapter 2: Level Interaction and Acceptance, Chapter 12: Setup Quality and Action Vocabulary, Chapter 13: From Read to Trade
 
 ## Confirmation & Invalidation Discipline
 
@@ -231,7 +245,7 @@ Invalidation is the market evidence that proves the read wrong, written before e
 
 ### Practical Implications
 
-1. Write a four-line card before every order: thesis, trigger, invalidation evidence with its translated stop, confirmation evidence with what it permits. No card, no order, including in sim.
+1. Write a four-line card before every decision: thesis, trigger, invalidation evidence with its translated stop, confirmation evidence with what it permits. No card, no participation, including in simulation.
 2. Define invalidation as acceptance, not touch: for example, two consecutive five-minute closes beyond the reference, or a retest of the reference that fails from the wrong side; place the hard stop beyond the price where that evidence completes.
 3. Keep a hard stop working in the market at all times; the evidence definition governs the early exit, the hard stop caps disaster when the evidence completes faster than you can act.
 4. Adds are permitted only on confirmation written before entry; an add condition invented while in the position is not a condition, it is appetite.
@@ -239,15 +253,15 @@ Invalidation is the market evidence that proves the read wrong, written before e
 
 ### How Traders Identify It
 
-- You are checking P&L more often than the tape after entry: the position is being managed by pain, not by evidence.
+- You are checking the result more often than the tape after entry: the position is being managed by pain, not by evidence.
 - You catch yourself re-deriving the thesis with evidence assembled after entry; motivated search has replaced the card.
 - The stop has moved in the adverse direction even once: the invalidation no longer exists, only a number that retreats.
 - You describe the position as "it just needs to hold X" where X is past your original invalidation: the read died and is being kept on a ventilator.
 - Confirmation evidence printed and you did nothing it pre-authorized: the quieter, profitable-feeling discipline failure, and it costs real expectancy too.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 
-GC long against a composite support zone at 2392 to 2396, entered at 2395.2 on responsive buying tape. The card, written and timestamped before the fill: thesis, responsive buyers defend the composite zone; trigger, absorption of the morning sell push; invalidation, acceptance below 2390, defined as a full five-minute close below 2390 followed by a failed reclaim of 2392; hard stop 2387.9; confirmation, reclaim and hold of 2399, permitting a half-size add; target logic, the 2408 band.
+GC long against a composite support zone at 2392 to 2396, entered at 2395.2 on responsive buying tape. The card, written and timestamped before the entry: thesis, responsive buyers defend the composite zone; trigger, absorption of the morning sell push; invalidation, acceptance below 2390, defined as a full five-minute close below 2390 followed by a failed reclaim of 2392; hard stop 2387.9; confirmation, reclaim and hold of 2399, permitting a half-size add; target logic, the 2408 band.
 
 Scenario one: price flushes to 2391.1, sweeping through the figure, never closes below 2390, and reclaims 2393 within two minutes. The sweep harvested every point-stop resting at 2392.0 and 2391.5; the evidence-based card kept the position because the invalidation, acceptance, never occurred. Confirmation prints at 2399 in the afternoon, the add executes as pre-authorized, exit near 2407.6. Scenario two, the honest loss: a five-minute bar closes 2389.4 and the retest of 2392 fails from below. Invalidation is complete. The exit happens around 2391 on the failed reclaim, small loss, no negotiation, and the trader is flat, calm, and eligible for the next read.
 
@@ -261,22 +275,22 @@ Drill: twenty sim trades in which the card is written and timestamped before ent
 
 ### See Also
 
-Context vs. Execution Permission, False Precision & Observation Tracking, The Read vs. The Touch, Sweep-and-Reclaim Behavior (Ch. 3), Stop Architecture & Trade-State Management (Ch. 9)
+Context vs. Execution Permission, False Precision & Observation Tracking, The Read vs. The Touch, Chapter 4: Tape Reading and Microstructure, Chapter 11: Trade-State Management
 
 ## Tape-Confirms-Narrative Rule
 
 ### Core Concept
 
-Every narrative, whether macro logic, technical story, or catalyst expectation, is a hypothesis about future flow. It becomes a read only when the tape shows that flow actually transacting at a location that matters. Markets price expectations before events, so the narrative's logical direction and the post-event flow direction routinely diverge: positioning, not logic, sets the path. The word "should," as in "this should be bearish," is the most expensive grammar in trading, because it marks an untested narrative being handed execution authority it never earned.
+Every narrative, whether macro logic, technical story, or catalyst expectation, is a hypothesis about future flow. It becomes a read only when the tape shows that flow is actually transacting at a location that matters. Markets price expectations before events, so the narrative's logical direction and the post-event flow direction routinely diverge: positioning, not logic, sets the path. The word "should," as in "this should be bearish," is the most expensive grammar in trading, because it marks an untested narrative being handed execution authority it never earned.
 
-> A narrative is a hypothesis about flow. Until the tape shows that flow transacting at a location that matters, you are holding an opinion, not a read.
+> A narrative is a hypothesis about flow. Until the tape shows that flow is transacting at a location that matters, you are holding an opinion, not a read.
 
 ### Why It Happens
 
 | Driver | Mechanism |
 |---|---|
 | Expectation is pre-traded | By event time the consensus view is already positioned; flow responds to the surprise relative to positioning, not to the headline's absolute content, which is why a correctly predicted headline can produce a wrong-way trade. |
-| Forced flow from the wrong-footed side | When positioning leans against the print, stop-outs and margin-driven covering from the trapped side create violent moves against the "correct" narrative; the squeeze is mechanical, not opinion. |
+| Forced flow from the wrong-footed side | When positioning leans against the print, stop-outs and forced covering from the trapped side create violent moves against the "correct" narrative; the squeeze is mechanical, not opinion. |
 | Volatility supply and demand around events | Protection bought before the event is unwound after it; the volatility crush plus hedge unwind produces mechanical drift opposite to the pre-event fear, independent of the data's content. |
 | Transmission-chain ordering | A macro impulse must reprice rates first, then currency, then equity duration; trading the equity narrative directly without checking the chain leader trades an assumption twice removed from the actual flow. |
 | Liquidity vacuum at the release | The first prints after a release occur into a pulled book; direction in those seconds reflects vacuum mechanics, not an auction verdict, and the verdict only arrives with the first sustained two-sided trade afterward. |
@@ -297,15 +311,15 @@ Every narrative, whether macro logic, technical story, or catalyst expectation, 
 - Volatility behavior: implied vol collapsing while price reverses the first move is the hedge-unwind drift signature, mechanical and tradable.
 - Delta quality on the counter-move: a "wrong-way" rally on heavy, persistent buy delta with shallow pullbacks is real flow, not noise to fade.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 
 A hypothetical hot inflation print. The narrative writes itself: yields up, dollar up, NQ down. Run the chain. Scenario one: ZN gaps down and cannot reclaim its pre-event level, every bounce sold on the tape; 6E breaks support and accepts below it; NQ opens lower, rallies into the pre-event shelf, and sellers absorb the entire lift, offers refreshing, buy delta climbing with zero print progression, then rolls over. The chain transmits and the tape confirms at a location: short the failed retest with invalidation above the shelf. Narrative and read happen to agree, but the read was built from flow, and it would have survived even if the narrative had been wrong.
 
-Scenario two, same headline: ZN's first flush is bought back inside ten minutes and the contract reclaims its pre-print level; NQ's gap-down low holds on sustained initiative buying, reclaims VWAP, and holds it from above on shrinking sell delta. The market came in positioned for the bad print, hedged and short, and the squeeze is the trade. The junior shorting "because the number was hot" is selling into forced covering, the single worst counterparty available, and his logical correctness about the data buys him nothing but a fast fill.
+Scenario two, same headline: ZN's first flush is bought back inside ten minutes and the contract reclaims its pre-print level; NQ's gap-down low holds on sustained initiative buying, reclaims VWAP, and holds it from above on shrinking sell delta. The market came in positioned for the bad print, hedged and short, and the squeeze is the trade. The junior shorting "because the number was hot" is selling into forced covering, the single worst counterparty available, and his logical correctness about the data buys him nothing but bad location.
 
-Why the error feels right: the logic is genuinely sound, and being right about the data feels indistinguishable from being right about the trade. The junior has not yet learned that analytical correctness and flow reality are separate variables, and the market settles accounts only in the second one. The cost is concentrated and ugly: fading post-event squeezes produces the worst slippage and the fastest multi-R losses of a junior's month, and then teaches the false lesson that events are random, when the actual lesson is that the tape outranks the story.
+Why the error feels right: the logic is genuinely sound, and being right about the data feels indistinguishable from being right about the trade. The junior has not yet learned that analytical correctness and flow reality are separate variables, and the market settles only the second variable. The cost is concentrated and ugly: fading post-event squeezes produces the worst slippage and the fastest multi-R losses of a junior's month, and then teaches the false lesson that events are random, when the actual lesson is that the tape outranks the story.
 
-Drill: the event-calendar drill. For the next five scheduled releases, write the per-instrument narrative direction and the positioning note before the print. Then record the chain, rates, dollar, equity index, at five minutes and thirty minutes after, and score narrative-tape agreement. No live event trades are permitted until ten events are logged and the agreement rate is known, because that number, not the narrative, is what sets size.
+Drill: the event-calendar drill. For the next five scheduled releases, write the per-instrument narrative direction and the positioning note before the print. Then record the chain, rates, dollar, equity index, at five minutes and thirty minutes after, and score narrative-tape agreement. No event participation is permitted until ten events are logged and the agreement rate is known, because that number, not the narrative, is what sets size.
 
 ### One-Line Summary
 
@@ -313,7 +327,7 @@ Drill: the event-calendar drill. For the next five scheduled releases, write the
 
 ### See Also
 
-Leading vs. Coincident Signals, The Read vs. The Touch, Event Positioning & Repricing (Ch. 7), Rates-FX-Equity Transmission (Ch. 6), Volatility Supply Around Events (Ch. 5)
+Leading vs. Coincident Signals, The Read vs. The Touch, Chapter 10: Catalyst Interpretation, Chapter 9: Intermarket Confirmation, Chapter 8: Volatility Regime
 
 ## Product-Specific Behavior (No Universal Read)
 
@@ -339,8 +353,8 @@ A read is a claim about how a specific auction, with its specific participants a
 1. Maintain a one-page behavior sheet per product: typical rotation size, displacement speed, book character, honest hours, killer windows around scheduled data, and the product's observed stop-run signature; rebuild it monthly from logged observation, not memory.
 2. Calibrate stops and targets in product-native rotation units, never in dollar amounts and never in another product's points; the unit conversion the junior skips is the one that kills the position.
 3. Restrict each read type to products where your log has validated it: absorption reads stay in thick books until a thin-book sample proves they survive there, which it usually will not in the same form.
-4. Trade each product only inside its honest hours until your own records demonstrate an edge elsewhere; the dead-hour fill is cheap to get and expensive to hold.
-5. When switching products intraday, run a deliberate recalibration pause: write the new product's rotation size and current regime before any order, because the hands carry the last product's units for longer than the mind admits.
+4. Trade each product only inside its honest hours until your own records demonstrate an edge elsewhere; the dead-hour entry is easy to justify and expensive to hold.
+5. When switching products intraday, run a deliberate recalibration pause: write the new product's rotation size and current regime before any participation, because the hands carry the last product's units for longer than the mind admits.
 
 ### How Traders Identify It
 
@@ -350,13 +364,13 @@ A read is a claim about how a specific auction, with its specific participants a
 - Behavior into and out of the product's own scheduled data: structure that survives the release matters; structure built in the hour before it is provisional by definition.
 - Pullback depth after displacement: shallow-and-continue versus deep-retrace-and-test character, measured, not assumed, per product.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 
 The same picture, two products. A trader sees compression under a session high with absorption-looking prints at the edge. In a thick-book index of the ES type: the offer at the high refreshes repeatedly against genuine size, then pulls, and the breakout grinds with shallow pullbacks. The signal meant what it said, because in that book the picture is too expensive to fake. The identical visual in a thin-book product of the NQ type: the "wall" was one participant's iceberg, it pulls without warning, price displaces a large multiple of the other product's rotation in seconds, retraces half of it, runs stops on both sides, and only then goes. Same chart pattern, different tradable reality: the thin-book version demands deeper adverse-excursion tolerance, wider invalidation in product units, smaller size, and faster decisions, or it demands a pass.
 
 Second contrast, the calendar version: a technically clean setup in CL ten minutes before its weekly inventory release is a NO-TRADE, because the release is about to reprice the entire structure the setup is built on. The same clock time in 6E is unremarkable, because that data line is not 6E's catalyst. The junior error is porting the playbook: same stop distance, same size logic, same patience model, moved from the product where it was built to a product that never agreed to those terms, or trading a product straight through its own killer window as if it were a normal hour. It feels right because pattern recognition genuinely transfers visually, the charts look the same, and the first few imported trades may even win, which finishes the trap. The cost is structural mis-sizing: stops calibrated to the wrong product's noise get consumed by routine rotation, and the trader concludes that his valid read type "stopped working" and abandons real edge instead of recalibrating units. Edges are rarely lost; they are usually mis-ported.
 
-Drill: a ten-session observation block per product before that product earns sim orders. Log rotation sizes, displacement speeds, behavior through the product's scheduled data, and the outcome of every visible stop run. The output is the behavior sheet, and the sheet is the license: no sheet, no orders, in that product.
+Drill: a ten-session observation block per product before that product earns simulated participation. Log rotation sizes, displacement speeds, behavior through the product's scheduled data, and the outcome of every visible stop run. The output is the behavior sheet, and the sheet is the license: no sheet, no participation, in that product.
 
 ### One-Line Summary
 
@@ -364,7 +378,7 @@ Drill: a ten-session observation block per product before that product earns sim
 
 ### See Also
 
-False Precision & Observation Tracking, The Read vs. The Touch, Liquidity Cycles & Honest Hours (Ch. 4), Regime-Dependent Behavior (Ch. 5), Catalyst Calendars by Product (Ch. 7)
+False Precision & Observation Tracking, The Read vs. The Touch, Chapter 7: Session Context and Sequencing, Chapter 8: Volatility Regime, Chapter 10: Catalyst Interpretation
 
 ## False Precision & Observation Tracking
 
@@ -390,7 +404,7 @@ Market references are zones produced by distributed liquidity, not points; the a
 2. Place stops beyond the measured noise band plus the completion of the acceptance evidence, never at the zone edge, because the edge is inside the distribution of routine overshoots.
 3. Log every read before the outcome with six fields: instrument, time, the read itself, confidence in ten-percent buckets between fifty and ninety, invalidation, and horizon. No retroactive entries; an unlogged read does not count as a read.
 4. Score weekly: hit rate per confidence bucket. If the eighty-percent bucket is hitting fifty-five, your stated confidence is noise, and no sizing decision may key off it until calibration improves.
-5. Track read quality and P&L as separate series, and promote size only on read-quality evidence, calibration plus process score, never on a green week alone.
+5. Track read quality and financial outcome as separate series, and promote size only on read-quality evidence, calibration plus process score, never on a favorable week alone.
 
 ### How Traders Identify It
 
@@ -400,9 +414,9 @@ Market references are zones produced by distributed liquidity, not points; the a
 - The journal contains fluent explanations written after outcomes and no predictions written before them: the audit instrument is missing and only the narrative engine is running.
 - Confidence language in your notes ("definitely," "has to," "guaranteed") shows no correlation with your scored hit rates, once you finally score them.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 
-An ES trader marks "support 5483.75" off a prior low. Session one: the low prints 5483.50, two ticks through his line, and reverses; his stop at 5483.25 is gone and he watches a fourteen-point rally flat. Session two, chastened, he widens arbitrarily; the low prints 5485.00 and never reaches his order, and he misses the trade waiting for a touch the zone never owed him. Both failures come from the same source: he treated a distribution as a point.
+An ES trader marks "support 5483.75" off a prior low. Session one: the low prints 5483.50, two ticks through his line, and reverses; his stop at 5483.25 is gone and he watches a fourteen-point rally flat. Session two, chastened, he widens arbitrarily; the low prints 5485.00 and never reaches his planned price, and he misses the trade waiting for a touch the zone never owed him. Both failures come from the same source: he treated a distribution as a point.
 
 Contrast the measured approach. Across twenty historical interactions with comparable references in the current regime, he measures the overshoot-past-reference distribution: median around three ticks, eightieth percentile around six. His preparation now reads "responsive zone 5482.25 to 5484.50, invalidation two five-minute closes below 5481, stop 5479.75," and he scales entries inside the zone instead of demanding one price. Both of the earlier sessions become wins under this construction, with no change in directional skill, because the construction finally matches how liquidity actually sits.
 
@@ -416,7 +430,7 @@ Drill, two parts, both runnable tomorrow. Part one, the zone-width study: for yo
 
 ### See Also
 
-Confirmation & Invalidation Discipline, Product-Specific Behavior (No Universal Read), Zone Construction & Reference Quality (Ch. 2), Regime Width & Noise Bands (Ch. 5), Prediction Logging & Review Loop (Ch. 10)
+Confirmation & Invalidation Discipline, Product-Specific Behavior (No Universal Read), Chapter 2: Level Interaction and Acceptance, Chapter 8: Volatility Regime, Layer 11: review loop
 
 ## Chapter Competency Checkpoint
 
@@ -425,7 +439,7 @@ Confirmation & Invalidation Discipline, Product-Specific Behavior (No Universal 
 1. Watch a live touch of a pre-marked reference and verbalize its classification (absorbed, rejected, accepted, no-information) with the supporting tape evidence inside two minutes, at seventy percent or better agreement with your own end-of-day replay verification.
 2. Take any pair of conflicting signals from today's session, label each structural or tactical, declare the conflict real or apparent, and state the resolution rule, all before the conflict resolves.
 3. Recite, from memory, the validated leading signals on your primary product's list and the coincident impostors on your banned list, and show the replay audit that produced both.
-4. For any directional opinion, state within ten seconds where permission could exist, what the trigger is, and what invalidates it, or explicitly classify the opinion as context-only and log it without an order.
+4. For any directional opinion, state within ten seconds where permission could exist, what the trigger is, and what invalidates it, or explicitly classify the opinion as context-only and log it without action.
 5. Produce pre-entry cards for your last twenty sim trades, every one timestamped before entry, with at least ninety percent of exits matching their card's category and zero adverse stop movements in the final fifteen.
 6. Show an event log of at least ten scheduled releases with narrative direction and positioning note written before each print, the post-event chain recorded at five and thirty minutes, and an agreement rate computed.
 7. Show a current behavior sheet, built from at least ten logged observation sessions, for every product you intend to trade, including measured rotation size and the product's killer windows.
@@ -433,22 +447,22 @@ Confirmation & Invalidation Discipline, Product-Specific Behavior (No Universal 
 
 ## Chapter Drill Progression
 
-1. **Observe.** Ten replay sessions on the primary product. Minimum evidence: forty level interactions logged with response classifications, ten displacements audited with the pre-displacement evidence frozen and listed, five signal conflicts classified S/T and real/apparent. No live screens required, no orders permitted.
-2. **Classify.** Ten live sessions, watch-only, zero orders. Live-label touches, conflicts, and leading evidence in real time, then verify against replay after each close. Advancement standard: seventy percent live-label agreement with replay verification across the final five sessions.
+1. **Observe.** Ten replay sessions on the primary product. Minimum evidence: forty level interactions logged with response classifications, ten displacements audited with the pre-displacement evidence frozen and listed, five signal conflicts classified S/T and real/apparent. No live screens required, no participation permitted.
+2. **Classify.** Ten live sessions, watch-only, zero participation. Live-label touches, conflicts, and leading evidence in real time, then verify against replay after each close. Advancement standard: seventy percent live-label agreement with replay verification across the final five sessions.
 3. **Predict.** Run the prediction log: minimum twenty-five timestamped reads with confidence buckets, invalidation, and horizon, written strictly before outcomes. Advancement standard: buckets correctly ordered (the eighty-percent bucket outperforms the sixty-percent bucket), even if absolute levels are off; mis-ordered buckets mean confidence is noise and the stage repeats.
-4. **Simulate.** Thirty sim trades minimum, every one on a pre-entry card. Advancement standard: ninety percent of exits matching card categories, zero stop-widening violations across the final fifteen trades, and a written weekly review separating process grade from P&L on every trade.
-5. **Risk.** Live micro-size only after stages one through four are complete with evidence on file. First twenty live trades at minimum size regardless of results. Any stop-widening violation at live size returns the trader to stage four for ten additional carded sim trades before live permission resumes. A green P&L week is not an advancement criterion at any stage; process evidence is the only currency.
+4. **Simulate.** Thirty sim trades minimum, every one on a pre-entry card. Advancement standard: ninety percent of exits matching card categories, zero stop-widening violations across the final fifteen trades, and a written weekly review separating process grade from financial outcome on every trade.
+5. **Risk.** Live micro-size only after stages one through four are complete with evidence on file. First twenty live trades at minimum size regardless of results. Any stop-widening violation at live size returns the trader to stage four for ten additional carded sim trades before live permission resumes. A favorable result week is not an advancement criterion at any stage; process evidence is the only currency.
 
 ## Chapter Failure Modes
 
-| Failure Mode | What It Looks Like | Account Cost | Correction |
+| Failure Mode | What It Looks Like | Process Cost | Correction |
 |---|---|---|---|
-| Touch-as-signal reflex | Resting entries parked at every marked level; fills seconds after touches with no response read taken | Death by stop-outs on continuation days; chronic spread and commission bleed; clustered multi-R losses on trend days | Two-minute response classification required before any level-based entry; twenty-touch log with accuracy standard before the read earns risk |
+| Touch-as-signal reflex | Resting entries parked at every marked level; action seconds after touches with no response read taken | Death by stop-outs on continuation days; chronic spread and commission bleed; clustered multi-R losses on trend days | Two-minute response classification required before any level-based entry; twenty-touch log with accuracy standard before the read earns risk |
 | Thesis-flipping on tactical noise | Long at 10:00, short at 10:40, long again at 11:15 inside one balance | Double-sided stop-outs within a single structure; done-for-the-day tilt before the real resolution arrives | S/T labeling at the moment of recording; three-failures-at-structure rule before any structural revision |
-| Chasing coincident confirmation | Entries on breakout bars, fills at extension, stops sitting in the retest path | Systematically degraded R-multiples; winners too small to pay for the losers; read quality outrunning results | Leading-inventory list per product; mandatory chase tag in the journal; alerts placed at leading conditions, never at breakout prices |
+| Chasing coincident confirmation | Entries on breakout bars, action at extension, stops sitting in the retest path | Systematically degraded R-multiples; winners too small to pay for the losers; read quality outrunning results | Leading-inventory list per product; mandatory chase tag in the journal; alerts placed at leading conditions, never at breakout prices |
 | Context spent as permission | Mid-range entries justified by the day's story; stops at round numbers or dollar amounts | Right on direction, red on the week; analytical effort converting directly into losses | Five-gate permission checklist; weekly context-only entry count tracked and driven to zero; alerts written at the locations where permission could exist |
 | Stop negotiation after entry | Stops widened "one more time"; exits finally taken at maximum pain | Fat left tail; a single violation erasing weeks of discipline; re-entry capacity destroyed at the worst moment | Hard stop always working in the market; violation rate tracked as a first-class metric; automatic size reset and return to sim on any violation |
-| Trading the headline | Orders inside the release vacuum; fading post-event squeezes on "should" logic | The month's worst slippage; fast multi-R losses; false lesson learned that events are random | Verdict-window rule; chain-leader check before any event read; ten logged events required before any event trade |
+| Trading the headline | Action inside the release vacuum; fading post-event squeezes on "should" logic | The month's worst slippage; fast multi-R losses; false lesson learned that events are random | Verdict-window rule; chain-leader check before any event read; ten logged events required before any event trade |
 | Playbook porting across products | Same stop distances, size logic, and patience model moved to a new product unmodified | Valid edges abandoned as "broken"; structural stop-outs from mis-sized noise tolerance | Behavior sheet built from a ten-session observation block as the license for each product; stops expressed in product-native rotation units |
 | Untracked reading | Fluent post-hoc explanations; an empty or retroactive prediction log | Permanent skill plateau; random strategy churn in every drawdown; confidence uncorrelated with accuracy | Unlogged reads do not count; twenty-five-prediction minimum before conclusions; weekly calibration review by confidence bucket |
 
@@ -467,12 +481,12 @@ Confirmation & Invalidation Discipline, Product-Specific Behavior (No Universal 
 
 ## Read Stack Integration
 
-The master read stack runs: (1) calendar and catalyst state, (2) higher-timeframe auction, (3) session context, (4) volatility regime, (5) intermarket tone, (6) structural location, (7) tape confirmation, (8) setup quality, (9) execution permission, (10) trade-state management, (11) review loop.
+The master read stack runs: Layer 1, calendar and catalyst state; Layer 2, higher-timeframe auction; Layer 3, session context; Layer 4, volatility regime; Layer 5, intermarket tone; Layer 6, structural location; Layer 7, tape confirmation; Layer 8, setup quality; Layer 9, execution permission; Layer 10, trade-state management; Layer 11, review loop.
 
-This chapter is not a layer in that stack. It is the operating method that governs how every layer is read, ranked, and combined: the classification rules from Signal Conflict Taxonomy decide how layers two through five get weighed against each other; Leading vs. Coincident governs what counts as evidence inside layer seven; Context vs. Execution Permission is the firewall between layers one-through-eight and layer nine; Confirmation & Invalidation Discipline writes the contract that layer ten enforces; and the prediction log from False Precision & Observation Tracking is the instrument layer eleven audits with.
+This chapter is not a layer in that stack. It is the operating method that governs how every layer is read, ranked, and combined: the classification rules from Signal Conflict Taxonomy decide how Layers 2 through 5 get weighed against each other; Leading vs. Coincident governs what counts as evidence inside Layer 7; Context vs. Execution Permission is the firewall between Layers 1 through 8 and Layer 9; Confirmation & Invalidation Discipline writes the contract that Layer 10 enforces; and the prediction log from False Precision & Observation Tracking is the instrument Layer 11 audits with.
 
 **What this chapter should lead:** everything, every session, from the first pre-market note onward. The context card, the S/T labels, the permission gates, and the prediction log are running before any directional content from later chapters is consumed, because they are the containers that content gets poured into.
 
-**What it should confirm:** nothing. Method does not confirm market evidence; it processes it. Tape confirmation at layer seven operates under this chapter's confirmation and invalidation rules, not the other way around.
+**What it should confirm:** nothing. Method does not confirm market evidence; it processes it. Tape confirmation at Layer 7 operates under this chapter's confirmation and invalidation rules, not the other way around.
 
-**What it must never override:** the market itself. When the tape contradicts the framework's expectation, the framework's own rules declare that the tape wins; method ritual is never a reason to hold a read the flow has falsified. And this chapter must never be allowed to collapse into journaling or mindset content: it is interpretation method, it carries no directional opinion of its own, and it never substitutes for the domain knowledge in the chapters it governs. Direction comes from layers one through seven, quality from eight, permission from nine, management from ten, and the audit from eleven. This chapter is the discipline that keeps those eleven honest.
+**What it must never override:** the market itself. When the tape contradicts the framework's expectation, the framework's own rules declare that the tape wins; method ritual is never a reason to hold a read the flow has falsified. And this chapter must never be allowed to collapse into journaling or mindset content: it is interpretation method, it carries no directional opinion of its own, and it never substitutes for the domain knowledge in the chapters it governs. Direction comes from Layers 1 through 7, quality from Layer 8, permission from Layer 9, management from Layer 10, and the audit from Layer 11. This chapter is the discipline that keeps those eleven honest.
