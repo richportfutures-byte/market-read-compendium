@@ -1,8 +1,10 @@
-# Chapter 4: Tape Reading & Microstructure
+# Chapter 4: Tape Reading and Microstructure
 
-The tape is the only part of the read stack that shows realized commitment. Everything above it (catalyst state, auction structure, session context, volatility regime, intermarket tone) is inference about what participants should do. The tape shows what they actually did, contract by contract, and what the passive side did about it. This chapter teaches you to read that record: prints, book behavior, delta, spread, liquidity replenishment, and the relationship between effort and result.
+The tape is the evidence layer of the auction read. Everything above it (catalyst state, auction structure, session context, volatility regime, intermarket tone) is inference about what participants should be likely to do at a location. The tape shows what they actually did there, contract by contract, and what the passive side did about it. This chapter teaches you to read that record: prints, book behavior, delta, spread, liquidity replenishment, and the relationship between effort and result.
 
 Two warnings frame everything that follows. First, the tape is a confirmation layer, not a setup generator. It can veto a trade that everything else endorses, and that veto is its strongest legitimate power. It cannot rescue a trade taken at bad location with no execution permission. Second, the tape is only readable when participation is real. Half of professional tape reading is knowing when not to read at all.
+
+This forbids the chapter's central misuse: you may not read prints as standalone permission. Tape answers a narrower question: at this specific location, are participants accepting, rejecting, defending, absorbing, chasing, trapped, or failing? If you cannot name the location first, the tape read is floating evidence, and floating evidence becomes a signal generator in disguise.
 
 All price sequences in this chapter are hypothetical training constructions. They are built to be structurally realistic, not to describe any historical session.
 
@@ -11,7 +13,7 @@ All price sequences in this chapter are hypothetical training constructions. The
 ## Absorption
 
 ### Core Concept
-Absorption is aggressive flow trading into passive liquidity at a price that refuses to displace. Volume is heavy, the aggressors keep paying, and the level keeps eating them. It is the cleanest expression of effort without result: market orders are being spent and the auction is not moving. Traders also call it "size sitting," "passive defense," or "someone leaning on the level." The critical junior misuse is calling absorption whenever price pauses: a pause with no volume is not absorption, it is absence of business. Absorption is a positive claim about measurable aggressive volume being consumed, and it must be proven by the prints, not inferred from stillness.
+Absorption is aggressive flow trading into passive liquidity at a price that refuses to displace. Volume is heavy, the aggressors keep paying, and the level keeps eating them. It is the cleanest expression of effort without result: market orders are being spent and the auction is not moving. Traders also call it "size sitting," "passive defense," or "someone leaning on the level." The critical junior misuse is calling absorption whenever price pauses: a pause with no volume is not absorption, it is absence of business. Absorption is a positive claim about measurable aggressive volume being consumed at a location the auction already made important, and it must be proven by the prints, not inferred from stillness.
 
 > Absorption is heavy traded volume into a price that will not move. No volume, no absorption. No exception.
 
@@ -27,7 +29,7 @@ Absorption is aggressive flow trading into passive liquidity at a price that ref
 | Post-sweep liquidation supply | After stops are triggered, passive orders placed specifically to buy or sell that forced flow absorb it, halting displacement at the extreme. |
 
 ### Practical Implications
-1. Never fade a level just because price has stalled there. Require quantified aggressive volume into the level (relative to recent per-minute volume) before the word absorption is allowed in your read.
+1. Never fade a level just because price has stalled there. Require quantified aggressive volume into the level (relative to recent per-minute volume) before the word absorption is allowed in your read, and require a structural reason that level matters.
 2. Trade the resolution of absorption, not its observation. The trade is when the aggressors quit (delta flattens, price rotates away) or when the passive side breaks or pulls; standing in front of an unresolved fight is donation.
 3. If you are positioned with the aggressors and your direction gets absorbed on two separate pushes into the same price, reduce or exit before the third push. Third attempts into a level that has eaten the first two fail more often than juniors expect, and the failure is fast.
 4. Weight absorption far more heavily at structural extremes (range edges, prior value boundaries, overnight extremes) than mid-range. Mid-range absorption frequently just marks a temporary inventory operation with no directional consequence.
@@ -40,7 +42,7 @@ Absorption is aggressive flow trading into passive liquidity at a price that ref
 - Time-and-sales shows sustained, dense printing at the level over minutes, not a single burst followed by silence.
 - Resolution evidence: bids or offers begin stepping away from the level on the aggressors' side, and the first rotation away travels easily on light volume.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 ES rallies into 5484.00, the prior session high. Over roughly two minutes, the footprint shows about 4,800 contracts printing at the ask across 5483.75 and 5484.00. Delta for the window is +3,900. The offer at 5484.00 shows 400 to 600, gets hit repeatedly, and reloads every time. Price never prints 5484.25. Then the buying slows, 5483.50 bids get hit without refreshing, and price walks down through 5482.75, 5481.50, 5480.25 on unimpressive volume. Nothing dramatic sold it. The longs who paid 5483.75 and 5484.00 are simply trapped, and their exits are the down move.
 
 Contrast that with the same approach where the 5484.00 offer is consumed, 5484.25 and 5484.75 print quickly, delta keeps building, and the first pullback holds above 5484.00 with bids refreshing there. Same level, same initial picture, opposite resolution: that is acceptance through the level, and shorting it because "there was size at 84" is fighting a completed auction.
@@ -53,14 +55,14 @@ Drill for tomorrow: in replay, define an objective volume threshold (for example
 > When heavy paying meets a price that will not move, the side doing the paying is losing.
 
 ### See Also
-Refreshing Liquidity, Cumulative Delta & Delta Divergence, Stall & Snap-Back, Sweeps Through Liquidity, Excess and Failed Auctions at Extremes (Ch. 2)
+Refreshing Liquidity, Cumulative Delta & Delta Divergence, Stall & Snap-Back, Sweeps Through Liquidity, Level Interaction and Acceptance (Ch. 2)
 
 ---
 
 ## Refreshing Liquidity
 
 ### Core Concept
-Refreshing liquidity is displayed size at a price that reloads after being traded against, revealing hidden reserve quantity behind the display. The common forms are exchange-native iceberg orders and algorithmic parent orders feeding child orders to one price. The practical meaning is blunt: the DOM understates true supply or demand at that price, sometimes by an order of magnitude. Juniors treat displayed size as commitment; professionals treat it as advertising and treat refresh behavior as the honest signal. A level showing 20 that has traded 600 is a fundamentally different object than a level showing 400 that has traded 30.
+Refreshing liquidity is displayed size at a price that reloads after being traded against, revealing hidden reserve quantity behind the display. The common forms are exchange-native iceberg orders and algorithmic parent orders feeding child orders to one price. The practical meaning is blunt: the DOM understates true supply or demand at that price, sometimes by an order of magnitude. Juniors treat displayed size as commitment; professionals treat it as advertising and treat refresh behavior as the honest signal. A level showing 20 that has traded 600 is a fundamentally different object than a level showing 400 that has traded 30, but neither object becomes tradeable until its location and resolution fit the auction read.
 
 > Judge a level by what it has traded, never by what it shows.
 
@@ -77,7 +79,7 @@ Refreshing liquidity is displayed size at a price that reloads after being trade
 ### Practical Implications
 1. Before calling any level thin or thick, compare cumulative traded volume at that exact price against the maximum size it ever displayed. A traded-to-displayed ratio above roughly five signals reserve liquidity at work.
 2. Do not buy a breakout because the offer "looks small." Small displayed offers that keep reloading are precisely how large sellers operate, and breakout entries into them fill at the top of nothing.
-3. When you find a refreshing level, treat it as a live institutional reference: trade location relative to it (fade approaches toward it, or trade the moment it stops reloading) rather than ignoring it.
+3. When you find a refreshing level, treat it as a live institutional reference: use it to test whether the auction is accepting, rejecting, or defending that location rather than treating the refresh as an entry signal by itself.
 4. The disappearance of refresh behavior is itself a signal. A level that reloaded eight times and then lets the ninth hit print through is telling you the parent order is done; displacement through a finished iceberg travels fast.
 5. In your journal, record refreshing levels by price, side, and approximate absorbed quantity. These prices recur as references later in the session and often on subsequent days.
 
@@ -88,7 +90,7 @@ Refreshing liquidity is displayed size at a price that reloads after being trade
 - Fill behavior on your own working orders: you join a small displayed level and remain unfilled while prints go off, meaning reserve quantity holds priority ahead of you.
 - When the reserve exhausts, the final reload either fails to appear or is visibly smaller, and the next aggressive hit displaces immediately.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 NQ trades 19,841.75 bid at 19,842.00 offered. The offer shows 18. Over the next four minutes roughly 650 contracts print at 19,842.00 while the displayed offer oscillates between 11 and 22. The junior looking at the DOM sees a thin offer the whole time. The junior looking at the tape sees a seller doing six hundred plus contracts of business behind an 18-lot storefront. The junior who only sees the DOM buys the "imminent breakout" twice and gets nothing but a scratch and a stop-out, because he is feeding the iceberg his entries.
 
 Contrast the genuine thin offer: 19,842.00 shows 18, trades about 20 total, vanishes, and price prints 19,842.50 and 19,843.25 within seconds. Same displayed number, completely different object. The difference was never visible in the book; it was only visible in the relationship between prints and display.
@@ -108,7 +110,7 @@ Absorption, Liquidity Pulls & Replenishment, Sweeps Through Liquidity, Tape Qual
 ## Chasing vs. Pressing
 
 ### Core Concept
-Chasing and pressing are the same direction expressed at opposite quality. Chasing is paying progressively worse prices after displacement has already completed, from no defined location, with invalidation either undefined or so far away that the risk is incoherent. Pressing is initiating or adding with confirmed initiative flow while the move is still being built, from a defined location (a held retest, a shallow pullback that refreshes), with invalidation close and structural. The distinction is not aggression versus patience, and it is not about courage. It is about whether the entry has a place to be wrong. Pressing has one. Chasing does not.
+Chasing and pressing are the same direction expressed at opposite quality. Chasing is paying progressively worse prices after displacement has already completed, from no defined location, with invalidation either undefined or so far away that the risk is incoherent. Pressing is initiating or adding with confirmed initiative flow while the move is still being built, from a defined location (a held retest, a shallow pullback that refreshes), with invalidation close and structural. The distinction is not aggression versus patience, and it is not about courage. It is about whether the entry has a place to be wrong. Pressing has one. Chasing does not. The same aggressive prints become evidence only after location has done its job: a held retest, accepted breakout, or defended pullback. Without that location, they are only proof that someone else is already late or urgent.
 
 > If you cannot state where this entry is wrong within a few ticks, you are not pressing, you are chasing.
 
@@ -136,7 +138,7 @@ Chasing and pressing are the same direction expressed at opposite quality. Chasi
 - Chasing context: your intended stop has no structural feature near it; it is a dollar amount, not a market location.
 - Either way: the swept or broken level itself is the dividing line; entries near it with it holding are presses, entries far beyond it are chases.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 ES breaks 5490.00 on a sweep and runs to 5496.00 in about forty seconds. Two traders go long. The chaser pays 5495.75 because the move is now "confirmed," with a stop "somewhere under 5490," six points of incoherent risk placed at the moment the stop fuel above 5490 has just been fully spent. The presser does nothing at 5496. He waits for the pullback: price returns to 5490.50, the retest holds, bids refresh at 5490.00, delta through the pullback stays net positive, and small aggressive buying resumes. He pays 5490.75 with invalidation below 5489.50, about five ticks of structural risk at the start of acceptance rather than six points at the end of fuel. Same direction, same read, and over a hundred repetitions one of these traders has a business.
 
 If instead the pullback slices back below 5490.00 on heavy prints with no bid refresh, the presser's entry never triggers and he has lost nothing. The chaser is already down four points. That asymmetry is the entire lesson: the press structure filters failure before it costs money; the chase structure pays full price for every failure.
@@ -149,14 +151,14 @@ Drill: for one week, hard-forbid entries more than a defined distance beyond any
 > Pressing buys the beginning of acceptance with a tight place to be wrong; chasing buys the end of fuel with no place to be wrong.
 
 ### See Also
-Sweeps Through Liquidity, Stall & Snap-Back, Setup Quality Grading (Ch. 7), Trade-State Management (Ch. 8)
+Sweeps Through Liquidity, Stall & Snap-Back, Setup Quality and Action Vocabulary (Ch. 12), Trade-State Management (Ch. 11)
 
 ---
 
 ## Stall & Snap-Back
 
 ### Core Concept
-Stall and snap-back is the failure sequence of a displacement: price breaks or extends, stops making progress, and then returns through the origin of the displacement faster than it left. The stall is the market asking whether the new prices attract follow-through business; the snap-back is the answer that they did not. The professional skill is differentiating a stall that resolves into continuation from a stall that resolves into snap-back, and the differentiation lives in the content of the stall: pullback depth, refresh behavior, delta slope, and whether new initiative prints at the worse prices. The junior, raised on chart patterns, sees every stall as a flag. Half of them are traps.
+Stall and snap-back is the failure sequence of a displacement: price breaks or extends, stops making progress, and then returns through the origin of the displacement faster than it left. The stall is the market asking whether the new prices attract follow-through business; the snap-back is the answer that they did not. The professional skill is differentiating a stall that resolves into continuation from a stall that resolves into snap-back, and the differentiation lives in the content of the stall: pullback depth, refresh behavior, delta slope, and whether new initiative prints at the worse prices. The junior, raised on chart patterns, sees every stall as a flag. Half of them are traps. The auction question is not whether the shape resembles continuation. It is whether the new prices are being accepted or rejected after the displacement.
 
 > The stall is a question. Read what happens during it, not the shape it draws.
 
@@ -184,7 +186,7 @@ Stall and snap-back is the failure sequence of a displacement: price breaks or e
 - The snap trigger is mechanical: a fast, dense burst of prints back through the displacement origin, with velocity exceeding the original move.
 - Post-snap, the prior extreme caps every retest attempt on light volume, confirming the trapped cohort is selling (or buying) into any relief.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 NQ breaks above 19,860.00 and prints to 19,871.00. Then ninety seconds of stall: prints shrink, delta goes flat, offers at 19,870 to 19,872 reload every time they are lifted, and the pullback to 19,861.00 finds no aggressive buyers, with the 19,861 bid getting hit and not refreshing. Then 19,859.75 prints and velocity explodes: 19,855, 19,849, 19,841 in under a minute. Nothing newsworthy happened. The breakout buyers' stops were the move.
 
 Contrast the stall that goes: same break to 19,871, but the pullback holds 19,865.50, bids refresh at 19,864 and 19,865, delta grinds higher through the stall, and fresh aggressive prints appear at 19,870 and above. Continuation follows. The shapes on a two-minute chart are nearly identical. The content was opposite, and only the tape showed it.
@@ -197,14 +199,14 @@ Drill: in replay, collect twenty post-displacement stalls. At a fixed point mid-
 > Breakouts die quietly during the stall and get buried loudly on the snap; learn to attend the quiet part.
 
 ### See Also
-Chasing vs. Pressing, Absorption, Sweeps Through Liquidity, Failed Auctions and Look-Above-and-Fail (Ch. 2)
+Chasing vs. Pressing, Absorption, Sweeps Through Liquidity, Level Interaction and Acceptance (Ch. 2)
 
 ---
 
 ## Tape Quality Spectrum
 
 ### Core Concept
-Tape quality is the degree to which microstructure signals carry information, and it is a regime variable that must be classified before any tape read is made. Thick tape (dense participation, stable one-tick spread, full book, continuous prints) makes absorption, refresh, and delta meaningful, because many independent participants are expressing intent. Thin tape (lunch hours, most of the overnight, holidays, pre-event withdrawal) produces the same visual shapes with little or no information content: a single mid-size order displaces price, "absorption" is just absence of business, and delta swings reflect one program, not the market. The first tape read of every session, and of every hour within it, is whether the tape is readable at all.
+Tape quality is the degree to which microstructure signals carry information, and it is a regime variable that must be classified before any tape read is made. Thick tape (dense participation, stable one-tick spread, full book, continuous prints) makes absorption, refresh, and delta meaningful, because many independent participants are expressing intent. Thin tape (lunch hours, most of the overnight, holidays, pre-event withdrawal) produces the same visual shapes with little or no information content: a single mid-size order displaces price, "absorption" is just absence of business, and delta swings reflect one program, not the market. The first tape read of every session, and of every hour within it, is whether the tape is readable at all. The second is where it is being read; unreadable tape is dangerous everywhere, but even readable tape becomes dangerous when interpreted away from a defined auction location.
 
 > Before you read the tape, decide whether the tape is worth reading. Most of the day, it is not.
 
@@ -232,7 +234,7 @@ Tape quality is the degree to which microstructure signals carry information, an
 - Print continuity: continuous, overlapping prints versus bursty prints separated by silence; silence between bursts is the signature of unreadable tape.
 - Calendar context: known thin regimes (midday, half-days, pre-holiday, ahead of major releases) downgrade the tape before you even look.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 Same picture, two contexts. At 10:05 on a morning with a fresh catalyst, ES prints 4,000 contracts into 5478.00 over two minutes, price will not break, delta is heavily negative and flat-lining against the level. That is absorption, in A tape, at a structural reference, and it deserves to anchor a read. At 12:40 the same visual appears: price sits on 5478.00, sellers "can't break it," the footprint shows the level holding. But the two minutes printed 180 contracts. Nobody is defending anything; nobody is attacking anything. The level is holding because nobody is at work. The junior who learned absorption in the morning now sees it everywhere at lunch, and trades it.
 
 The junior error is forcing reads all day because he is at the desk all day. It feels right for an honest reason: watching feels like working, signals visually appear constantly in noise, and refusing to read feels like wasted hours. The cost is the classic lunch-chop bleed: a string of small losses from trading noise as signal, plus the less visible cost, which is decision fatigue that degrades the afternoon session where real opportunity may return. Many juniors lose the 14:30 trade at 12:40.
@@ -243,14 +245,14 @@ Drill: for two weeks, divide every session into blocks (open hour, mid-morning, 
 > Thin tape draws the same pictures as thick tape; only one of them is telling the truth.
 
 ### See Also
-Tape vs. Narrative, Spread Behavior, Session Context and Participation Structure (Ch. 3), Volatility Regime Classification (Ch. 5)
+Tape vs. Narrative, Spread Behavior, Session Context and Sequencing (Ch. 7), Volatility Regime (Ch. 8)
 
 ---
 
 ## Tape vs. Narrative
 
 ### Core Concept
-Narrative is what price should do given the story: the macro view, the headline, the morning's thesis, the bias inherited from yesterday. Tape is what price is doing, expressed in realized flow by everyone who actually paid to hold a position. When the two conflict on an intraday horizon, the tape governs, because the narrative pays nobody's stop and the tape is the sum of everyone's actual money. This is not a claim that narrative is worthless; catalyst and macro context sit above tape in the read stack and set the day's frame. It is a claim about conflict resolution: the better the story, the more dangerous it is, because a good story licenses ignoring prints.
+Narrative is what price should do given the story: the macro view, the headline, the morning's thesis, the bias inherited from yesterday. Tape is what price is doing, expressed in realized flow by everyone who actually paid to hold a position. When the two conflict on an intraday horizon, the tape governs, because the narrative pays nobody's stop and the tape is the sum of everyone's actual money. This is not a claim that narrative is worthless; catalyst and macro context sit above tape in the read stack and set the day's frame. It is a claim about conflict resolution at the location where the story is supposed to prove itself: the better the story, the more dangerous it is, because a good story licenses ignoring prints.
 
 > The narrative tells you what should happen. The tape tells you what is happening. Your stop lives in the second world.
 
@@ -278,7 +280,7 @@ Narrative is what price should do given the story: the macro view, the headline,
 - One-sided positioning evidence into the event (persistent grind, skewed flow) followed by a confirming headline that produces the opposite flow.
 - Your own behavior: you are explaining the tape away in real time ("they're wrong," "it hasn't sunk in yet") rather than reading it. That sentence in your head is the signal.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 A hypothetical inflation print comes in hotter than expected. The junior's narrative is clean: hot print, hawkish implication, sell the index. The open flushes, sweeping the overnight low. Then the tape goes to work against the story: over the next nine minutes, heavy volume prints into the flush low, delta runs deeply negative, and price will not make a new low. Offers above start getting pulled, the bid at the low refreshes again and again, and then price reclaims the entire flush, re-printing through its origin with speed. The read is mechanical: sellers spent maximum effort for zero result, the shorts from the flush are trapped, and the path of pain is up.
 
 The junior holds his short anyway, because the narrative is right. Here is the trap in full: the narrative may genuinely be right on a one-week horizon. Hot inflation can matter enormously and the market can still rally for two days first on positioning unwind. His analysis and his account live on different clocks. Holding an intraday position on a weekly thesis is not conviction, it is a category error.
@@ -291,7 +293,7 @@ Drill: build a two-column prediction page for every scheduled catalyst. Column o
 > Strong opinion, contradicting tape, held position: that is the configuration that ends accounts, and all three parts are visible in advance.
 
 ### See Also
-Absorption, Stall & Snap-Back, Catalyst Interpretation and Repricing Chains (Ch. 6), Read Discipline and Prediction Logging (Ch. 9)
+Absorption, Stall & Snap-Back, Catalyst Interpretation (Ch. 10), Read Discipline and Interpretation Method (Ch. 1)
 
 ---
 
@@ -327,7 +329,7 @@ The bid-ask spread, together with top-of-book depth, is the price of immediacy: 
 - Print dispersion: consecutive prints alternating across a wide spread without progress, versus prints walking directionally through a tight spread.
 - Your own fills: limit orders going unfilled at touches and market orders filling worse than expected are direct measurements of effective spread exceeding quoted spread.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 ES in normal mid-morning A tape: one tick wide, 150 to 300 displayed on each side, prints walking. At 8:29:45 ahead of a scheduled release, the book exhales: stacks drop into the 20s and 30s, the spread flickers between two and four ticks, prints go silent. The junior, positioned flat and excited, sends a market order at 8:30:01 into the reaction. He fills three ticks through the screen price, on a spread that cost him more than his intended stop distance, and then reads the wild prints around him as conviction flow when most of the violence is spread noise: prints ricocheting between a wide bid and a wide ask while the actual auction has not yet chosen.
 
 Contrast 8:42: the release is digested, the spread has been one tick wide for several minutes, depth has rebuilt to baseline, and price now displaces through a level on dense, continuous prints. That displacement means something; the 8:30 violence mostly did not. Same morning, same instrument, and the spread told you exactly when the tape became readable again.
@@ -340,7 +342,7 @@ Drill: for ten sessions, log quoted spread and top-three-level depth at five fix
 > Tight spread and deep book: the tape is speaking. Wide spread and hollow book: it is screaming, and screaming is not information.
 
 ### See Also
-Tape Quality Spectrum, Liquidity Pulls & Replenishment, Catalyst Event Mechanics (Ch. 6), Execution Permission (Ch. 8)
+Tape Quality Spectrum, Liquidity Pulls & Replenishment, Catalyst Interpretation (Ch. 10), From Read to Trade (Ch. 13)
 
 ---
 
@@ -375,7 +377,7 @@ The order book is a statement of intent, and intent can be revised until the mom
 - Speed asymmetry through the zone: price traverses vacated prices with abnormal velocity and minimal volume, the print record of an air pocket.
 - Re-provision after the flush: size reappears at better prices once the displacement completes, showing providers who stepped aside stepping back in.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 ES trades 5479.00 with sellers pressing. The bid stack reads 5478.00: 350, 5477.75: 290, a visible wall. The junior buys 5478.50 "in front of the size." At 5478.25, before a single contract trades at 5478.00, the 350 becomes 60 and the 290 becomes 45. Price slices to 5476.50 in seconds, and his stop fills another tick and a half below where he placed it, because the prices between were vacated too. He was not run over by sellers; he was abandoned by the bids he leaned on, which is worse, because it was visible one tick before it cost him.
 
 Contrast the same approach where 5478.00 holds: it gets hit for 200, the display drops, then rebuilds to 300; hit again, rebuilds again, prints stacking at the level while it refuses to break. That is replenishment under fire, the qualifying evidence this chapter's absorption entry requires, and a long against that behavior, with invalidation below the defended price, is a structurally different trade than a long in front of an untested number.
@@ -395,7 +397,7 @@ Refreshing Liquidity, Absorption, Sweeps Through Liquidity, Spread Behavior
 ## Sweeps Through Liquidity
 
 ### Core Concept
-A sweep is aggressive volume consuming multiple price levels nearly instantaneously: one decision, several prices, no negotiation. Sweeps come in two species that look identical at the moment of printing. The initiative sweep begins a repricing: the aggressor wants exposure at any nearby price and continues to want it afterward. The terminal sweep ends a move: it consumes a stop cluster, the triggered flow is the entire fuel supply, and once the cluster is spent there is no one left to continue. The sweep itself cannot tell you which one it was. The next thirty to one hundred twenty seconds can, and the professional discipline is refusing to classify before that window provides its evidence.
+A sweep is aggressive volume consuming multiple price levels nearly instantaneously: one decision, several prices, no negotiation. Sweeps come in two species that look identical at the moment of printing. The initiative sweep begins a repricing: the aggressor wants exposure at any nearby price and continues to want it afterward. The terminal sweep ends a move: it consumes a stop cluster, the triggered flow is the entire fuel supply, and once the cluster is spent there is no one left to continue. The sweep itself cannot tell you which one it was. The next thirty to one hundred twenty seconds can, and the professional discipline is refusing to classify before that window provides its evidence. A sweep asks whether the auction is accepting beyond the level or rejecting the run through it; it is not permission to buy or sell the burst.
 
 > A sweep is a question the market asks. The answer arrives in the next two minutes, and trading before the answer is guessing at premium prices.
 
@@ -423,7 +425,7 @@ A sweep is aggressive volume consuming multiple price levels nearly instantaneou
 - Delta shape: a one-spike delta profile that immediately flattens marks exhausted stop fuel; a stepped, renewing delta marks an aggressor who still wants more.
 - Location context: proximity to obvious stop reservoirs versus a genuine structural boundary changes the prior before any post-sweep evidence arrives.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 Two sweeps, same level, opposite trades. (a) NQ sweeps the stops above 19,900.00 and prints to 19,912.00 in a two-second burst. Over the next ninety seconds: the pullback holds 19,902, bids refresh at 19,901 and 19,902, delta keeps stepping higher, and offers at 19,910 and above keep getting lifted by new aggression. The swept level has become support, the aggressor is still hungry, and the press entry (per the Chasing vs. Pressing contract) is the held retest near 19,902 with invalidation back under 19,899. (b) The identical sweep prints to 19,912, then within seventy seconds heavy volume prints back down through 19,900, delta reverses sharply, and the bid side that drove the burst is simply gone. The fuel was the stops; everyone who was forced to buy has bought. The trade, if location and the rest of the stack permit, is the failure: short against 19,912 as price re-enters the prior range, with the trapped longs above as the engine.
 
 The junior error is buying the sweep print itself as breakout confirmation. It feels right for the most seductive reason in this chapter: speed and volume look exactly like strength, and sometimes they are, which provides just enough reinforcement to sustain the habit. The account cost is structural, not occasional: a trader who buys every upside sweep is systematically purchasing the final prints of stop runs, a strategy with negative expectancy wearing a momentum costume. His journal shows entries clustered at short-term extremes with immediate adverse excursion, the forensic fingerprint of bought sweeps.
@@ -434,14 +436,14 @@ Drill: log twenty-five sweeps in replay. For each, record location type (range e
 > The sweep spends the stops; what happens after the spending tells you whether anyone with intent was behind it.
 
 ### See Also
-Liquidity Pulls & Replenishment, Chasing vs. Pressing, Stall & Snap-Back, Excess vs. Acceptance at Range Extremes (Ch. 2)
+Liquidity Pulls & Replenishment, Chasing vs. Pressing, Stall & Snap-Back, Level Interaction and Acceptance (Ch. 2)
 
 ---
 
 ## Cumulative Delta & Delta Divergence
 
 ### Core Concept
-Cumulative delta (CD) sums aggressive buy volume minus aggressive sell volume: every print classified by which side crossed the spread to make it happen. It is therefore a measure of effort by the initiative side, while price is the result. CD carries no meaning in isolation; it becomes a read only in relation to price. Aligned (rising delta, rising price) means effort is producing result. Divergent means effort is failing, and failure of effort is information about who is trapped and which passive side is larger. The non-negotiable doctrine: delta is a context instrument, never a trigger. "Delta turned positive" is not an entry, has never been an entry, and the juniors who treat it as one fund the chop.
+Cumulative delta (CD) sums aggressive buy volume minus aggressive sell volume: every print classified by which side crossed the spread to make it happen. It is therefore a measure of effort by the initiative side, while price is the result. CD carries no meaning in isolation; it becomes a read only in relation to price and location. Aligned (rising delta, rising price) means effort is producing result. Divergent means effort is failing, and failure of effort is information about who is trapped and which passive side is larger. The non-negotiable doctrine: delta is a context instrument, never a trigger. "Delta turned positive" is not an entry, has never been an entry, and the juniors who treat it as one fund the chop.
 
 > Delta measures who is paying. Price measures whether the paying is working. The read lives in the gap between them.
 
@@ -470,7 +472,7 @@ Cumulative delta (CD) sums aggressive buy volume minus aggressive sell volume: e
 - Quality screen first: delta reads require A or B tape (per the Tape Quality Spectrum entry); thin-tape delta is one program's footprint, not a market statement.
 - Cross-check on the related instrument: a genuine index repricing usually shows congruent delta behavior in the sibling contract; divergence between siblings flags hedge flow.
 
-### In Practice — Building the Read
+### In Practice: Building the Read
 ES is at the upper edge of a three-day balance. An hour ago price printed 5495.75 with cumulative delta at +6,200. Price now prints a marginal new high at 5496.25, and CD reads +3,800: a higher high in price against a clearly lower high in effort. The second push was not driven by new aggressive buying; it ran on thin offers and the last of the covering. On its own, this is a yellow light, not a trade. The read completes when the rest of the evidence arrives: the new high cannot extend, offers begin refreshing at 5496, the first pullback prints heavy and deep, and structure gives a defined invalidation above the high. Location (balance edge) plus divergence (effort failing) plus tape behavior (supply returning) is a short with a place to be wrong. The divergence alone was only the reason to start watching.
 
 Contrast the absorption form: price sits at 5496.00 for six minutes while CD climbs another +2,500 and the high will not print through. Aggressive buyers are paying continuously and being filled by a passive seller who does not move. The trapped cohort is being assembled in real time, and the eventual rotation down needs no new selling, only the buyers giving up.
@@ -483,7 +485,7 @@ Drill: for ten sessions, mark every CD divergence you can find, but sort them at
 > Delta tells you who is spending; only price tells you whether the spending bought anything, and the trade lives where spending fails at a level that matters.
 
 ### See Also
-Absorption, Stall & Snap-Back, Tape Quality Spectrum, Structural Location and Value-Edge Reads (Ch. 2)
+Absorption, Stall & Snap-Back, Tape Quality Spectrum, Level Interaction and Acceptance (Ch. 2)
 
 ---
 
@@ -500,7 +502,7 @@ You are not done with this chapter until you can:
 5. State the day's narrative and the current tape read as two separate written sentences at any point in a catalyst session, and identify which one is currently governing your impulse to act.
 6. Report the current spread and depth state versus your instrument's baseline before every entry, and name the order type that state permits.
 7. Place any delta observation in context by stating location and structure first, and reject the observation aloud when location does not qualify it.
-8. Produce a one-paragraph written tape read every thirty minutes of a regular session that a reviewer could grade for evidence quality without asking you a single clarifying question.
+8. Produce a one-paragraph written tape read every thirty minutes of a regular session that names location first, then evidence, then inference, so a reviewer could grade its quality without asking you a single clarifying question.
 
 ## Chapter Drill Progression
 
@@ -544,26 +546,8 @@ This chapter is layer seven of the master read stack: tape confirmation. It sits
 
 What this chapter should lead: almost nothing strategic. The tape legitimately leads only micro-timing inside a read that already exists: the exact moment an absorption resolves, the held retest that converts a press from plan to position, the reload failure that opens a level. A trader whose directional theses originate from the tape has inverted the stack and will manufacture trades all day.
 
-What this chapter should confirm: structural location reads (is the level behaving the way the location thesis requires), session-context expectations (is participation consistent with the day type you assigned), and setup quality (a graded setup either receives tape confirmation at the moment of truth or it does not). Tape evidence feeds directly into execution permission: location, trigger, invalidation, risk, and trade-state plan must align, and the tape supplies the trigger-quality and condition evidence for that alignment.
+What this chapter should confirm: structural location reads (is the level behaving the way the location thesis requires), session-context expectations (is participation consistent with the day type you assigned), and setup quality (a graded setup either receives tape confirmation at the moment of truth or it does not). Tape evidence feeds directly into execution permission: location, trigger, invalidation, risk, and trade-state plan must align, and the tape supplies the trigger-quality and condition evidence for that alignment. The disciplined order is always observation, then inference: first what traded, where it traded, what refreshed or pulled, and what failed to move; only then what that means.
 
 What this chapter must never override: bad location (no quality of tape rescues an entry at a price where you cannot define being wrong), missing execution permission (a beautiful absorption is not a trade until the full permission checklist aligns), the tape-quality gate itself (no signal observed in C tape outranks the gate that prohibits reading C tape), and risk limits (tape conviction is not a sizing argument).
 
 One asymmetry deserves explicit statement: the tape's veto is stronger than its endorsement. When every layer above agrees and the tape contradicts (the level pulls instead of holding, the sweep fails, the narrative direction gets absorbed), standing aside is the professional action, and NO-TRADE on tape contradiction is a decision to be logged and graded as such. Promoting tape signals into standalone setups is this chapter's core misuse; granting the tape veto power over everything except the rules above it is this chapter's correct installation.
-
----
-
-## Verification Report
-
-**Canonical coverage:** All ten capsule entries generated in capsule order: Absorption, Refreshing Liquidity, Chasing vs. Pressing, Stall & Snap-Back, Tape Quality Spectrum, Tape vs. Narrative, Spread Behavior, Liquidity Pulls & Replenishment, Sweeps Through Liquidity, Cumulative Delta & Delta Divergence.
-
-**Entry contract:** Each entry contains the seven sections in contract order. Core Concept sections run 3 to 6 sentences and end in a blockquote. Mechanism tables contain 4 to 6 rows, each citing a concrete mechanic (passive/active liquidity, icebergs, stop conversion, dealer gamma, inventory, adverse selection, forced flow, auction response, anchoring). Implications run 4 to 6 numbered items. Identification sections run 4 to 5 bullets of real-time observables. Each In Practice section contains a concrete sequence, the named junior error, why it feels right, explicit equity-curve cost, and a runnable drill; contrast scenarios included where the concept requires contrast (Absorption, Refreshing Liquidity, Chasing vs. Pressing, Stall & Snap-Back, Tape Quality Spectrum, Liquidity Pulls, Sweeps, Delta). Drill formats vary across entries (threshold logging, ratio tests, dual-hypothetical journals, prediction grading, baseline tables, base-rate construction).
-
-**Required mechanism coverage:** Passive absorption (Entry 1), iceberg/refresh (Entry 2), sweeps vs. real breaks (Entry 9), spread widening and depth withdrawal (Entries 7, 8), cumulative delta as effort (Entry 10), DOM behavior (Entries 2, 8), tape quality spectrum (Entry 5), pulls and replenishment (Entry 8). All six capsule misuse patterns exposed: delta as trigger (Entry 10, failure table), every stall called absorption (Entry 1), chasing sweeps (Entries 3, 9), ignoring spread/depth (Entry 7), forcing thin-tape reads (Entry 5), narrative over prints (Entry 6).
-
-**Chapter-level contract:** Competency Checkpoint (8 items, application-tested), Drill Progression (five stages with minimum evidence standards), Failure Modes table (six recurring-drag modes), Assessment Prompts (10 applied judgment scenarios), Read Stack Integration (lead/confirm/never-override stated, veto asymmetry stated).
-
-**Doctrines:** Read-is-not-trade, NO-TRADE as active decision, process over outcome, prediction before outcome, mechanism over narrative, and conditionality are embedded in entry content and training sections rather than restated as filler.
-
-**Evidence discipline:** All price sequences are hypothetical constructions, flagged as such in the introduction. No historical events, current price levels, current exchange rules, or live instrument conditions are asserted.
-
-**Flags for operator reconciliation:** (1) Cross-chapter See Also references use provisional chapter numbers inferred from the read-stack ordering (Ch. 2 auction/structure, Ch. 3 session context, Ch. 5 volatility regime, Ch. 6 catalyst, Ch. 7 setup quality, Ch. 8 execution/trade-state, Ch. 9 review/read discipline). Reconcile against the master table of contents before locking. (2) The section header "In Practice — Building the Read" preserves the entry contract's exact wording, including its dash, for template fidelity with the locked compendium structure; all authored prose elsewhere avoids em-dashes per standing instruction. Confirm which rule governs the header before canonical lock.
