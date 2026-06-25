@@ -1,15 +1,15 @@
 # Chapter 10: Catalyst Interpretation
 
-New information is the only thing that can legitimately change a market's mind mid-session, and most of what arrives on the wire is not new information. This chapter teaches the difference. The trader's job is never to predict headlines; it is to read what the market does with them: whether anything was actually learned, who is now forced to reposition, which instrument carries the truth, and what the reaction does to any thesis already on the book.
+New information is the only thing that can legitimately change a market's mind mid-session, and most of what arrives on the wire is not new information. Even genuine new information does not create direction from nothing. It releases positioning that was already in the system. This chapter teaches the difference. The trader's job is never to predict headlines or prints; it is to read what the market does with them: whether anything was actually learned, who is now offside and forced to reposition, which instrument carries the truth, and what the reaction does to any thesis already on the book.
 
-Every entry below assumes the rest of the read stack is running. A catalyst read sits on top of structure, session context, volatility regime, and tape. It can redirect all of them. It can never replace any of them.
+Every entry below assumes the rest of the read stack is running. A catalyst read sits on top of structure, session context, volatility regime, and tape. It can redirect all of them. It can never replace any of them. Before the release, the state is UNKNOWN and the work is a conditional liquidation map. Only after the book reloads, volume confirms or fails, and the trapped side reveals itself does the state become VERIFIED.
 
 ---
 
 ## New Information vs. Recycled Context
 
 ### Core Concept
-A catalyst is only a catalyst if it changes what some group of participants is now forced, or strongly incentivized, to do. New information shifts the expected distribution of outcomes and creates repricing flow that did not exist a minute earlier. Recycled context restates something the market has already positioned for: an official repeating last month's language, a wire re-running an overnight story, an analyst summarizing what price already did. Juniors treat both identically because both arrive as red banners in urgent fonts. The professional question is never "does this headline sound important," it is "who learned something, and what must they now do about it." Aliases you will hear on a desk: fresh versus stale, incremental information, the novelty test.
+A catalyst is only a catalyst if it changes what some group of participants is now forced, or strongly incentivized, to do. New information shifts the expected distribution of outcomes and releases repricing flow stored in the positions built before it arrived. Recycled context restates something the market has already positioned for: an official repeating last month's language, a wire re-running an overnight story, an analyst summarizing what price already did. Juniors treat both identically because both arrive as red banners in urgent fonts. The professional question is never "does this headline sound important," it is "who learned something, who was leaning the wrong way, and what must they now do about it." Aliases you will hear on a desk: fresh versus stale, incremental information, the novelty test.
 
 > If nobody is forced to reposition, the headline is decoration, no matter how loud it reads.
 
@@ -52,16 +52,16 @@ Drill: the novelty log. For the next twenty headline-driven moves you witness, l
 > Trade what the market just learned, not what the newsroom just reprinted.
 
 ### See Also
-Pricing-In, Source Quality, Transmission Mechanism & Order Effects, Absorption (Ch. 5), Volatility Regime Classification (Ch. 7)
+Pricing-In, Source Quality, Transmission Mechanism & Order Effects, Tape Reading and Microstructure (Ch. 4), Volatility Regime (Ch. 8)
 
 ---
 
 ## Pricing-In
 
 ### Core Concept
-Markets trade expectations, not events. By the time a scheduled catalyst arrives, the expected outcome is already embedded in price, positioning, and implied volatility, so the tradeable object is the gap between expectation and outcome, plus the unwind of whatever was positioned for that expectation. This is why an objectively bullish number can sell off and an ugly number can rally: the market grades the print against its forecast distribution, not against zero. Related vocabulary: discounting, consensus, the whisper number, buy the rumor sell the news, sell the fact. The junior failure is grading the print against intuition ("strong number, so buy") instead of against what was already paid for.
+Markets trade expectations, not events. By the time a scheduled catalyst arrives, the expected outcome is already embedded in price, positioning, and implied volatility, so the tradeable object is the gap between expectation and outcome, plus the unwind of whatever was positioned for that expectation. This is why an objectively bullish number can sell off and an ugly number can rally: the market grades the print against its forecast distribution, not against zero. The pre-release state is honestly UNKNOWN. Your edge is not calling the number; it is mapping the liquidation paths that different numbers would unlock. Related vocabulary: discounting, consensus, the whisper number, buy the rumor sell the news, sell the fact. The junior failure is grading the print against intuition ("strong number, so buy") instead of against what was already paid for.
 
-> The event does not move the market. The error in the market's forecast of the event moves the market.
+> The event does not create the move. It reveals which stored position has to liquidate.
 
 ### Why It Happens
 
@@ -74,7 +74,7 @@ Markets trade expectations, not events. By the time a scheduled catalyst arrives
 | Positioning skews the payoff | When the crowd leans one way, the same-magnitude surprise in the painful direction travels further, because stops and forced flow are stacked on that side. |
 
 ### Practical Implications
-1. Before every scheduled event on your products, write three things: consensus, the lean (what drift and positioning say the market actually expects), and the implied move (event straddle, or the average of recent same-event ranges). Grade the print against the lean, never against consensus alone.
+1. Before every scheduled event on your products, write four things: consensus, the lean (what drift and positioning say the market actually expects), the implied move (event straddle, or the average of recent same-event ranges), and the conditional liquidation map for both sides. Grade the print against the lean, never against consensus alone.
 2. Treat reaction inversion as a positioning report: good news sold means the good news was owned. Do not argue with that flow on the grounds that the number was strong; the flow already knows.
 3. Compare the realized first reaction to the implied move: smaller than implied argues vol crush and rotation back into balance; larger than implied argues genuine surprise and conditional trend permission.
 4. Respect pre-event drift: a market that rallied hard into the print has already spent part of the bullish outcome, and an entry on the expected side after that run carries the worst location of the week.
@@ -94,13 +94,13 @@ Now run the alternate print: a surprise build of 2 million against an expected d
 
 The junior error is face-value grading: buying the bullish-on-its-face number after the run-up because the data confirms the story he already liked. It feels right because it is literally true; the number was bullish. The cost is buying local tops on event days with size and conviction, the most expensive pairing a junior owns, and these losses cluster precisely on the days he felt most certain, which is what makes the lesson so slow to land without a log.
 
-Drill: the pre-event expectation card. For the next ten scheduled events on your products, write consensus, lean, implied move, and two reaction scripts (the in-line script and the surprise script) before the print, then grade which script ran and whether your entry rules would have kept you out of any inversion. No live risk on event prints until ten cards are written and graded.
+Drill: the pre-event expectation card. For the next ten scheduled events on your products, write consensus, lean, implied move, and two conditional liquidation scripts before the print: the in-line script and the surprise script. Then grade which script became VERIFIED after the book reloaded and whether your entry rules would have kept you out of any inversion. No live risk on event prints until ten cards are written and graded.
 
 ### One-Line Summary
 > Price pays for surprises, not for confirmations it already bought.
 
 ### See Also
-New Information vs. Recycled Context, Catalyst-to-Trade Translation, Narrative Consensus & Disagreement, Event-State Volatility (Ch. 7)
+New Information vs. Recycled Context, Catalyst-to-Trade Translation, Narrative Consensus & Disagreement, Volatility Regime (Ch. 8)
 
 ---
 
@@ -117,26 +117,26 @@ A genuine catalyst does not hit all instruments at once; it propagates along a c
 |---|---|
 | Rate-sensitive holders are forced first on macro data | ZN and the rest of the curve reprice the policy path directly; their holders' P&L is the data, so they react within the first second. |
 | FX transmits the rate differential | 6E and the other majors move as the expected rate gap shifts, confirming the rates read or flagging a one-market anomaly. |
-| Index reaction is filtered through dealer gamma | Long-gamma dealers dampen the equity leg with their hedging, delaying or muting it; short-gamma positioning amplifies it; the equity move can arrive in a second stage when hedging flips. |
+| Index reaction is filtered through dealer gamma | Long-gamma dealers hedge against price direction, selling as price rises and buying as price falls, which dampens the equity leg. Short-gamma dealers hedge with price direction, buying as price rises and selling as price falls, which adds fuel to the move and can turn a catalyst impulse into acceleration. |
 | Arbitrage desks enforce the chain | Cross-asset and futures-cash arb flow mechanically transmits a repricing from the leading instrument to related ones over seconds to minutes. |
 | Real money arrives on a delay | Institutional execution slices (VWAP, TWAP) express the new view over hours, which is why genuine catalysts print sustained directional volume long after the spike. |
 
 ### Practical Implications
 1. Pre-write the expected chain for every scheduled release you sit through: first mover, second mover, what confirms, what invalidates. If the chain runs out of order, treat the move as suspect until resolved.
 2. Use the leader as your truth instrument: when trading ES off macro news, your confirmation lives in ZN and 6E, not in ES's own first spike.
-3. Treat divergence as a signal to classify, not a nuisance: ZN repricing hard while ES sits still means either a gamma-dampened equity leg still pending or data the equity market deems irrelevant. Decide which by watching whether the rates move holds and whether index vol bids, do not guess.
+3. Treat divergence as a signal to classify, not a nuisance: ZN repricing hard while ES sits still means either a long-gamma equity leg is dampening the release or the equity market deems the data irrelevant. Decide which by watching whether the rates move holds, whether index vol bids, and whether ES later prints initiative through the pinned area. Do not guess.
 4. Never trade the laggard on catch-up logic alone: "ZN moved so ES must follow" is incomplete until ES's own tape shows initiative flow at a usable location.
 5. For energy and metals headlines, demand breadth before extending the read to index: CL moving alone is an energy trade, not a risk-off trade, until GC, ZN, and FX participate.
 
 ### How Traders Identify It
 - Relative magnitude: each instrument's move scaled to its own normal volatility, never raw points across products.
 - Sequence timing: the leader inside the first seconds, transmitters inside the first minutes, real-money continuation across the session.
-- Gamma fingerprints: index pinned and rotational despite a hard rates move, then releasing suddenly when hedging pressure flips.
+- Gamma fingerprints: long-gamma pinning, where ES or NQ rotates despite a hard rates move, versus short-gamma acceleration, where each extension forces same-direction hedging and pullbacks cannot refill.
 - Chain agreement versus conflict: rates, FX, index, and metals telling one coherent story, versus a single-instrument twitch with silence around it.
 - Lead-lag inversion: equities moving before rates on a supposedly macro headline, a red flag for a non-macro driver or bad sourcing.
 
 ### In Practice: Building the Read
-An 08:30 employment-class release comes in hot. ZN drops eighteen ticks in under a second; 6E loses thirty-five pips inside the first minute. NQ falls sixty points, then stabilizes and chops in a forty-point band for ten minutes while ZN keeps bleeding. The junior reads "NQ holding up well" and starts looking for longs. The professional reads a dampened second stage: index hedging is absorbing the move, and as long as ZN does not recover, the equity leg is pending, not cancelled. At 09:40 NQ breaks the band and travels a hundred and forty points with shallow pullbacks. That was the delayed transmission, and it was tradeable at far better location than anything available in the 08:30 vacuum, but only for the trader who understood why the index was quiet.
+An 08:30 employment-class release comes in hot. ZN drops eighteen ticks in under a second; 6E loses thirty-five pips inside the first minute. NQ falls sixty points, then stabilizes and chops in a forty-point band for ten minutes while ZN keeps bleeding. The junior reads "NQ holding up well" and starts looking for longs. The professional reads an UNKNOWN divergence: either long-gamma hedging is absorbing the equity leg or equity does not care. As long as ZN does not recover, index vol stays bid, and NQ keeps failing to reclaim the release area, the bearish liquidation path remains live. At 09:40 NQ breaks the band and travels a hundred and forty points with shallow pullbacks. The reload converted the map to VERIFIED, and the trade lived at far better location than anything available in the 08:30 vacuum.
 
 Contrast a geopolitical headline at 13:10. CL jumps ninety cents, GC pops, ZN catches a bid, ES dips: a coherent risk-off chain, breadth confirming the headline matters. Run the same headline class on another day: CL jumps, nothing else participates, and CL round-trips inside twenty minutes. The chain refused to confirm, and that refusal was visible well before the round trip completed.
 
@@ -148,14 +148,14 @@ Drill: the transmission map. For five scheduled macro releases, pre-write the ch
 > Read the chain, not the headline: leaders prove the story, laggards prove the breadth.
 
 ### See Also
-New Information vs. Recycled Context, Source Quality, Catalyst-to-Trade Translation, Intermarket Confirmation & Conflict (Ch. 9), Dealer Gamma Effects (Ch. 7)
+New Information vs. Recycled Context, Source Quality, Catalyst-to-Trade Translation, Intermarket Confirmation (Ch. 9), Volatility Regime (Ch. 8)
 
 ---
 
 ## Catalyst-to-Trade Translation
 
 ### Core Concept
-A correct catalyst read is context, not a ticket. Translation is the disciplined path from "the market learned X" to a specific trade: direction and expected energy from the catalyst, location from structure, trigger from tape, risk from regime. Skipping translation is what turns news literacy into news gambling. The first seconds after a release are a liquidity vacuum: spreads wide, depth pulled, fills adversely selected. Almost nothing that happens in that window is an entry; it is evidence to be read.
+A correct catalyst read is context, not a ticket. Translation is the disciplined path from "the market learned X" to a specific trade: direction and expected energy from the forced liquidation, location from structure, trigger from tape, risk from regime. Skipping translation is what turns news literacy into news gambling. The first seconds after a release are a liquidity vacuum: spreads wide, depth pulled, fills adversely selected. Almost nothing that happens in that window is an entry; it is evidence to be read.
 
 > The catalyst tells you what to look for. It never tells you to click.
 
@@ -196,7 +196,7 @@ Drill: the event-day playbook. Write your two or three permitted post-catalyst e
 > Right about the news and wrong about the entry is just wrong, and it costs the same.
 
 ### See Also
-Pricing-In, Transmission Mechanism & Order Effects, Catalyst Effect on Thesis, Setup Quality Grading (Ch. 9), Absorption (Ch. 5)
+Pricing-In, Transmission Mechanism & Order Effects, Catalyst Effect on Thesis, Setup Quality and Action Vocabulary (Ch. 12), Tape Reading and Microstructure (Ch. 4)
 
 ---
 
@@ -245,7 +245,7 @@ Drill: the thesis card protocol. For ten sim or replay trades, write the two to 
 > When the world changes, re-mark the thesis; the stop was priced for the old world.
 
 ### See Also
-Catalyst-to-Trade Translation, New Information vs. Recycled Context, Trade-State Management (Ch. 11), Prediction Logging (Ch. 12)
+Catalyst-to-Trade Translation, New Information vs. Recycled Context, Trade-State Management (Ch. 11), Setup Quality and Action Vocabulary (Ch. 12)
 
 ---
 
@@ -293,7 +293,7 @@ Drill: the reaction-function journal. Pick one product. For four weeks, log ever
 > When everyone finally agrees, the trade is not early anymore; it is inventory looking for a door.
 
 ### See Also
-Pricing-In, Catalyst Effect on Thesis, Source Quality, Higher-Timeframe Auction Context (Ch. 4)
+Pricing-In, Catalyst Effect on Thesis, Source Quality, Auction and Market Profile (Ch. 3)
 
 ---
 
@@ -341,7 +341,7 @@ Drill: source-tier tagging. For two weeks, tag every catalyst-driven move you ob
 > If you cannot name the source, you are not trading information; you are trading other people's reflexes.
 
 ### See Also
-New Information vs. Recycled Context, Transmission Mechanism & Order Effects, Catalyst-to-Trade Translation, Tape Confirmation (Ch. 5)
+New Information vs. Recycled Context, Transmission Mechanism & Order Effects, Catalyst-to-Trade Translation, Tape Reading and Microstructure (Ch. 4)
 
 ---
 
@@ -349,8 +349,8 @@ New Information vs. Recycled Context, Transmission Mechanism & Order Effects, Ca
 
 You are not done with this chapter until you can…
 
-1. Classify a live headline as new or recycled within thirty seconds, with a written forced-flow answer, and demonstrate at least 80 percent accuracy on persistence predictions across twenty logged cases.
-2. Produce a complete pre-event card (consensus, lean, implied move, in-line script, surprise script) before every scheduled release on your products, without exception, for two consecutive weeks.
+1. Classify a live headline as new or recycled within thirty seconds, with a written forced-flow answer, and demonstrate at least 80 percent accuracy on persistence calls across twenty logged cases.
+2. Produce a complete pre-event card (consensus, lean, implied move, in-line liquidation script, surprise liquidation script) before every scheduled release on your products, without exception, for two consecutive weeks.
 3. Pre-write the transmission chain for a macro release, then grade the actual sequence, correctly identifying at least one gamma-dampened equity leg and one single-instrument non-confirmation from your logs.
 4. Sit flat through the first sixty to ninety seconds of every scheduled release, and state in writing which of your permitted post-catalyst entry patterns is or is not forming, before any order is considered.
 5. Re-mark an open thesis (confirm, weaken, or kill per written assumption) within one minute of a relevant catalyst, and demonstrate at least one logged case of correctly leaving a position untouched through an orthogonal catalyst.
@@ -362,7 +362,7 @@ You are not done with this chapter until you can…
 
 1. **Observe.** Replay twenty event windows across your products: scheduled releases and unscheduled headlines mixed. For each, log the headline class, the first mover, the chain behavior, the release-window liquidity vacuum, and the eventual persistence. Minimum evidence: twenty logged windows spanning at least three product families before advancing.
 2. **Classify.** Across ten live sessions, label every catalyst in real time without trading: new or recycled, source tier, expected chain, and a persistence call. Minimum evidence: at least thirty classifications with 80 percent or better on persistence and zero unclassified Tier-3 spikes before advancing.
-3. **Predict.** For fifteen events, write the full pre-event card or pre-headline read before the outcome: expectation, lean, implied move, chain, permitted entry patterns. Prediction before outcome is the audit instrument; post-hoc explanation earns nothing. Minimum evidence: fifteen graded cards with honest scoring of which script ran.
+3. **Map.** For fifteen events, write the full pre-event card or pre-headline read before the outcome: expectation, lean, implied move, chain, conditional liquidation paths, permitted entry patterns. Mapping before outcome is the audit instrument; post-hoc explanation earns nothing. Minimum evidence: fifteen graded cards with honest scoring of which script became VERIFIED.
 4. **Simulate.** Take ten sim trades exclusively from your permitted post-catalyst patterns, each with a written thesis card, invalidation, and trade-state plan, each reviewed against process rather than P&L. Minimum evidence: ten attempts with a process score of eight out of ten or better on at least seven, including at least two correctly executed NO-TRADE event windows logged as decisions.
 5. **Risk.** Live micro size only, only on Tier 1 or Tier 2 confirmed catalysts, only at permitted patterns, only after the simulate stage is complete and documented. Permission is revoked back to the simulate stage after any entry inside the release vacuum or any Tier-3 entry, regardless of outcome. A green violation is still a violation.
 
@@ -382,7 +382,7 @@ You are not done with this chapter until you can…
 
 1. ES drops seven handles at 10:14 on a headline quoting an official. You locate identical language in a speech from two weeks ago. ZN moved two ticks and recovered. What is the read, what trade class (if any) does it create, and exactly what tape evidence is required before taking it?
 2. CL rallies ninety cents into a 10:30 inventory print. The report shows a draw modestly larger than consensus; price pops, then trades below the pre-release level within five minutes. Explain the mechanism, name the junior error available here, and state what the inversion tells you about positioning for the rest of the session.
-3. A hot inflation print drops ZN eighteen ticks. NQ falls modestly, then chops sideways for fifteen minutes while ZN keeps bleeding. Give the two competing reads, the evidence that resolves them, and where the eventual NQ trade lives if your primary read proves out.
+3. A hot inflation print drops ZN eighteen ticks. NQ falls modestly, then chops sideways for fifteen minutes while ZN keeps bleeding. Give the two competing reads, explain the dealer-gamma mechanism that could dampen or amplify the equity leg, name the evidence that resolves the UNKNOWN state, and state where the eventual NQ trade lives if your primary read proves out.
 4. You are long NQ on a breakout thesis. An unscheduled energy headline hits: CL jumps, ZN and breadth do nothing, NQ shakes two points on thin prints that refill. Walk through your assumption re-mark line by line and state the action.
 5. Same long, but the headline is a hawkish surprise: ZN dumps and NQ fails to re-accept your breakout level on negative delta. Where do you exit, why is the original stop the wrong exit, and what does waiting for it typically cost in both ticks and subsequent decisions?
 6. For six weeks, soft data has been bought in ES. Today a friendly print rallies eight handles and closes flat below VWAP. What changed, what does it imply about positioning, and what structure and tape evidence would you require before trading the implication?
@@ -392,9 +392,9 @@ You are not done with this chapter until you can…
 
 ## Read Stack Integration
 
-This chapter is layer one of the master read stack: calendar and catalyst state. Everything below it (higher-timeframe auction, session context, volatility regime, intermarket tone, structural location, tape confirmation, setup quality, execution permission, trade-state management, review loop) is built inside whatever information state this layer declares.
+This chapter is layer one of the master read stack: calendar and catalyst state. Everything below it (higher-timeframe auction, session context, volatility regime, intermarket tone, structural location, tape confirmation, setup quality, execution permission, trade-state management, review loop) is built inside whatever information state this layer declares. Before the release, that state is UNKNOWN and the chapter produces conditional maps, not predictions. After the reload, the state becomes VERIFIED only if the chain, volume, and tape show which stored position is now liquidating.
 
-**What this chapter should lead.** When genuinely new, well-sourced information forces repositioning, the catalyst layer leads the entire read. It can legitimately overturn the session-context and structural expectations carried into the day, because those expectations were built in the old world. It also sets the day's posture in advance: a loaded calendar means event-state rules, reduced size, and pattern restrictions before anything has even printed.
+**What this chapter should lead.** When genuinely new, well-sourced information releases forced repositioning, the catalyst layer leads the entire read. It can legitimately overturn the session-context and structural expectations carried into the day, because those expectations were built in the old world. It also sets the day's posture in advance: a loaded calendar means event-state rules, reduced size, and pattern restrictions before anything has even printed.
 
 **What this chapter should confirm.** Volatility regime classification (the catalyst state explains why the regime is what it is), session context (event days produce characteristic session shapes), and intermarket tone (the transmission chain and intermarket reads should agree, and disagreement between them is itself information to resolve, not ignore).
 
